@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--我是勇哥我怕谁-->
+<CGDic>
+  <dic candidate="总重厦部桥门庆津大楼故视桥梁视门珠样双保子树塔"
+       candidate_english="CCTV" id="1" picFrontName="BJ_CCTV_" picNum="1"
+       rewards="3" title="北京" answer="CCTV总部大楼" star="1"/>
+
+  <dic candidate="水重厦卢桥门庆津立电桥中视方正门珠强双保子树小段" candidate_english="" id="2" picFrontName="BJ_SLF_" picNum="1" title="北京" answer="水立方" star="2"/>
+  <dic candidate="水重厦卢桥门庆津立电桥中视方正门珠强双保子树小段" candidate_english="" id="3" picFrontName="BJ_SLF_" picNum="1" title="北京" answer="水立方" star="2"/>
+  <dic candidate="水重厦卢桥门庆津立电桥中视方正门珠强双保子树小段" candidate_english="" id="4" picFrontName="BJ_SLF_" picNum="1" title="北京" answer="水立方" star="2"/>
+  <dic candidate="水重厦卢桥门庆津立电桥中视方正门珠强双保子树小段" candidate_english="" id="5" picFrontName="BJ_SLF_" picNum="1" title="北京" answer="水立方" star="2"/>
+  <dic candidate="水重厦卢桥门庆津立电桥中视方正门珠强双保子树小段" candidate_english="" id="6" picFrontName="BJ_SLF_" picNum="1" title="北京" answer="水立方" star="2"/>
+  <dic candidate="水重厦卢桥门庆津立电桥中视方正门珠强双保子树小段" candidate_english="" id="7" picFrontName="BJ_SLF_" picNum="1" title="北京" answer="水立方" star="2"/>
+  
+</CGDic>

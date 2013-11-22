@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--我是勇哥我怕谁---这个文件用 "setingName"作为唯一标示符--->
+<CGDic>
+  <dic settingName="音量" volume_bg="0.34" volume_eff="0.79"/>
+  <dic settingName="静音" silence="0"/>
+</CGDic>

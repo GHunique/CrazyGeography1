@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--我是勇哥我怕谁-->
+<CGDic>
+    <dicInfo id="0" name="中国" currChaId="1" currPassId="1"/>
+    <dic id="1" name="北京"/>
+    <dic id="2" name="天津"/>
+    <dic id="3" name="上海"/>
+    <dic id="4" name="重庆"/>
+    <dic id="5" name="河北"/>
+    <dic id="6" name="辽宁"/>
+    <dic id="7" name="吉林"/>
+    <dic id="8" name="山西"/>
+    <dic id="9" name="山东"/>
+    <dic id="10" name="河南"/>
+    <dic id="11" name="安徽"/>
+    <dic id="12" name="江苏"/>
+    <dic id="13" name="浙江"/>
+    <dic id="14" name="福建"/>
+    <dic id="15" name="广东"/>
+    <dic id="16" name="香港"/>
+    <dic id="17" name="澳门"/>
+    <dic id="18" name="海南"/>
+    <dic id="19" name="广西"/>
+    <dic id="20" name="台湾"/>
+    <dic id="21" name="湖南"/>
+    <dic id="22" name="湖北"/>
+    <dic id="23" name="贵州"/>
+    <dic id="24" name="云南"/>
+    <dic id="25" name="四川"/>
+    <dic id="26" name="陕西"/>
+    <dic id="27" name="宁夏"/>
+    <dic id="28" name="内蒙古"/>
+    <dic id="29" name="甘肃"/>
+    <dic id="30" name="青海"/>
+    <dic id="31" name="西藏"/>
+    <dic id="32" name="新疆"/>
+</CGDic>

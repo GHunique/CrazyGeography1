@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--我是勇哥我怕谁-->
+<CGDic>
+    <dicInfo passedChaId="1" passedPassId="2" id="0" name="中国" shortName="中"/>
+    <dic id="1" name="北京" shortName="京" star="0"/>
+    <dic id="2" name="天津" shortName="津" star="0"/>
+    <dic id="3" name="上海" shortName="沪" star="0"/>
+    <dic id="4" name="重庆" shortName="渝" star="0"/>
+    <dic id="5" name="河北" shortName="冀" star="0"/>
+    <dic id="6" name="辽宁" shortName="辽" star="0"/>
+    <dic id="7" name="吉林" shortName="吉" star="0"/>
+    <dic id="8" name="山西" shortName="晋" star="0"/>
+    <dic id="9" name="山东" shortName="鲁" star="0"/>
+    <dic id="10" name="河南" shortName="豫" star="0"/>
+    <dic id="11" name="安徽" shortName="皖" star="0"/>
+    <dic id="12" name="江苏" shortName="苏" star="0"/>
+    <dic id="13" name="浙江" shortName="浙" star="0"/>
+    <dic id="14" name="福建" shortName="闽" star="0"/>
+    <dic id="15" name="广东" shortName="粤" star="0"/>
+    <dic id="16" name="香港" shortName="港" star="0"/>
+    <dic id="17" name="澳门" shortName="澳" star="0"/>
+    <dic id="18" name="海南" shortName="琼" star="0"/>
+    <dic id="19" name="广西" shortName="桂" star="0"/>
+    <dic id="20" name="台湾" shortName="台" star="0"/>
+    <dic id="21" name="湖南" shortName="湘" star="0"/>
+    <dic id="22" name="湖北" shortName="鄂" star="0"/>
+    <dic id="23" name="贵州" shortName="黔" star="0"/>
+    <dic id="24" name="云南" shortName="滇" star="0"/>
+    <dic id="25" name="四川" shortName="蜀" star="0"/>
+    <dic id="26" name="陕西" shortName="秦" star="0"/>
+    <dic id="27" name="宁夏" shortName="宁" star="0"/>
+    <dic id="28" name="内蒙古" shortName="蒙" star="0"/>
+    <dic id="29" name="甘肃" shortName="陇" star="0"/>
+    <dic id="30" name="青海" shortName="青" star="0"/>
+    <dic id="31" name="西藏" shortName="藏" star="0"/>
+    <dic id="32" name="新疆" shortName="新" star="0"/>
+</CGDic>
