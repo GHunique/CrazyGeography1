@@ -9,7 +9,7 @@
 #ifndef __CrazyGeography__CPPSingleton__
 #define __CrazyGeography__CPPSingleton__
 
-#include <iostream>
+#include "cocos2d.h"
 
 template <typename _TS>
 

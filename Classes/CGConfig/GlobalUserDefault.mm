@@ -14,6 +14,8 @@
 #include "base64.h"
 #include "SharedMultiPlatform.h"
 //<---------------------------->//
+#import "platform91Configure.h"
+//<----->
 
 #define BGMUSIC_VOLUME  "background_music"
 #define EFFMUSIC_VOLUME "effect_music"
@@ -518,6 +520,7 @@ std::string GlobalUserDefault::makeCacheFileData(std::string filePath,bool chang
         
     }
     
+    
     return filePath_full;
 }
 
@@ -532,4 +535,28 @@ void GlobalUserDefault::cancelAllAuth()
 {
     _shareMultPla->cancelAuth(0);
 }
+
+#pragma mark - buyCommodity
+
+void GlobalUserDefault::buyCommodities(const char *commId, const char *commName, float price, int count)
+{
+    [[platform91Configure instance] buyCommodities];
+}
+
+void GlobalUserDefault::show91ToolBar(bool show)
+{
+    [[platform91Configure instance] show91ToolBar:show];
+}
+
+void GlobalUserDefault::switchAccount()
+{
+    [[platform91Configure instance] switchAccount];
+}
+
+void GlobalUserDefault::enterAccountManage()
+{
+    [[platform91Configure instance] enterAccountManage];
+}
+
+
 

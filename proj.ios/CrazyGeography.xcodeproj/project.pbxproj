@@ -171,7 +171,7 @@
 		1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */; };
 		1AFCDA8216D4A25900906EA6 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AFCDA8116D4A25900906EA6 /* RootViewController.mm */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		379BB99517F03F3700829B88 /* CCActionFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 379BB8FC17F03F3700829B88 /* CCActionFrame.cpp */; };
 		379BB99617F03F3700829B88 /* CCActionFrameEasing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 379BB8FE17F03F3700829B88 /* CCActionFrameEasing.cpp */; };
@@ -257,7 +257,7 @@
 		AC0D4A53183F5A3F001213FE /* ShareSDKiPhoneDefaultShareViewUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC0D4A1D183F5A3F001213FE /* ShareSDKiPhoneDefaultShareViewUI.bundle */; };
 		AC0D4A54183F5A3F001213FE /* ShareSDKiPhoneDefaultShareViewUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0D4A1E183F5A3F001213FE /* ShareSDKiPhoneDefaultShareViewUI.framework */; };
 		AC0D4A58183F5B05001213FE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0D4A57183F5B05001213FE /* SystemConfiguration.framework */; };
-		AC0D4A5A183F5B34001213FE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0D4A59183F5B34001213FE /* CoreTelephony.framework */; };
+		AC0D4A5A183F5B34001213FE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0D4A59183F5B34001213FE /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		AC0D4A5C183F5B52001213FE /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0D4A5B183F5B52001213FE /* libicucore.dylib */; };
 		AC0D4A5E183F5B5C001213FE /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0D4A5D183F5B5C001213FE /* libz.1.2.5.dylib */; };
 		AC0D4A60183F5CC7001213FE /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0D4A5F183F5CC7001213FE /* libsqlite3.dylib */; };
@@ -277,6 +277,19 @@
 		AC82DA151834C81500969C15 /* AheadChapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC82DA131834C81500969C15 /* AheadChapter.cpp */; };
 		AC82DA1B1834D2B600969C15 /* UIControlLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC82DA191834D2B600969C15 /* UIControlLayer.cpp */; };
 		AC8C9EAA1828C9EB0000F27D /* CPPSingleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC8C9EA81828C9EB0000F27D /* CPPSingleton.cpp */; };
+		AC99D9491842E59B008EC1D6 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC99D9481842E59B008EC1D6 /* AddressBook.framework */; };
+		AC99D94B1842E617008EC1D6 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC99D94A1842E617008EC1D6 /* MessageUI.framework */; };
+		AC99D9561842E772008EC1D6 /* ATSMS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC99D94E1842E772008EC1D6 /* ATSMS.framework */; };
+		AC99D9571842E772008EC1D6 /* Encrypt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC99D94F1842E772008EC1D6 /* Encrypt.framework */; };
+		AC99D9581842E772008EC1D6 /* Log.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC99D9501842E772008EC1D6 /* Log.framework */; };
+		AC99D9591842E772008EC1D6 /* NDJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC99D9511842E772008EC1D6 /* NDJSON.framework */; };
+		AC99D95A1842E772008EC1D6 /* NDUtility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC99D9521842E772008EC1D6 /* NDUtility.framework */; };
+		AC99D95B1842E772008EC1D6 /* NetEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC99D9531842E772008EC1D6 /* NetEngine.framework */; };
+		AC99D95C1842E772008EC1D6 /* NdComPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC99D9541842E772008EC1D6 /* NdComPlatform.framework */; };
+		AC99D95D1842E772008EC1D6 /* NdComPlatformInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC99D9551842E772008EC1D6 /* NdComPlatformInt.framework */; };
+		AC99D95F1842E7DD008EC1D6 /* NdComPlatform_SNS_Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC99D95E1842E7DD008EC1D6 /* NdComPlatform_SNS_Resources.bundle */; };
+		AC99D9691842F642008EC1D6 /* 91platformConfigure.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC99D9681842F642008EC1D6 /* 91platformConfigure.mm */; };
+		AC99D96C184300E4008EC1D6 /* platform91Configure.m in Sources */ = {isa = PBXBuildFile; fileRef = AC99D96B184300E4008EC1D6 /* platform91Configure.m */; };
 		ACC9E25018337FCF006A3D65 /* UIFUAlert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACC9E24E18337FCF006A3D65 /* UIFUAlert.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
@@ -839,6 +852,21 @@
 		AC8C9EA81828C9EB0000F27D /* CPPSingleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CPPSingleton.cpp; sourceTree = "<group>"; };
 		AC8C9EA91828C9EB0000F27D /* CPPSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPPSingleton.h; sourceTree = "<group>"; };
 		AC8C9EAC1828CFA90000F27D /* GlobalUserDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalUserDefault.h; sourceTree = "<group>"; };
+		AC99D9481842E59B008EC1D6 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		AC99D94A1842E617008EC1D6 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		AC99D94E1842E772008EC1D6 /* ATSMS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ATSMS.framework; sourceTree = "<group>"; };
+		AC99D94F1842E772008EC1D6 /* Encrypt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Encrypt.framework; sourceTree = "<group>"; };
+		AC99D9501842E772008EC1D6 /* Log.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Log.framework; sourceTree = "<group>"; };
+		AC99D9511842E772008EC1D6 /* NDJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NDJSON.framework; sourceTree = "<group>"; };
+		AC99D9521842E772008EC1D6 /* NDUtility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NDUtility.framework; sourceTree = "<group>"; };
+		AC99D9531842E772008EC1D6 /* NetEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NetEngine.framework; sourceTree = "<group>"; };
+		AC99D9541842E772008EC1D6 /* NdComPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NdComPlatform.framework; sourceTree = "<group>"; };
+		AC99D9551842E772008EC1D6 /* NdComPlatformInt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NdComPlatformInt.framework; sourceTree = "<group>"; };
+		AC99D95E1842E7DD008EC1D6 /* NdComPlatform_SNS_Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NdComPlatform_SNS_Resources.bundle; sourceTree = "<group>"; };
+		AC99D9671842F642008EC1D6 /* 91PlatformConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 91PlatformConfigure.h; sourceTree = "<group>"; };
+		AC99D9681842F642008EC1D6 /* 91platformConfigure.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = 91platformConfigure.mm; sourceTree = "<group>"; };
+		AC99D96A184300E4008EC1D6 /* platform91Configure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform91Configure.h; sourceTree = "<group>"; };
+		AC99D96B184300E4008EC1D6 /* platform91Configure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = platform91Configure.m; sourceTree = "<group>"; };
 		ACC9E24E18337FCF006A3D65 /* UIFUAlert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIFUAlert.cpp; sourceTree = "<group>"; };
 		ACC9E24F18337FCF006A3D65 /* UIFUAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIFUAlert.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -862,7 +890,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC99D9581842E772008EC1D6 /* Log.framework in Frameworks */,
+				BF1712471292920000B8313A /* libz.dylib in Frameworks */,
+				AC99D94B1842E617008EC1D6 /* MessageUI.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				AC99D95C1842E772008EC1D6 /* NdComPlatform.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				AC99D9491842E59B008EC1D6 /* AddressBook.framework in Frameworks */,
 				AC0D4A60183F5CC7001213FE /* libsqlite3.dylib in Frameworks */,
+				AC99D95A1842E772008EC1D6 /* NDUtility.framework in Frameworks */,
+				AC99D9571842E772008EC1D6 /* Encrypt.framework in Frameworks */,
 				AC0D4A5E183F5B5C001213FE /* libz.1.2.5.dylib in Frameworks */,
 				AC0D4A5C183F5B52001213FE /* libicucore.dylib in Frameworks */,
 				AC0D4A5A183F5B34001213FE /* CoreTelephony.framework in Frameworks */,
@@ -870,27 +907,28 @@
 				AC0D4A58183F5B05001213FE /* SystemConfiguration.framework in Frameworks */,
 				15A3DA6A1682F886002FB0C5 /* libcocos2dx.a in Frameworks */,
 				AC0D4A48183F5A3F001213FE /* TencentOpenAPI.framework in Frameworks */,
+				AC99D9561842E772008EC1D6 /* ATSMS.framework in Frameworks */,
 				AC0D4A4A183F5A3F001213FE /* libSinaWeiboSDK.a in Frameworks */,
 				1ACB3244164770DE00914215 /* libcurl.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				AC0D4A42183F5A3F001213FE /* ShareSDKCoreService.framework in Frameworks */,
-				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				AC0D4A3F183F5A3F001213FE /* AGCommon.framework in Frameworks */,
+				AC99D95D1842E772008EC1D6 /* NdComPlatformInt.framework in Frameworks */,
 				AC0D4A31183F5A3F001213FE /* QQConnection.framework in Frameworks */,
 				AC0D4A34183F5A3F001213FE /* SinaWeiboConnection.framework in Frameworks */,
-				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				AC0D4A54183F5A3F001213FE /* ShareSDKiPhoneDefaultShareViewUI.framework in Frameworks */,
 				AC0D4A4B183F5A3F001213FE /* libWeiboSDK.a in Frameworks */,
 				BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */,
+				AC99D9591842E772008EC1D6 /* NDJSON.framework in Frameworks */,
 				AC0D4A32183F5A3F001213FE /* QZoneConnection.framework in Frameworks */,
 				AC0D4A4C183F5A3F001213FE /* libWeChatSDK.a in Frameworks */,
 				AC0D4A4D183F5A3F001213FE /* ShareSDK.framework in Frameworks */,
 				AC0D4A64183F5FB7001213FE /* ShareSDKiPadDefaultShareViewUI.framework in Frameworks */,
 				BF1712461292920000B8313A /* libxml2.dylib in Frameworks */,
-				BF1712471292920000B8313A /* libz.dylib in Frameworks */,
 				D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */,
 				D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */,
 				AC0D4A3D183F5A3F001213FE /* WeChatConnection.framework in Frameworks */,
+				AC99D95B1842E772008EC1D6 /* NetEngine.framework in Frameworks */,
 				D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */,
 				AC0D4A39183F5A3F001213FE /* TencentWeiboConnection.framework in Frameworks */,
 				1AB8703C175E0A92005D39BF /* libwebsockets.a in Frameworks */,
@@ -1392,6 +1430,7 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AC99D9601842E900008EC1D6 /* 91Platform */,
 				AC0D49D3183F4DEC001213FE /* SharedExtenxion */,
 				AC7E6C5318399FC800BF352A /* CGAccessary */,
 				AC6BED0E18222AD900724ABD /* CGExtension */,
@@ -1529,6 +1568,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AC99D94A1842E617008EC1D6 /* MessageUI.framework */,
+				AC99D9481842E59B008EC1D6 /* AddressBook.framework */,
 				AC0D4A5F183F5CC7001213FE /* libsqlite3.dylib */,
 				AC0D4A5D183F5B5C001213FE /* libz.1.2.5.dylib */,
 				AC0D4A5B183F5B52001213FE /* libicucore.dylib */,
@@ -1851,6 +1892,8 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AC99D95E1842E7DD008EC1D6 /* NdComPlatform_SNS_Resources.bundle */,
+				AC99D94C1842E772008EC1D6 /* framework5 */,
 				AC0D49D7183F5A3F001213FE /* ShareSDK_v2.6.0 */,
 				AC7DEF51181F534E00EF9479 /* iphone@x2 */,
 				AC7DEF4B181F526100EF9479 /* ipad */,
@@ -2036,6 +2079,41 @@
 			path = ../Classes/CGAccessary;
 			sourceTree = "<group>";
 		};
+		AC99D94C1842E772008EC1D6 /* framework5 */ = {
+			isa = PBXGroup;
+			children = (
+				AC99D94D1842E772008EC1D6 /* framework */,
+				AC99D9541842E772008EC1D6 /* NdComPlatform.framework */,
+				AC99D9551842E772008EC1D6 /* NdComPlatformInt.framework */,
+			);
+			path = framework5;
+			sourceTree = "<group>";
+		};
+		AC99D94D1842E772008EC1D6 /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				AC99D94E1842E772008EC1D6 /* ATSMS.framework */,
+				AC99D94F1842E772008EC1D6 /* Encrypt.framework */,
+				AC99D9501842E772008EC1D6 /* Log.framework */,
+				AC99D9511842E772008EC1D6 /* NDJSON.framework */,
+				AC99D9521842E772008EC1D6 /* NDUtility.framework */,
+				AC99D9531842E772008EC1D6 /* NetEngine.framework */,
+			);
+			path = framework;
+			sourceTree = "<group>";
+		};
+		AC99D9601842E900008EC1D6 /* 91Platform */ = {
+			isa = PBXGroup;
+			children = (
+				AC99D9671842F642008EC1D6 /* 91PlatformConfigure.h */,
+				AC99D9681842F642008EC1D6 /* 91platformConfigure.mm */,
+				AC99D96A184300E4008EC1D6 /* platform91Configure.h */,
+				AC99D96B184300E4008EC1D6 /* platform91Configure.m */,
+			);
+			name = 91Platform;
+			path = ../Classes/91Platform;
+			sourceTree = "<group>";
+		};
 		ACC9E24818337E07006A3D65 /* UIControlor */ = {
 			isa = PBXGroup;
 			children = (
@@ -2125,6 +2203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC0D4A63183F5FB7001213FE /* ShareSDKiPadDefaultShareViewUI.bundle in Resources */,
+				AC99D95F1842E7DD008EC1D6 /* NdComPlatform_SNS_Resources.bundle in Resources */,
 				AC7DEF4F181F526100EF9479 /* ipad@x2 in Resources */,
 				AC0D4A41183F5A3F001213FE /* Resource.bundle in Resources */,
 				7855E0E1153FEF240059DD9A /* Default.png in Resources */,
@@ -2190,6 +2269,7 @@
 				15A3D91A1682F7D5002FB0C5 /* b2Contact.cpp in Sources */,
 				15A3D91B1682F7D5002FB0C5 /* b2ContactSolver.cpp in Sources */,
 				15A3D91C1682F7D5002FB0C5 /* b2EdgeAndCircleContact.cpp in Sources */,
+				AC99D9691842F642008EC1D6 /* 91platformConfigure.mm in Sources */,
 				15A3D91D1682F7D5002FB0C5 /* b2EdgeAndPolygonContact.cpp in Sources */,
 				AC0D49D6183F4DEC001213FE /* SharedMultiPlatform.mm in Sources */,
 				15A3D91E1682F7D5002FB0C5 /* b2PolygonAndCircleContact.cpp in Sources */,
@@ -2201,6 +2281,7 @@
 				15A3D9231682F7D5002FB0C5 /* b2Joint.cpp in Sources */,
 				15A3D9241682F7D5002FB0C5 /* b2MouseJoint.cpp in Sources */,
 				15A3D9251682F7D5002FB0C5 /* b2PrismaticJoint.cpp in Sources */,
+				AC99D96C184300E4008EC1D6 /* platform91Configure.m in Sources */,
 				15A3D9261682F7D5002FB0C5 /* b2PulleyJoint.cpp in Sources */,
 				15A3D9271682F7D5002FB0C5 /* b2RevoluteJoint.cpp in Sources */,
 				15A3D9281682F7D5002FB0C5 /* b2RopeJoint.cpp in Sources */,
@@ -2429,6 +2510,8 @@
 					"/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Resources/ShareSDK_v2.6.0",
 					"/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Resources/ShareSDK_v2.6.0/UI",
 					"/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Resources/ShareSDK_v2.6.0/Extend/GooglePlusSDK",
+					"/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Resources/framework5/framework",
+					"/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Resources/framework5",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -2495,6 +2578,8 @@
 					"/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Resources/ShareSDK_v2.6.0",
 					"/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Resources/ShareSDK_v2.6.0/UI",
 					"/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Resources/ShareSDK_v2.6.0/Extend/GooglePlusSDK",
+					"/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Resources/framework5/framework",
+					"/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Resources/framework5",
 				);
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -2549,6 +2634,7 @@
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = "armv6 armv7 i386";
 			};
@@ -2563,6 +2649,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = "armv6 armv7 i386";
 			};

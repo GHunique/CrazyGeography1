@@ -84,6 +84,13 @@ public:
     
     void sharedGame(int type);                  //分享游戏
     void cancelAllAuth();                       //取消所有平台授权
+    
+    //---- 91平台操作
+    void buyCommodities(const char* commId,const char* commName,float price,int count);
+    void show91ToolBar(bool show);              //显示或隐藏91工具栏
+    void switchAccount();
+    void enterAccountManage();
+
 private:
     
     ~GlobalUserDefault();

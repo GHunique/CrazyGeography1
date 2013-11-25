@@ -5,11 +5,14 @@
 #import "RootViewController.h"
 #import <ShareSDK/ShareSDK.h>
 
+//-----91platform
+#import "platform91Configure.h"
 
 @implementation AppController
 
 #pragma mark -
 #pragma mark Application lifecycle
+
 
 // cocos2d application instance
 static AppDelegate s_sharedApplication;
@@ -49,10 +52,11 @@ static AppDelegate s_sharedApplication;
     
     [window makeKeyAndVisible];
     
+    //---91platform
+    [platform91Configure instance];
+    //---91platform
     [[UIApplication sharedApplication] setStatusBarHidden:true];
-    
     cocos2d::CCApplication::sharedApplication()->run();
-
     return YES;
 }
 
@@ -85,6 +89,7 @@ static AppDelegate s_sharedApplication;
      Called as part of  transition from the background to the inactive state: here you can undo many of the changes made on entering the background.
      */
     cocos2d::CCApplication::sharedApplication()->applicationWillEnterForeground();
+    [[platform91Configure instance] willEnterForeground];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
@@ -92,6 +97,13 @@ static AppDelegate s_sharedApplication;
      Called when the application is about to terminate.
      See also applicationDidEnterBackground:.
      */
+}
+
+
+#pragma mark - 分享
+- (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
+{
+    return UIInterfaceOrientationMaskAll;
 }
 
 - (BOOL)application:(UIApplication *)application  handleOpenURL:(NSURL *)url
@@ -112,7 +124,6 @@ static AppDelegate s_sharedApplication;
                         wxDelegate:self];
 }
 
-
 #pragma mark -
 #pragma mark Memory management
 
@@ -123,7 +134,9 @@ static AppDelegate s_sharedApplication;
 }
 
 
-- (void)dealloc {
+- (void)dealloc
+{
+    [[platform91Configure instance] release];
     [window release];
     [super dealloc];
 }

@@ -16,6 +16,8 @@ AppDelegate::~AppDelegate()
 
 bool AppDelegate::applicationDidFinishLaunching()
 {
+    
+    
     CCDirector *yDirector = CCDirector::sharedDirector();
     CCEGLView *yEGLView = CCEGLView::sharedOpenGLView();
     

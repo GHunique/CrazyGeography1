@@ -28,11 +28,13 @@ GameLayer::GameLayer()
     CG_MAX_ANSWER_NUMBER = 0;
     CG_ENGLISH_ANSWER_NUMBER = 0;
     
+    GlobalUserDefault::instance()->show91ToolBar(false);
 }
 
 GameLayer::~GameLayer()
 {
 //    CC_SAFE_RELEASE_NULL(_candidateAnswerDic);
+    GlobalUserDefault::instance()->show91ToolBar(true);
 }
 
 bool GameLayer::init()

@@ -101,7 +101,10 @@ void AheadChapter::reSetGame(cocos2d::extension::UIButton *pSender, TouchEventTy
         case TOUCH_EVENT_ENDED:
         {
             
-            GlobalUserDefault::instance()->sharedGame(0);
+//            GlobalUserDefault::instance()->sharedGame(0);
+            
+            GlobalUserDefault::instance()->buyCommodities("", "", 0, 0);
+            
 //            int iKey = 2;
 //            std::string sValue = "此项目已存在保存数据的xml文件";
 //            char buffer[32];
