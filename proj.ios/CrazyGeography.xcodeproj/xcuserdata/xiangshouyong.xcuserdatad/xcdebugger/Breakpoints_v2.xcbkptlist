@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/91Platform/platform91Configure.m"
-            timestampString = "407055068.031352"
+            timestampString = "407058669.373037"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "-buyCommodities"
             landmarkType = "5">
             <Locations>
@@ -89,11 +89,11 @@
                   symbolName = "-[platform91Configure buyCommodities]"
                   moduleName = "CrazyGeography"
                   urlString = "file://localhost/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Classes/91Platform/platform91Configure.m"
-                  timestampString = "407055533.854136"
+                  timestampString = "407061763.95574"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "120"
-                  endingLineNumber = "120"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
                   offsetFromSymbolStart = "4">
                </Location>
                <Location
@@ -103,11 +103,11 @@
                   symbolName = "-[platform91Configure buyCommodities]"
                   moduleName = "CrazyGeography"
                   urlString = "file://localhost/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Classes/91Platform/platform91Configure.m"
-                  timestampString = "407055533.85436"
+                  timestampString = "407061763.955988"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "120"
-                  endingLineNumber = "120"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
                   offsetFromSymbolStart = "26">
                </Location>
             </Locations>
@@ -120,27 +120,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/91Platform/platform91Configure.m"
-            timestampString = "407055068.031352"
+            timestampString = "407061417.625691"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
-            landmarkName = "-SNSLeaveComplatformUI:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../Classes/91Platform/platform91Configure.m"
-            timestampString = "407055095.939227"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
+            startingLineNumber = "326"
+            endingLineNumber = "326"
             landmarkName = "-NdUniPayResult:"
             landmarkType = "5">
          </BreakpointContent>
@@ -152,11 +136,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/91Platform/platform91Configure.m"
-            timestampString = "407055095.939227"
+            timestampString = "407061417.625691"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "293"
-            endingLineNumber = "293"
+            startingLineNumber = "385"
+            endingLineNumber = "385"
             landmarkName = "-removeRecord:"
             landmarkType = "5">
             <Locations>
@@ -167,11 +151,11 @@
                   symbolName = "-[platform91Configure removeRecord:]"
                   moduleName = "CrazyGeography"
                   urlString = "file://localhost/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Classes/91Platform/platform91Configure.m"
-                  timestampString = "407055533.855137"
+                  timestampString = "407061763.956619"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "293"
-                  endingLineNumber = "293"
+                  startingLineNumber = "385"
+                  endingLineNumber = "385"
                   offsetFromSymbolStart = "12">
                </Location>
                <Location
@@ -181,11 +165,11 @@
                   symbolName = "-[platform91Configure removeRecord:]"
                   moduleName = "CrazyGeography"
                   urlString = "file://localhost/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Classes/91Platform/platform91Configure.m"
-                  timestampString = "407055533.855374"
+                  timestampString = "407061763.956883"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "293"
-                  endingLineNumber = "293"
+                  startingLineNumber = "385"
+                  endingLineNumber = "385"
                   offsetFromSymbolStart = "154">
                </Location>
             </Locations>
@@ -198,11 +182,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/91Platform/platform91Configure.m"
-            timestampString = "407055068.031352"
+            timestampString = "407061417.625691"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
             landmarkName = "-checkPaySuccessDidFinish:cooOrderSerial:bSuccess:"
             landmarkType = "5">
          </BreakpointContent>
@@ -214,12 +198,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/91Platform/platform91Configure.m"
-            timestampString = "407055068.031352"
+            timestampString = "407059429.751377"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
-            landmarkName = "-show91ToolBar:"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "-submitScoreTo91:nCurrentScore:displayText:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/91Platform/platform91Configure.m"
+            timestampString = "407061153.10075"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
+            landmarkName = "-unlockAchievementDidFinish:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

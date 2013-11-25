@@ -558,5 +558,26 @@ void GlobalUserDefault::enterAccountManage()
     [[platform91Configure instance] enterAccountManage];
 }
 
+void GlobalUserDefault::submitScoreTo91(unsigned int nLeaderBoardId, unsigned int nCurrentScore, const char *displayText)
+{
+    NSString *disString = [NSString stringWithUTF8String:displayText];
+    [[platform91Configure instance] submitScoreTo91:nLeaderBoardId nCurrentScore:nCurrentScore displayText:disString];
+}
+
+void GlobalUserDefault::openScoreBoard(int nLeaderBoardId)
+{
+    [[platform91Configure instance] openScoreBoard:nLeaderBoardId];
+}
+
+void GlobalUserDefault::openAchievement()
+{
+    [[platform91Configure instance] openAchievement:0];
+}
+
+void GlobalUserDefault::unLockAchievement(int achieId, int percent, const char *displayText)
+{
+     NSString *disString = [NSString stringWithUTF8String:displayText];
+    [[platform91Configure instance] unLockAchievement:achieId currValuePercent:percent displayText:disString];
+}
 
 

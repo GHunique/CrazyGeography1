@@ -26,9 +26,25 @@
 
 - (void)show91ToolBar:(BOOL) show;
 
-- (void)switchAccount;
+- (void)switchAccount;          //注销
 
-- (void)enterAccountManage;
+- (void)enterAccountManage;     //进入账户管理界面
+
+/**
+ *提交排行榜分数
+ *排行榜id
+ *分值，不能是负数
+ *如果不想自定义文本传nil
+ */
+
+- (void)submitScoreTo91:(unsigned int) nLeaderBoardId nCurrentScore:(unsigned int )nCurrentScore displayText:(NSString *)displayText;
+- (void)openScoreBoard:(int) nLeaderBoardId;        //打开排行榜
+
+/**
+ * 进入成就列表界面，可查看所有成就信息及解锁状态。
+ */
+- (void)openAchievement:(int ) achievementId;
+- (void)unLockAchievement:(int) achieId currValuePercent:(int) percent displayText:(NSString *)displayText;
 
 
 @end

@@ -90,7 +90,10 @@ public:
     void show91ToolBar(bool show);              //显示或隐藏91工具栏
     void switchAccount();
     void enterAccountManage();
-
+    void submitScoreTo91(unsigned int nLeaderBoardId,unsigned int nCurrentScore,const char* displayText);
+    void openScoreBoard(int nLeaderBoardId);
+    void openAchievement();
+    void unLockAchievement(int achieId,  int percent, const char* displayText);
 private:
     
     ~GlobalUserDefault();

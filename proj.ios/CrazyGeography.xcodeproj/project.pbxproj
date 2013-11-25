@@ -2059,8 +2059,8 @@
 		AC7DEF37181F470B00EF9479 /* CGConfig */ = {
 			isa = PBXGroup;
 			children = (
-				044044FF183E4C9200D49AA7 /* GlobalUserDefault.mm */,
 				AC8C9EAC1828CFA90000F27D /* GlobalUserDefault.h */,
+				044044FF183E4C9200D49AA7 /* GlobalUserDefault.mm */,
 				AC7DEF53181F5C4E00EF9479 /* MacroDefine.h */,
 				AC7DEF55181F956500EF9479 /* CGconfig.cpp */,
 				AC7DEF56181F956500EF9479 /* CGconfig.h */,

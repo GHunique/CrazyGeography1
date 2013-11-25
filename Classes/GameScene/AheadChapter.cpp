@@ -103,7 +103,11 @@ void AheadChapter::reSetGame(cocos2d::extension::UIButton *pSender, TouchEventTy
             
 //            GlobalUserDefault::instance()->sharedGame(0);
             
-            GlobalUserDefault::instance()->buyCommodities("", "", 0, 0);
+//            GlobalUserDefault::instance()->buyCommodities("", "", 0, 0);
+
+//            GlobalUserDefault::instance()->enterAccountManage();
+            
+            GlobalUserDefault::instance()->unLockAchievement(1, 50, "我去这么好的游戏");
             
 //            int iKey = 2;
 //            std::string sValue = "此项目已存在保存数据的xml文件";
@@ -135,6 +139,11 @@ void AheadChapter::settingGame(cocos2d::extension::UIButton *pSender, TouchEvent
             break;
         case TOUCH_EVENT_ENDED:
         {
+//            GlobalUserDefault::instance()->submitScoreTo91(1, 1, "用户获得了哈");
+//            GlobalUserDefault::instance()->openScoreBoard(0);
+            GlobalUserDefault::instance()->openAchievement();
+            return;
+            
             CCScene *scene = CCScene::create();                         //添加场景
             UIControlLayer *gameLayer = UIControlLayer::create();        //章节
             scene->addChild(gameLayer);

@@ -91,6 +91,9 @@ static platform91Configure *_platform91;
         [[NdComPlatform defaultPlatform] NdCheckPaySuccess : cooOrderSerial delegate : self];
     }
     
+    //获取我的详细信息
+    [[NdComPlatform defaultPlatform] NdGetMyInfoDetail:self];
+    
     return self;
 }
 
@@ -164,6 +167,70 @@ static platform91Configure *_platform91;
 - (void)enterAccountManage
 {
     [[NdComPlatform defaultPlatform] NdEnterAccountManage];
+}
+
+- (void)submitScoreTo91:(unsigned int)nLeaderBoardId nCurrentScore:(unsigned int)nCurrentScore displayText:(NSString *)displayText
+{
+    [[NdComPlatform defaultPlatform] NdSubmitScore:nLeaderBoardId
+                                             score:nCurrentScore displayText:displayText delegate:self];
+}
+
+//target 需要实现的回调方法
+- (void)submitScoreDidFinish:(int)error
+{
+    NSString* str = nil;
+    if (error >= ND_COM_PLATFORM_NO_ERROR) {
+        str = @"提交成功";
+        NSLog(@" 分享排行榜情况 %@ ",str);
+    }
+    else if (ND_COM_PLATFORM_ERROR_LEADERBOARD_NOT_EXIST == error) {
+        str = @"排行榜不存在";
+        NSLog(@" 分享排行榜情况 %@ ",str);
+    }
+    else if (ND_COM_PLATFORM_ERROR_NOT_LOGINED == error) {
+        str = @"离线提交";
+        NSLog(@" 分享排行榜情况 %@ ",str);
+    }
+    else {
+        str = @"提交失败";
+        NSLog(@" 分享排行榜情况 %@ ",str);
+    }
+    //TODO: 提交结果提示
+}
+
+- (void)openScoreBoard:(int)nLeaderBoardId
+{
+    [[NdComPlatform defaultPlatform] NdOpenLeaderBoard:nLeaderBoardId flag:0];
+}
+
+- (void)openAchievement:(int)achievementId
+{
+    //打开成就榜列表界面
+    [[NdComPlatform defaultPlatform] NdOpenAchievement:0];
+}
+
+- (void)unLockAchievement:(int)achieId currValuePercent:(int)percent displayText:(NSString *)displayText
+{
+    [[NdComPlatform defaultPlatform] NdUnLockAchievement: achieId
+                                                   value: percent displayText: displayText delegate: self];
+}
+
+//unLockAchievement 需要实现的回调方法
+- (void)unlockAchievementDidFinish:(int)error
+{
+    NSString* str = nil;
+    if (error >= 0) {
+        str = @"提交成功";
+    }
+    else if (ND_COM_PLATFORM_ERROR_ACHIEVEMENT_NOT_EXIST == error) {
+        str = @"不存在该成就";
+    }
+    else {
+        str = @"提交失败";
+    }
+    
+     NSLog(@" 提交成就情况 %@ ",str);
+    //TODO: 结果提示
 }
 
 - (void)checkPaySuccessDidFinish:(int)error
@@ -290,6 +357,21 @@ static platform91Configure *_platform91;
     NSLog(@"NdUiPayResult: %@", str);
     [self removeRecord:buyInfo.cooOrderSerial];
 }
+
+//NdGetMyInfoDetail 和NdGetUserInfoDetail 的回调
+- (void)getUserInfoDidFinish:(int)error userInfo:(NdUserInfo *)userInfo
+{
+    if (error < 0 ) {
+        //TODO: 下载用户信息失败
+    }
+    else {
+        //userInfo中包含昵称，生日，地区，心情等详细数据
+    }
+}
+
+
+
+
 
 #pragma mark -  ()
 - (void)addRecord:(NSString *)record
