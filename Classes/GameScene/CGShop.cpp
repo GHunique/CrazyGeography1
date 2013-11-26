@@ -50,6 +50,8 @@ bool CGShop::init()
     butt68->addTouchEventListener(this, toucheventselector(CGShop::buyGold)); butt68->setTag(kBUY_3800_$_68);
     butt128->addTouchEventListener(this, toucheventselector(CGShop::buyGold));butt128->setTag(kBUY_8000_$_128);
     
+    
+    
     return true;
 }
 

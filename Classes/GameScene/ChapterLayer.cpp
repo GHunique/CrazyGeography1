@@ -36,7 +36,9 @@ bool ChapterLayer::init()
     _scrollView = static_cast<UIScrollView *>(_chapter_root->getChildByName("ScrollView"));
     _scrollView->setZOrder(10);
     _scrollView->setDirection(SCROLLVIEW_DIR_HORIZONTAL);
-
+    
+    "back_butt_1" "back_butt_2"
+    
     this->provincesLayout();
     
     return true;
