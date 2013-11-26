@@ -41,47 +41,51 @@ void SharedMultiPlatform::registerAppWithIOSPlatform()
         return;
     
     
-    [ShareSDK registerApp:@"api20"];     //参数为ShareSDK官网中添加应用后得到的AppKey
+    [ShareSDK registerApp:@"d2883c13136"];     //参数为ShareSDK官网中添加应用后得到的AppKey
+    
+//    tencen  App Key:801443052 App Secret:3ee6b8281440e9600dc7fb8c973744cf
+//    sina  App Key：382748327   App Secret：83ad60eaebe18275adf7518f029a54aa
+
     
     //添加新浪微博应用
-//    [ShareSDK connectSinaWeiboWithAppKey:@"382748327"
-//                               appSecret:@"83ad60eaebe18275adf7518f029a54aa"
-//                             redirectUri:@"http://open.weibo.com"];
+    [ShareSDK connectSinaWeiboWithAppKey:@"382748327"
+                               appSecret:@"83ad60eaebe18275adf7518f029a54aa"
+                             redirectUri:@"http://www.weibo.com"];
+    //分享腾讯微博
+    [ShareSDK connectTencentWeiboWithAppKey:@"801443052"
+                                  appSecret:@"3ee6b8281440e9600dc7fb8c973744cf"
+                                redirectUri:@"http://dev.t.qq.com/apps"];
     
-    [ShareSDK connectSinaWeiboWithAppKey:@"568898243"
-                               appSecret:@"38a4f8204cc784f81f9f0daaf31e02e3"
-                             redirectUri:@"http://www.sharesdk.cn"];
+    //添加QQ空间应用 我自己申请的
+    [ShareSDK connectQZoneWithAppKey:@"801443052"
+                           appSecret:@"4e240525f2dffdb0cc6c859d381a7691"];
     
-    //添加腾讯微博应用
-    [ShareSDK connectTencentWeiboWithAppKey:@"801307650"
-                                  appSecret:@"ae36f4ee3946e1cbb98d6965b0b2ff5c"
-                                redirectUri:@"http://www.sharesdk.cn"];
-    //添加QQ空间应用
-    [ShareSDK connectQZoneWithAppKey:@"100371282"
-                           appSecret:@"aed9b0303e3ed1e27bae87c33761161d"];
+//    [ShareSDK connectQZoneWithAppKey:@"100371282"
+//                           appSecret:@"aed9b0303e3ed1e27bae87c33761161d"];
+    
     //添加微信应用
-    [ShareSDK connectWeChatWithAppId:@"wx6dd7a9b94f3dd72a"        //此参数为申请的微信AppID
+    [ShareSDK connectWeChatWithAppId:@"wx7f80c2190aed576e"        //此参数为申请的微信AppID
                            wechatCls:[WXApi class]];
     
-    //添加微信应用
-    [ShareSDK connectWeChatTimelineWithAppId:@"wx6dd7a9b94f3dd72a"        //此参数为申请的微信AppID
+    //添加微信朋友圈应用
+    [ShareSDK connectWeChatTimelineWithAppId:@"wx7f80c2190aed576e"        //此参数为申请的微信AppID
                            wechatCls:[WXApi class]];
     
     //添加QQ应用
-    [ShareSDK connectQQWithQZoneAppKey:@"100371282"                 //该参数填入申请的QQ AppId
+    [ShareSDK connectQQWithQZoneAppKey:@"801443052"                 //该参数填入申请的QQ AppId  URL Scheme QQ2fc50cec
                      qqApiInterfaceCls:[QQApiInterface class]
                        tencentOAuthCls:[TencentOAuth class]];
 }
 
 void SharedMultiPlatform::sharedAllPlatForm()
 {
-    NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"zhupo"  ofType:@"jpg"];
+    NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"appIconDefault_0"  ofType:@"png"];
     
     //构造分享内容
     id<ISSContent> publishContent = [ShareSDK content:@"分享--内容"
                                        defaultContent:@"默认分享内容，没内容时显示"
                                                 image:[ShareSDK imageWithPath:imagePath]
-                                                title:@"ShareSDK"
+                                                title:@"知乎地标分享"
                                                   url:@"http://www.sharesdk.cn"
                                           description:@"这是一条测试信息"
                                             mediaType:SSPublishContentMediaTypeText];
@@ -104,13 +108,13 @@ void SharedMultiPlatform::sharedAllPlatForm()
     id<ISSContainer> container = [ShareSDK container];
     [container setIPadContainerWithView:nil arrowDirect:UIPopoverArrowDirectionUp];
     
-    id<ISSShareOptions> shareOptions = [ShareSDK defaultShareOptionsWithTitle:@"XXXX分享快乐旅程"
+    id<ISSShareOptions> shareOptions = [ShareSDK defaultShareOptionsWithTitle:@"分了吧"
                                                               oneKeyShareList:[NSArray defaultOneKeyShareList]
                                                                cameraButtonHidden:NO
                                                           mentionButtonHidden:NO
                                                             topicButtonHidden:NO
                                                                qqButtonHidden:NO
-                                                        wxSessionButtonHidden:YES
+                                                        wxSessionButtonHidden:NO
                                                        wxTimelineButtonHidden:NO
                                                          showKeyboardOnAppear:NO
                                                             shareViewDelegate:nil

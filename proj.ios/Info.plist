@@ -43,6 +43,8 @@
 			<string>com.FUDream.Great</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
+				<string>QQ2fc50cec</string>
+				<string>wx7f80c2190aed576e</string>
 				<string>91-com.FUDream.Great</string>
 			</array>
 		</dict>

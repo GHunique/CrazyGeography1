@@ -263,6 +263,7 @@
 		AC0D4A60183F5CC7001213FE /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0D4A5F183F5CC7001213FE /* libsqlite3.dylib */; };
 		AC0D4A63183F5FB7001213FE /* ShareSDKiPadDefaultShareViewUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC0D4A61183F5FB7001213FE /* ShareSDKiPadDefaultShareViewUI.bundle */; };
 		AC0D4A64183F5FB7001213FE /* ShareSDKiPadDefaultShareViewUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0D4A62183F5FB7001213FE /* ShareSDKiPadDefaultShareViewUI.framework */; };
+		AC3B03841844D12D0072A057 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AC3B03831844D12D0072A057 /* libstdc++.dylib */; };
 		AC40768D1832060100BC64A5 /* ChapterLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC40768B1832060100BC64A5 /* ChapterLayer.cpp */; };
 		AC5F7203183AF9DF0085D184 /* GamePasses.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC5F7201183AF9DF0085D184 /* GamePasses.cpp */; };
 		AC6BED1318222AD900724ABD /* CGHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC6BED0F18222AD900724ABD /* CGHelper.cpp */; };
@@ -827,6 +828,7 @@
 		AC0D4A5F183F5CC7001213FE /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		AC0D4A61183F5FB7001213FE /* ShareSDKiPadDefaultShareViewUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDKiPadDefaultShareViewUI.bundle; sourceTree = "<group>"; };
 		AC0D4A62183F5FB7001213FE /* ShareSDKiPadDefaultShareViewUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKiPadDefaultShareViewUI.framework; sourceTree = "<group>"; };
+		AC3B03831844D12D0072A057 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		AC40768B1832060100BC64A5 /* ChapterLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChapterLayer.cpp; sourceTree = "<group>"; };
 		AC40768C1832060100BC64A5 /* ChapterLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterLayer.h; sourceTree = "<group>"; };
 		AC5F7201183AF9DF0085D184 /* GamePasses.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GamePasses.cpp; sourceTree = "<group>"; };
@@ -893,6 +895,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC0D4A60183F5CC7001213FE /* libsqlite3.dylib in Frameworks */,
+				AC3B03841844D12D0072A057 /* libstdc++.dylib in Frameworks */,
 				AC99D9581842E772008EC1D6 /* Log.framework in Frameworks */,
 				BF1712471292920000B8313A /* libz.dylib in Frameworks */,
 				AC99D94B1842E617008EC1D6 /* MessageUI.framework in Frameworks */,
@@ -900,7 +904,6 @@
 				AC99D95C1842E772008EC1D6 /* NdComPlatform.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				AC99D9491842E59B008EC1D6 /* AddressBook.framework in Frameworks */,
-				AC0D4A60183F5CC7001213FE /* libsqlite3.dylib in Frameworks */,
 				AC99D95A1842E772008EC1D6 /* NDUtility.framework in Frameworks */,
 				AC99D9571842E772008EC1D6 /* Encrypt.framework in Frameworks */,
 				AC0D4A5E183F5B5C001213FE /* libz.1.2.5.dylib in Frameworks */,
@@ -1571,6 +1574,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AC3B03831844D12D0072A057 /* libstdc++.dylib */,
 				AC99D94A1842E617008EC1D6 /* MessageUI.framework */,
 				AC99D9481842E59B008EC1D6 /* AddressBook.framework */,
 				AC0D4A5F183F5CC7001213FE /* libsqlite3.dylib */,

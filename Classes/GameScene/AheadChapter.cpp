@@ -100,16 +100,13 @@ void AheadChapter::reSetGame(cocos2d::extension::UIButton *pSender, TouchEventTy
         case TOUCH_EVENT_ENDED:
         {
             
-//            GlobalUserDefault::instance()->sharedGame(0);
+            GlobalUserDefault::instance()->sharedGame(0);
             
-            GlobalUserDefault::instance()->buyCommodities("", "", 68, 1);
+//            GlobalUserDefault::instance()->buyCommodities("", "", 68, 1);
 
 //            GlobalUserDefault::instance()->enterAccountManage();
             
-            GlobalUserDefault::instance()->unLockAchievement(1, 50, "我去这么好的游戏");
-            
-           
-            
+//            GlobalUserDefault::instance()->unLockAchievement(1, 50, "我去这么好的游戏");
             
         }
             break;
