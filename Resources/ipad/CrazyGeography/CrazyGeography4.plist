@@ -80,6 +80,44 @@
 				<key>offsetY</key>
 				<real>0</real>
 			</dict>
+			<key>accessary2/pay_item_normal.png</key>
+			<dict>
+				<key>width</key>
+				<integer>524</integer>
+				<key>height</key>
+				<integer>89</integer>
+				<key>originalWidth</key>
+				<integer>524</integer>
+				<key>originalHeight</key>
+				<integer>89</integer>
+				<key>x</key>
+				<integer>0</integer>
+				<key>y</key>
+				<integer>354</integer>
+				<key>offsetX</key>
+				<real>0</real>
+				<key>offsetY</key>
+				<real>0</real>
+			</dict>
+			<key>accessary2/pay_item_select.png</key>
+			<dict>
+				<key>width</key>
+				<integer>524</integer>
+				<key>height</key>
+				<integer>89</integer>
+				<key>originalWidth</key>
+				<integer>524</integer>
+				<key>originalHeight</key>
+				<integer>89</integer>
+				<key>x</key>
+				<integer>0</integer>
+				<key>y</key>
+				<integer>445</integer>
+				<key>offsetX</key>
+				<real>0</real>
+				<key>offsetY</key>
+				<real>0</real>
+			</dict>
 		</dict>
 		<key>metadata</key>
 		<dict>

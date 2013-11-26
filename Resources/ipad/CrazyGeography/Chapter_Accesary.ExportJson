@@ -281,7 +281,7 @@
               "__type": "ComGUILabelBMFontSurrogate:#EditorCommon.JsonModel.Component.GUI",
               "classname": "LabelBMFont",
               "name": "labelBMF",
-              "ZOrder": 0,
+              "ZOrder": 2,
               "actiontag": 128,
               "anchorPointX": 0.5,
               "anchorPointY": 0.5,
@@ -297,7 +297,7 @@
               "rotation": 0,
               "scaleX": 0.799999952,
               "scaleY": 0.799999952,
-              "tag": 92,
+              "tag": 113,
               "touchAble": false,
               "useMergedTexture": true,
               "visible": true,
@@ -307,7 +307,7 @@
               "y": 63,
               "yProportion": 0.63,
               "fileNameData": {
-                "path": "passNumber-wawatiSC.fnt",
+                "path": "BMF/passNumber-wawatiSC.fnt",
                 "plistFile": null,
                 "resourceType": 0
               },
@@ -539,7 +539,7 @@
               "rotation": 0,
               "scaleX": 1,
               "scaleY": 1,
-              "tag": 76,
+              "tag": 113,
               "touchAble": false,
               "useMergedTexture": true,
               "visible": true,
@@ -549,7 +549,7 @@
               "y": 20,
               "yProportion": 0.2,
               "fileNameData": {
-                "path": "shortName-hangqi-hanmo.fnt",
+                "path": "BMF/shortName-hangqi-hanmo.fnt",
                 "plistFile": null,
                 "resourceType": 0
               },

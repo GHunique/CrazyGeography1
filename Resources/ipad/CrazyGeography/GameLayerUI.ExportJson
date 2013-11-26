@@ -21,6 +21,73 @@
     "name": null,
     "children": [
       {
+        "classname": "TextButton",
+        "name": null,
+        "children": [],
+        "options": {
+          "__type": "ComGUITextButtonSurrogate:#EditorCommon.JsonModel.Component.GUI",
+          "classname": "TextButton",
+          "name": "getGold_butt",
+          "ZOrder": 3,
+          "actiontag": 144,
+          "anchorPointX": 0.5,
+          "anchorPointY": 0.5,
+          "classType": null,
+          "colorB": 255,
+          "colorG": 255,
+          "colorR": 255,
+          "flipX": false,
+          "flipY": false,
+          "height": 84,
+          "ignoreSize": false,
+          "opacity": 255,
+          "rotation": 0,
+          "scaleX": 0.799999952,
+          "scaleY": 0.799999952,
+          "tag": 110,
+          "touchAble": false,
+          "useMergedTexture": true,
+          "visible": true,
+          "width": 197,
+          "x": 542,
+          "xProportion": 0.846875,
+          "y": 915,
+          "yProportion": 0.953125,
+          "capInsetsHeight": 0,
+          "capInsetsWidth": 0,
+          "capInsetsX": 0,
+          "capInsetsY": 0,
+          "disabled": null,
+          "disabledData": {
+            "path": null,
+            "plistFile": null,
+            "resourceType": 0
+          },
+          "fontName": "黑体",
+          "fontSize": 30,
+          "fontType": 1,
+          "normal": null,
+          "normalData": {
+            "path": "btn_gold.png",
+            "plistFile": null,
+            "resourceType": 1
+          },
+          "pressed": null,
+          "pressedData": {
+            "path": "btn_gold_press.png",
+            "plistFile": null,
+            "resourceType": 1
+          },
+          "scale9Enable": false,
+          "scale9Height": 84,
+          "scale9Width": 197,
+          "text": "     234",
+          "textColorB": 181,
+          "textColorG": 228,
+          "textColorR": 255
+        }
+      },
+      {
         "classname": "LabelBMFont",
         "name": null,
         "children": [],
@@ -44,7 +111,7 @@
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
-          "tag": 74,
+          "tag": 109,
           "touchAble": false,
           "useMergedTexture": true,
           "visible": true,
@@ -54,7 +121,7 @@
           "y": 814,
           "yProportion": 0.847916663,
           "fileNameData": {
-            "path": "TitleFont-wawatiSC.fnt",
+            "path": "BMF/TitleFont-wawatiSC.fnt",
             "plistFile": null,
             "resourceType": 0
           },
@@ -189,7 +256,7 @@
           "rotation": 0,
           "scaleX": 1,
           "scaleY": 1,
-          "tag": 36,
+          "tag": 109,
           "touchAble": false,
           "useMergedTexture": true,
           "visible": true,
@@ -199,7 +266,7 @@
           "y": 361,
           "yProportion": 0.376041681,
           "fileNameData": {
-            "path": "CGFont_Didot.fnt",
+            "path": "BMF/CGFont_Didot.fnt",
             "plistFile": null,
             "resourceType": 0
           },
@@ -264,66 +331,6 @@
           "scale9Enable": false,
           "scale9Height": 126,
           "scale9Width": 119
-        }
-      },
-      {
-        "classname": "Button",
-        "name": null,
-        "children": [],
-        "options": {
-          "__type": "ComGUIButtonSurrogate:#EditorCommon.JsonModel.Component.GUI",
-          "classname": "Button",
-          "name": "getGold_butt",
-          "ZOrder": 5,
-          "actiontag": 29,
-          "anchorPointX": 0.5,
-          "anchorPointY": 0.5,
-          "classType": null,
-          "colorB": 255,
-          "colorG": 255,
-          "colorR": 255,
-          "flipX": false,
-          "flipY": false,
-          "height": 84,
-          "ignoreSize": true,
-          "opacity": 255,
-          "rotation": 0,
-          "scaleX": 0.799999952,
-          "scaleY": 0.799999952,
-          "tag": 9,
-          "touchAble": false,
-          "useMergedTexture": true,
-          "visible": true,
-          "width": 197,
-          "x": 551,
-          "xProportion": 0.8609375,
-          "y": 915,
-          "yProportion": 0.953125,
-          "capInsetsHeight": 0,
-          "capInsetsWidth": 0,
-          "capInsetsX": 0,
-          "capInsetsY": 0,
-          "disabled": null,
-          "disabledData": {
-            "path": "btn_gold.png",
-            "plistFile": null,
-            "resourceType": 1
-          },
-          "normal": null,
-          "normalData": {
-            "path": "btn_gold.png",
-            "plistFile": null,
-            "resourceType": 1
-          },
-          "pressed": null,
-          "pressedData": {
-            "path": "btn_gold_press.png",
-            "plistFile": null,
-            "resourceType": 1
-          },
-          "scale9Enable": false,
-          "scale9Height": 84,
-          "scale9Width": 197
         }
       },
       {
