@@ -277,6 +277,7 @@
 		AC82DA151834C81500969C15 /* AheadChapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC82DA131834C81500969C15 /* AheadChapter.cpp */; };
 		AC82DA1B1834D2B600969C15 /* UIControlLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC82DA191834D2B600969C15 /* UIControlLayer.cpp */; };
 		AC89BF63184436BE008FCDBC /* CGShop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC89BF61184436BE008FCDBC /* CGShop.cpp */; };
+		AC89BF65184442AD008FCDBC /* platform91Configure.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC89BF64184442AD008FCDBC /* platform91Configure.mm */; };
 		AC8C9EAA1828C9EB0000F27D /* CPPSingleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC8C9EA81828C9EB0000F27D /* CPPSingleton.cpp */; };
 		AC99D9491842E59B008EC1D6 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC99D9481842E59B008EC1D6 /* AddressBook.framework */; };
 		AC99D94B1842E617008EC1D6 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC99D94A1842E617008EC1D6 /* MessageUI.framework */; };
@@ -290,7 +291,6 @@
 		AC99D95D1842E772008EC1D6 /* NdComPlatformInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC99D9551842E772008EC1D6 /* NdComPlatformInt.framework */; };
 		AC99D95F1842E7DD008EC1D6 /* NdComPlatform_SNS_Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC99D95E1842E7DD008EC1D6 /* NdComPlatform_SNS_Resources.bundle */; };
 		AC99D9691842F642008EC1D6 /* 91platformConfigure.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC99D9681842F642008EC1D6 /* 91platformConfigure.mm */; };
-		AC99D96C184300E4008EC1D6 /* platform91Configure.m in Sources */ = {isa = PBXBuildFile; fileRef = AC99D96B184300E4008EC1D6 /* platform91Configure.m */; };
 		ACC9E25018337FCF006A3D65 /* UIFUAlert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACC9E24E18337FCF006A3D65 /* UIFUAlert.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
@@ -852,6 +852,7 @@
 		AC82DA1A1834D2B600969C15 /* UIControlLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIControlLayer.h; sourceTree = "<group>"; };
 		AC89BF61184436BE008FCDBC /* CGShop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CGShop.cpp; sourceTree = "<group>"; };
 		AC89BF62184436BE008FCDBC /* CGShop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGShop.h; sourceTree = "<group>"; };
+		AC89BF64184442AD008FCDBC /* platform91Configure.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = platform91Configure.mm; sourceTree = "<group>"; };
 		AC8C9EA81828C9EB0000F27D /* CPPSingleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CPPSingleton.cpp; sourceTree = "<group>"; };
 		AC8C9EA91828C9EB0000F27D /* CPPSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPPSingleton.h; sourceTree = "<group>"; };
 		AC8C9EAC1828CFA90000F27D /* GlobalUserDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalUserDefault.h; sourceTree = "<group>"; };
@@ -869,7 +870,6 @@
 		AC99D9671842F642008EC1D6 /* 91PlatformConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 91PlatformConfigure.h; sourceTree = "<group>"; };
 		AC99D9681842F642008EC1D6 /* 91platformConfigure.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = 91platformConfigure.mm; sourceTree = "<group>"; };
 		AC99D96A184300E4008EC1D6 /* platform91Configure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform91Configure.h; sourceTree = "<group>"; };
-		AC99D96B184300E4008EC1D6 /* platform91Configure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = platform91Configure.m; sourceTree = "<group>"; };
 		ACC9E24E18337FCF006A3D65 /* UIFUAlert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIFUAlert.cpp; sourceTree = "<group>"; };
 		ACC9E24F18337FCF006A3D65 /* UIFUAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIFUAlert.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -2113,7 +2113,7 @@
 				AC99D9671842F642008EC1D6 /* 91PlatformConfigure.h */,
 				AC99D9681842F642008EC1D6 /* 91platformConfigure.mm */,
 				AC99D96A184300E4008EC1D6 /* platform91Configure.h */,
-				AC99D96B184300E4008EC1D6 /* platform91Configure.m */,
+				AC89BF64184442AD008FCDBC /* platform91Configure.mm */,
 			);
 			name = 91Platform;
 			path = ../Classes/91Platform;
@@ -2286,7 +2286,6 @@
 				15A3D9231682F7D5002FB0C5 /* b2Joint.cpp in Sources */,
 				15A3D9241682F7D5002FB0C5 /* b2MouseJoint.cpp in Sources */,
 				15A3D9251682F7D5002FB0C5 /* b2PrismaticJoint.cpp in Sources */,
-				AC99D96C184300E4008EC1D6 /* platform91Configure.m in Sources */,
 				15A3D9261682F7D5002FB0C5 /* b2PulleyJoint.cpp in Sources */,
 				15A3D9271682F7D5002FB0C5 /* b2RevoluteJoint.cpp in Sources */,
 				15A3D9281682F7D5002FB0C5 /* b2RopeJoint.cpp in Sources */,
@@ -2329,6 +2328,7 @@
 				15A3DA311682F826002FB0C5 /* CCBAnimationManager.cpp in Sources */,
 				15A3DA321682F826002FB0C5 /* CCBFileLoader.cpp in Sources */,
 				15A3DA331682F826002FB0C5 /* CCBKeyframe.cpp in Sources */,
+				AC89BF65184442AD008FCDBC /* platform91Configure.mm in Sources */,
 				15A3DA341682F826002FB0C5 /* CCBReader.cpp in Sources */,
 				15A3DA351682F826002FB0C5 /* CCBSequence.cpp in Sources */,
 				15A3DA361682F826002FB0C5 /* CCBSequenceProperty.cpp in Sources */,

@@ -90,8 +90,13 @@ void CGShop::buyGold(cocos2d::extension::UIButton *pSender, TouchEventType type)
     }
     
     if (price != 0.0)
-    GlobalUserDefault::instance()->buyCommodities(shopInfo[kCommId], shopInfo[kCommName],price,count);
-    else;
+    {
+        GlobalUserDefault::instance()->buyCommodities(shopInfo[kCommId], shopInfo[kCommName],price,count);
+    }
+    else
+    {
+        
+    }
 }
 
 

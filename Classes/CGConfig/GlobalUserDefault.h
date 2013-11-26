@@ -94,6 +94,13 @@ public:
     void openScoreBoard(int nLeaderBoardId);
     void openAchievement();
     void unLockAchievement(int achieId,  int percent, const char* displayText);
+    
+    /**
+     * 游戏中金币的处理
+     */
+    void addGameGold(int addGold);
+    void 
+    
 private:
     
     ~GlobalUserDefault();
