@@ -25,7 +25,9 @@ enum {
     kGamePassesUI,  //-------------选择关卡
     kGameSuccessUI, ///-----------游戏成功界面
     kGameProvincePath,//----------关卡资源目录
-    kControlerUI_volume,///-----------游戏音效设置界面
+    kControlerUI_volume,///-------游戏音效设置界面
+    
+    kGameShopUI,          //--------游戏商店
     
     kChapter_Accessary,//------------一些特定的控件
 };
@@ -39,6 +41,8 @@ const std::string CG_GamePathes[9] =
     "CrazyGeography/GameSuccessUI.ExportJson",  ///-----------游戏成功界面
     "provinces/",                               //----------关卡资源目录
     "CrazyGeography/ControlerUI_volume.ExportJson",     ///-----------游戏音效设置界面
+    
+    "CrazyGeography/GameShopUI.ExportJson"      //--------游戏商店
     
     "CrazyGeography/Chapter_Accesary.ExportJson",     //------------一些特定的控件
 };

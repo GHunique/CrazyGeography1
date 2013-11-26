@@ -276,6 +276,7 @@
 		AC7E6C5C1839A09200BF352A /* CGAccessaryButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC7E6C5A1839A09200BF352A /* CGAccessaryButton.cpp */; };
 		AC82DA151834C81500969C15 /* AheadChapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC82DA131834C81500969C15 /* AheadChapter.cpp */; };
 		AC82DA1B1834D2B600969C15 /* UIControlLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC82DA191834D2B600969C15 /* UIControlLayer.cpp */; };
+		AC89BF63184436BE008FCDBC /* CGShop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC89BF61184436BE008FCDBC /* CGShop.cpp */; };
 		AC8C9EAA1828C9EB0000F27D /* CPPSingleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC8C9EA81828C9EB0000F27D /* CPPSingleton.cpp */; };
 		AC99D9491842E59B008EC1D6 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC99D9481842E59B008EC1D6 /* AddressBook.framework */; };
 		AC99D94B1842E617008EC1D6 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC99D94A1842E617008EC1D6 /* MessageUI.framework */; };
@@ -849,6 +850,8 @@
 		AC82DA141834C81500969C15 /* AheadChapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AheadChapter.h; sourceTree = "<group>"; };
 		AC82DA191834D2B600969C15 /* UIControlLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIControlLayer.cpp; sourceTree = "<group>"; };
 		AC82DA1A1834D2B600969C15 /* UIControlLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIControlLayer.h; sourceTree = "<group>"; };
+		AC89BF61184436BE008FCDBC /* CGShop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CGShop.cpp; sourceTree = "<group>"; };
+		AC89BF62184436BE008FCDBC /* CGShop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGShop.h; sourceTree = "<group>"; };
 		AC8C9EA81828C9EB0000F27D /* CPPSingleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CPPSingleton.cpp; sourceTree = "<group>"; };
 		AC8C9EA91828C9EB0000F27D /* CPPSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPPSingleton.h; sourceTree = "<group>"; };
 		AC8C9EAC1828CFA90000F27D /* GlobalUserDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalUserDefault.h; sourceTree = "<group>"; };
@@ -2041,6 +2044,8 @@
 		AC7DEF32181F45C100EF9479 /* GameScene */ = {
 			isa = PBXGroup;
 			children = (
+				AC89BF61184436BE008FCDBC /* CGShop.cpp */,
+				AC89BF62184436BE008FCDBC /* CGShop.h */,
 				AC5F7201183AF9DF0085D184 /* GamePasses.cpp */,
 				AC5F7202183AF9DF0085D184 /* GamePasses.h */,
 				AC82DA131834C81500969C15 /* AheadChapter.cpp */,
@@ -2371,6 +2376,7 @@
 				15A3DA5E1682F826002FB0C5 /* CCPhysicsDebugNode.cpp in Sources */,
 				15A3DA5F1682F826002FB0C5 /* CCPhysicsSprite.cpp in Sources */,
 				15A3DAEB1682F8A6002FB0C5 /* CDAudioManager.m in Sources */,
+				AC89BF63184436BE008FCDBC /* CGShop.cpp in Sources */,
 				15A3DAEC1682F8A6002FB0C5 /* CDOpenALSupport.m in Sources */,
 				15A3DAED1682F8A6002FB0C5 /* CocosDenshion.m in Sources */,
 				15A3DAEE1682F8A6002FB0C5 /* SimpleAudioEngine.mm in Sources */,
