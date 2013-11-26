@@ -626,10 +626,17 @@ void GlobalUserDefault::reduceGameGold(int reGold)
     local_gold -= reGold;
     
     std::string sValue = CGHelper::getstring(local_gold);
-    CCLog("----------存储");
-    CCLog("存储之前数据 key：index: Himi, value: %s  ",sValue.c_str());
+    
+#ifdef GLOBAL_DEBUG
+    CCLog("----------存储------");
+       CCLog("存储之前数据 key：index: Himi, value: %s  ",sValue.c_str());
+#endif
+    
     string value_str = himiSaveData(reinterpret_cast<const unsigned char*>(sValue.c_str()), sValue.length());
-    CCLog("存储加密后的数据 key：index: Himi, value: %s  ",value_str.c_str());
+    if (GLOBAL_DEBUG) {
+        CCLog("存储加密后的数据 key：index: Himi, value: %s  ",value_str.c_str());
+    }
+    
     CCUserDefault::sharedUserDefault()->setStringForKey(CG_GAME_GOLD_KEY, value_str);
     CCUserDefault::sharedUserDefault()->flush();
 }
@@ -646,6 +653,10 @@ int GlobalUserDefault::getGameGold()
     {
         local_gold = CGHelper::getint(local_gold_str);      //得到当前金币数量
     }
+
+#ifdef GLOBAL_DEBUG
+        CCLog("<--GlobalUserDefault::getGameGold--/n 得到金币 %d> %s",local_gold,userDefault->getXMLFilePath().c_str());
+#endif
     
     return local_gold;
 }

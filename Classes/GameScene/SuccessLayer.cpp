@@ -135,7 +135,8 @@ void SuccessLayer::setSuccessData(Map_str_str &dic)
         
     }
     
-    dic.at("shijian").c_str();          //通关所用时间
+    CCLog("<!!-----通关时间为 #%d#----!!>",CGHelper::getint(dic.at("shijian")));
+//    dic.at("shijian").c_str();          //通关所用时间
 }
 
 

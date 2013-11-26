@@ -16,6 +16,8 @@
 USING_NS_CC;
 USING_NS_CC_EXT;
 
+#define GLOBAL_DEBUG  1
+
 //战斗场景路径
 enum {
     kGamePathesBegin = 0,
@@ -76,5 +78,4 @@ enum  {
 
 
 typedef std::map<std::string, std::string> Map_str_str;
-
 #endif /* defined(__CrazyGeography__CGconfig__) */

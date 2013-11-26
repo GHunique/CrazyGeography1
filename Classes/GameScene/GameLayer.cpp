@@ -457,8 +457,7 @@ void GameLayer::compareAnswer()
         GlobalUserDefault::instance()->nextPass();                  //下一关
         GlobalUserDefault::instance()->increaseGameGold(award_amount);
         
-        SuccessLayer *_succLayer  = SuccessLayer::create();         //成功界面
-        
+        SuccessLayer *_succLayer  = SuccessLayer::create();         //通关界面
         CCScene *success_scene = CCScene::create();
         success_scene->addChild(_succLayer,10);
         
