@@ -431,29 +431,31 @@ void GameLayer::compareAnswer()
         long curr_seconds = now.tv_sec;
         _total_award_cd = curr_seconds - _start_cd_seconds;
         
-        std::string award_str;
+        int award_amount;
         int star_amount;
         
         if (_total_award_cd <= CG_GAME_CD_LV3)
         {
-            award_str = CGHelper::getstring(kGameAward_LV3);
+            award_amount = kGameAward_LV3;
             star_amount = 3;
         }else if(_total_award_cd <= CG_GAME_CD_LV2)
         {
-            award_str = CGHelper::getstring(KGameAward_LV2);
+            award_amount = KGameAward_LV2;
             star_amount = 2;
         }else
         {
-            award_str = CGHelper::getstring(kGameAward_LV1);
+            award_amount = kGameAward_LV1;
             star_amount = 1;
         }
         
         /**
          * 1.）修改通关结果
          * 2.) 设置下一关章节和关卡id
+         * 3.) 获得奖励后修改金币数量
          */
         GlobalUserDefault::instance()->setPassInfo(star_amount);
         GlobalUserDefault::instance()->nextPass();                  //下一关
+        GlobalUserDefault::instance()->increaseGameGold(award_amount);
         
         SuccessLayer *_succLayer  = SuccessLayer::create();         //成功界面
         
@@ -463,7 +465,7 @@ void GameLayer::compareAnswer()
         Map_str_str dic;
         dic.insert(make_pair("xingshu",CGHelper::getChar(star_amount)));
         dic.insert(make_pair("answer", _standardAnswer));
-        dic.insert(make_pair("jiangli", award_str));
+        dic.insert(make_pair("jiangli", CGHelper::getChar(award_amount)));
         dic.insert(make_pair("shijian", CGHelper::getChar(_total_award_cd)));
         _succLayer->setSuccessData(dic);
         

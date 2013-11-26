@@ -134,6 +134,8 @@ void SuccessLayer::setSuccessData(Map_str_str &dic)
         xingImage->setTexture("xing-xing1.png",UI_TEX_TYPE_PLIST);
         
     }
+    
+    dic.at("shijian").c_str();          //通关所用时间
 }
 
 
