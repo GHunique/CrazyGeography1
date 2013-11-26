@@ -23,15 +23,34 @@
 				<key>offsetY</key>
 				<real>0</real>
 			</dict>
+			<key>pass_info_search.png</key>
+			<dict>
+				<key>width</key>
+				<integer>250</integer>
+				<key>height</key>
+				<integer>250</integer>
+				<key>originalWidth</key>
+				<integer>250</integer>
+				<key>originalHeight</key>
+				<integer>250</integer>
+				<key>x</key>
+				<integer>642</integer>
+				<key>y</key>
+				<integer>0</integer>
+				<key>offsetX</key>
+				<real>0</real>
+				<key>offsetY</key>
+				<real>0</real>
+			</dict>
 		</dict>
 		<key>metadata</key>
 		<dict>
 			<key>format</key>
 			<integer>0</integer>
 			<key>textureFileName</key>
-			<string>CrazyGeography3.png</string>
+			<string>CrazyGeography2.png</string>
 			<key>realTextureFileName</key>
-			<string>CrazyGeography3.png</string>
+			<string>CrazyGeography2.png</string>
 			<key>size</key>
 			<string>{1024,1024}</string>
 		</dict>

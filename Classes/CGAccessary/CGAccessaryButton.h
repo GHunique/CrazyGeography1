@@ -54,6 +54,7 @@ public:
     
     CREATE_FUNC(ProvinceButton);
     bool init();
+    void lock(bool lock);   //图标被锁定
 
 };
 

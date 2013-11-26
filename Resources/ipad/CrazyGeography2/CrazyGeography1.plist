@@ -4,7 +4,7 @@
 	<dict>
 		<key>frames</key>
 		<dict>
-			<key>game_bg13.png</key>
+			<key>answer_bg.jpg</key>
 			<dict>
 				<key>width</key>
 				<integer>640</integer>
@@ -23,33 +23,14 @@
 				<key>offsetY</key>
 				<real>0</real>
 			</dict>
-			<key>btn_showword.png</key>
+			<key>D:/Program Files/CocoStudio/EditorDefaultRes/GUI/selected01.png</key>
 			<dict>
 				<key>width</key>
-				<integer>119</integer>
-				<key>height</key>
-				<integer>126</integer>
-				<key>originalWidth</key>
-				<integer>119</integer>
-				<key>originalHeight</key>
-				<integer>126</integer>
-				<key>x</key>
-				<integer>642</integer>
-				<key>y</key>
-				<integer>0</integer>
-				<key>offsetX</key>
-				<real>0</real>
-				<key>offsetY</key>
-				<real>0</real>
-			</dict>
-			<key>success_flower.png</key>
-			<dict>
-				<key>width</key>
-				<integer>34</integer>
+				<integer>56</integer>
 				<key>height</key>
 				<integer>56</integer>
 				<key>originalWidth</key>
-				<integer>34</integer>
+				<integer>56</integer>
 				<key>originalHeight</key>
 				<integer>56</integer>
 				<key>x</key>
@@ -61,18 +42,18 @@
 				<key>offsetY</key>
 				<real>0</real>
 			</dict>
-			<key>coin.png</key>
+			<key>D:/Program Files/CocoStudio/EditorDefaultRes/GUI/selected02.png</key>
 			<dict>
 				<key>width</key>
-				<integer>60</integer>
+				<integer>56</integer>
 				<key>height</key>
-				<integer>60</integer>
+				<integer>47</integer>
 				<key>originalWidth</key>
-				<integer>60</integer>
+				<integer>56</integer>
 				<key>originalHeight</key>
-				<integer>60</integer>
+				<integer>47</integer>
 				<key>x</key>
-				<integer>36</integer>
+				<integer>58</integer>
 				<key>y</key>
 				<integer>962</integer>
 				<key>offsetX</key>
@@ -86,9 +67,9 @@
 			<key>format</key>
 			<integer>0</integer>
 			<key>textureFileName</key>
-			<string>CrazyGeography2.png</string>
+			<string>CrazyGeography1.png</string>
 			<key>realTextureFileName</key>
-			<string>CrazyGeography2.png</string>
+			<string>CrazyGeography1.png</string>
 			<key>size</key>
 			<string>{1024,1024}</string>
 		</dict>

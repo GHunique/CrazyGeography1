@@ -4,16 +4,16 @@
 	<dict>
 		<key>frames</key>
 		<dict>
-			<key>answer_bg.jpg</key>
+			<key>bluebutt_normal.png</key>
 			<dict>
 				<key>width</key>
-				<integer>640</integer>
+				<integer>348</integer>
 				<key>height</key>
-				<integer>960</integer>
+				<integer>138</integer>
 				<key>originalWidth</key>
-				<integer>640</integer>
+				<integer>348</integer>
 				<key>originalHeight</key>
-				<integer>960</integer>
+				<integer>138</integer>
 				<key>x</key>
 				<integer>0</integer>
 				<key>y</key>
@@ -23,39 +23,343 @@
 				<key>offsetY</key>
 				<real>0</real>
 			</dict>
-			<key>D:/Program Files/CocoStudio/EditorDefaultRes/GUI/selected01.png</key>
+			<key>bluebutt_pressed.png</key>
 			<dict>
 				<key>width</key>
-				<integer>56</integer>
+				<integer>348</integer>
 				<key>height</key>
-				<integer>56</integer>
+				<integer>138</integer>
 				<key>originalWidth</key>
-				<integer>56</integer>
+				<integer>348</integer>
 				<key>originalHeight</key>
-				<integer>56</integer>
+				<integer>138</integer>
 				<key>x</key>
-				<integer>0</integer>
+				<integer>350</integer>
 				<key>y</key>
-				<integer>962</integer>
+				<integer>0</integer>
 				<key>offsetX</key>
 				<real>0</real>
 				<key>offsetY</key>
 				<real>0</real>
 			</dict>
-			<key>D:/Program Files/CocoStudio/EditorDefaultRes/GUI/selected02.png</key>
+			<key>pass_info_search.png</key>
 			<dict>
 				<key>width</key>
-				<integer>56</integer>
+				<integer>250</integer>
 				<key>height</key>
-				<integer>47</integer>
+				<integer>250</integer>
 				<key>originalWidth</key>
-				<integer>56</integer>
+				<integer>250</integer>
 				<key>originalHeight</key>
-				<integer>47</integer>
+				<integer>250</integer>
 				<key>x</key>
-				<integer>58</integer>
+				<integer>700</integer>
 				<key>y</key>
-				<integer>962</integer>
+				<integer>0</integer>
+				<key>offsetX</key>
+				<real>0</real>
+				<key>offsetY</key>
+				<real>0</real>
+			</dict>
+			<key>pass_info_passed.png</key>
+			<dict>
+				<key>width</key>
+				<integer>250</integer>
+				<key>height</key>
+				<integer>250</integer>
+				<key>originalWidth</key>
+				<integer>250</integer>
+				<key>originalHeight</key>
+				<integer>250</integer>
+				<key>x</key>
+				<integer>0</integer>
+				<key>y</key>
+				<integer>252</integer>
+				<key>offsetX</key>
+				<real>0</real>
+				<key>offsetY</key>
+				<real>0</real>
+			</dict>
+			<key>xing-xing0.png</key>
+			<dict>
+				<key>width</key>
+				<integer>96</integer>
+				<key>height</key>
+				<integer>96</integer>
+				<key>originalWidth</key>
+				<integer>96</integer>
+				<key>originalHeight</key>
+				<integer>96</integer>
+				<key>x</key>
+				<integer>252</integer>
+				<key>y</key>
+				<integer>252</integer>
+				<key>offsetX</key>
+				<real>0</real>
+				<key>offsetY</key>
+				<real>0</real>
+			</dict>
+			<key>xing-xing1.png</key>
+			<dict>
+				<key>width</key>
+				<integer>96</integer>
+				<key>height</key>
+				<integer>96</integer>
+				<key>originalWidth</key>
+				<integer>96</integer>
+				<key>originalHeight</key>
+				<integer>96</integer>
+				<key>x</key>
+				<integer>350</integer>
+				<key>y</key>
+				<integer>252</integer>
+				<key>offsetX</key>
+				<real>0</real>
+				<key>offsetY</key>
+				<real>0</real>
+			</dict>
+			<key>chapter_bg_image.png</key>
+			<dict>
+				<key>width</key>
+				<integer>94</integer>
+				<key>height</key>
+				<integer>100</integer>
+				<key>originalWidth</key>
+				<integer>94</integer>
+				<key>originalHeight</key>
+				<integer>100</integer>
+				<key>x</key>
+				<integer>448</integer>
+				<key>y</key>
+				<integer>252</integer>
+				<key>offsetX</key>
+				<real>0</real>
+				<key>offsetY</key>
+				<real>0</real>
+			</dict>
+			<key>btn_back_00.png</key>
+			<dict>
+				<key>width</key>
+				<integer>119</integer>
+				<key>height</key>
+				<integer>84</integer>
+				<key>originalWidth</key>
+				<integer>119</integer>
+				<key>originalHeight</key>
+				<integer>84</integer>
+				<key>x</key>
+				<integer>0</integer>
+				<key>y</key>
+				<integer>504</integer>
+				<key>offsetX</key>
+				<real>0</real>
+				<key>offsetY</key>
+				<real>0</real>
+			</dict>
+			<key>btn_back_press_00.png</key>
+			<dict>
+				<key>width</key>
+				<integer>119</integer>
+				<key>height</key>
+				<integer>84</integer>
+				<key>originalWidth</key>
+				<integer>119</integer>
+				<key>originalHeight</key>
+				<integer>84</integer>
+				<key>x</key>
+				<integer>121</integer>
+				<key>y</key>
+				<integer>504</integer>
+				<key>offsetX</key>
+				<real>0</real>
+				<key>offsetY</key>
+				<real>0</real>
+			</dict>
+			<key>btn_back.png</key>
+			<dict>
+				<key>width</key>
+				<integer>119</integer>
+				<key>height</key>
+				<integer>84</integer>
+				<key>originalWidth</key>
+				<integer>119</integer>
+				<key>originalHeight</key>
+				<integer>84</integer>
+				<key>x</key>
+				<integer>242</integer>
+				<key>y</key>
+				<integer>504</integer>
+				<key>offsetX</key>
+				<real>0</real>
+				<key>offsetY</key>
+				<real>0</real>
+			</dict>
+			<key>000_ipad.png</key>
+			<dict>
+				<key>width</key>
+				<integer>980</integer>
+				<key>height</key>
+				<integer>110</integer>
+				<key>originalWidth</key>
+				<integer>980</integer>
+				<key>originalHeight</key>
+				<integer>110</integer>
+				<key>x</key>
+				<integer>0</integer>
+				<key>y</key>
+				<integer>590</integer>
+				<key>offsetX</key>
+				<real>0</real>
+				<key>offsetY</key>
+				<real>0</real>
+			</dict>
+			<key>blankAnswerImage.png</key>
+			<dict>
+				<key>width</key>
+				<integer>33</integer>
+				<key>height</key>
+				<integer>33</integer>
+				<key>originalWidth</key>
+				<integer>33</integer>
+				<key>originalHeight</key>
+				<integer>33</integer>
+				<key>x</key>
+				<integer>982</integer>
+				<key>y</key>
+				<integer>590</integer>
+				<key>offsetX</key>
+				<real>0</real>
+				<key>offsetY</key>
+				<real>0</real>
+			</dict>
+			<key>btn_share.png</key>
+			<dict>
+				<key>width</key>
+				<integer>119</integer>
+				<key>height</key>
+				<integer>126</integer>
+				<key>originalWidth</key>
+				<integer>119</integer>
+				<key>originalHeight</key>
+				<integer>126</integer>
+				<key>x</key>
+				<integer>0</integer>
+				<key>y</key>
+				<integer>702</integer>
+				<key>offsetX</key>
+				<real>0</real>
+				<key>offsetY</key>
+				<real>0</real>
+			</dict>
+			<key>btn_gold.png</key>
+			<dict>
+				<key>width</key>
+				<integer>197</integer>
+				<key>height</key>
+				<integer>84</integer>
+				<key>originalWidth</key>
+				<integer>197</integer>
+				<key>originalHeight</key>
+				<integer>84</integer>
+				<key>x</key>
+				<integer>121</integer>
+				<key>y</key>
+				<integer>702</integer>
+				<key>offsetX</key>
+				<real>0</real>
+				<key>offsetY</key>
+				<real>0</real>
+			</dict>
+			<key>btn_gold_press.png</key>
+			<dict>
+				<key>width</key>
+				<integer>197</integer>
+				<key>height</key>
+				<integer>84</integer>
+				<key>originalWidth</key>
+				<integer>197</integer>
+				<key>originalHeight</key>
+				<integer>84</integer>
+				<key>x</key>
+				<integer>320</integer>
+				<key>y</key>
+				<integer>702</integer>
+				<key>offsetX</key>
+				<real>0</real>
+				<key>offsetY</key>
+				<real>0</real>
+			</dict>
+			<key>top_title_image.png</key>
+			<dict>
+				<key>width</key>
+				<integer>640</integer>
+				<key>height</key>
+				<integer>88</integer>
+				<key>originalWidth</key>
+				<integer>640</integer>
+				<key>originalHeight</key>
+				<integer>88</integer>
+				<key>x</key>
+				<integer>0</integer>
+				<key>y</key>
+				<integer>830</integer>
+				<key>offsetX</key>
+				<real>0</real>
+				<key>offsetY</key>
+				<real>0</real>
+			</dict>
+			<key>divisionLine.png</key>
+			<dict>
+				<key>width</key>
+				<integer>640</integer>
+				<key>height</key>
+				<integer>88</integer>
+				<key>originalWidth</key>
+				<integer>640</integer>
+				<key>originalHeight</key>
+				<integer>88</integer>
+				<key>x</key>
+				<integer>0</integer>
+				<key>y</key>
+				<integer>920</integer>
+				<key>offsetX</key>
+				<real>0</real>
+				<key>offsetY</key>
+				<real>0</real>
+			</dict>
+			<key>composeImageFrame@2x.png</key>
+			<dict>
+				<key>width</key>
+				<integer>88</integer>
+				<key>height</key>
+				<integer>65</integer>
+				<key>originalWidth</key>
+				<integer>88</integer>
+				<key>originalHeight</key>
+				<integer>65</integer>
+				<key>x</key>
+				<integer>642</integer>
+				<key>y</key>
+				<integer>920</integer>
+				<key>offsetX</key>
+				<real>0</real>
+				<key>offsetY</key>
+				<real>0</real>
+			</dict>
+			<key>composeloadingbtn@2x.png</key>
+			<dict>
+				<key>width</key>
+				<integer>67</integer>
+				<key>height</key>
+				<integer>66</integer>
+				<key>originalWidth</key>
+				<integer>67</integer>
+				<key>originalHeight</key>
+				<integer>66</integer>
+				<key>x</key>
+				<integer>732</integer>
+				<key>y</key>
+				<integer>920</integer>
 				<key>offsetX</key>
 				<real>0</real>
 				<key>offsetY</key>
