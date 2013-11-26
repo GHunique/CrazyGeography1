@@ -431,7 +431,6 @@ void GameLayer::compareAnswer()
         long curr_seconds = now.tv_sec;
         _total_award_cd = curr_seconds - _start_cd_seconds;
         
-        
         std::string award_str;
         int star_amount;
         
