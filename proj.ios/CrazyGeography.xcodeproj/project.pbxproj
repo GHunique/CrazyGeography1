@@ -274,12 +274,9 @@
 		AC0D4A5C183F5B52001213FE /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0D4A5B183F5B52001213FE /* libicucore.dylib */; };
 		AC0D4A5E183F5B5C001213FE /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0D4A5D183F5B5C001213FE /* libz.1.2.5.dylib */; };
 		AC0D4A60183F5CC7001213FE /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0D4A5F183F5CC7001213FE /* libsqlite3.dylib */; };
-<<<<<<< HEAD
-=======
 		AC0D4A63183F5FB7001213FE /* ShareSDKiPadDefaultShareViewUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC0D4A61183F5FB7001213FE /* ShareSDKiPadDefaultShareViewUI.bundle */; };
 		AC0D4A64183F5FB7001213FE /* ShareSDKiPadDefaultShareViewUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0D4A62183F5FB7001213FE /* ShareSDKiPadDefaultShareViewUI.framework */; };
 		AC3B03841844D12D0072A057 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AC3B03831844D12D0072A057 /* libstdc++.dylib */; };
->>>>>>> bc69049dd70f02aa6d8731fd02200614838f6594
 		AC40768D1832060100BC64A5 /* ChapterLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC40768B1832060100BC64A5 /* ChapterLayer.cpp */; };
 		AC5F7203183AF9DF0085D184 /* GamePasses.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC5F7201183AF9DF0085D184 /* GamePasses.cpp */; };
 		AC6BED1318222AD900724ABD /* CGHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC6BED0F18222AD900724ABD /* CGHelper.cpp */; };
@@ -847,12 +844,9 @@
 		AC0D4A5B183F5B52001213FE /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		AC0D4A5D183F5B5C001213FE /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		AC0D4A5F183F5CC7001213FE /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-<<<<<<< HEAD
-=======
 		AC0D4A61183F5FB7001213FE /* ShareSDKiPadDefaultShareViewUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDKiPadDefaultShareViewUI.bundle; sourceTree = "<group>"; };
 		AC0D4A62183F5FB7001213FE /* ShareSDKiPadDefaultShareViewUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKiPadDefaultShareViewUI.framework; sourceTree = "<group>"; };
 		AC3B03831844D12D0072A057 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
->>>>>>> bc69049dd70f02aa6d8731fd02200614838f6594
 		AC40768B1832060100BC64A5 /* ChapterLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChapterLayer.cpp; sourceTree = "<group>"; };
 		AC40768C1832060100BC64A5 /* ChapterLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterLayer.h; sourceTree = "<group>"; };
 		AC5F7201183AF9DF0085D184 /* GamePasses.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GamePasses.cpp; sourceTree = "<group>"; };
@@ -911,13 +905,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				046F3D131844170B00B0ECBB /* TencentOpenAPI.framework in Frameworks */,
-=======
 				AC0D4A60183F5CC7001213FE /* libsqlite3.dylib in Frameworks */,
 				AC3B03841844D12D0072A057 /* libstdc++.dylib in Frameworks */,
 				AC99D9581842E772008EC1D6 /* Log.framework in Frameworks */,
->>>>>>> bc69049dd70f02aa6d8731fd02200614838f6594
 				BF1712471292920000B8313A /* libz.dylib in Frameworks */,
 				AC99D94B1842E617008EC1D6 /* MessageUI.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
@@ -926,16 +917,13 @@
 				046F3D2C1844172E00B0ECBB /* NDUtility.framework in Frameworks */,
 				046F3D0D1844170B00B0ECBB /* TencentWeiboConnection.framework in Frameworks */,
 				AC99D9491842E59B008EC1D6 /* AddressBook.framework in Frameworks */,
-<<<<<<< HEAD
 				AC0D4A60183F5CC7001213FE /* libsqlite3.dylib in Frameworks */,
 				046F3D0F1844170B00B0ECBB /* AGCommon.framework in Frameworks */,
 				046F3D0A1844170B00B0ECBB /* QQConnection.framework in Frameworks */,
 				046F3D291844172E00B0ECBB /* Encrypt.framework in Frameworks */,
 				046F3D0E1844170B00B0ECBB /* WeChatConnection.framework in Frameworks */,
-=======
 				AC99D95A1842E772008EC1D6 /* NDUtility.framework in Frameworks */,
 				AC99D9571842E772008EC1D6 /* Encrypt.framework in Frameworks */,
->>>>>>> bc69049dd70f02aa6d8731fd02200614838f6594
 				AC0D4A5E183F5B5C001213FE /* libz.1.2.5.dylib in Frameworks */,
 				046F3D121844170B00B0ECBB /* ShareSDKCoreService.framework in Frameworks */,
 				046F3D161844170B00B0ECBB /* libWeChatSDK.a in Frameworks */,
