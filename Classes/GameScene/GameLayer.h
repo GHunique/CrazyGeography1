@@ -162,9 +162,13 @@ private:
     CCDictionary *_candidateAnswerDic;          //答案字典
     CCDictionary *_directlyCandidateDic;        //本次关卡的候选答案字典
     
-    SuccessLayer *_succLayer;                   //成功界面
     int _currChapter;                           //当前章节
     int _currPass;                              //当前章节
+    
+    UILabelBMFont *_gameGold_BMF;               //显示金币标签
+    long _start_cd_seconds;                     //开始倒计时时间点
+    long _total_award_cd;                             //剩余奖励时间
+    bool _startCD;                              //是否倒计时
     
 protected:
     
@@ -190,6 +194,7 @@ private:
     
     void refreshGameData();                                         //每次刷新游戏数据函数
     void initialTipView();                                          //初始化提示信息界面(包括答案进度,答案位置提示)
+    void update(float delta);
 };
 
 #endif /* defined(__CrazyGeography__GameLayer__) */

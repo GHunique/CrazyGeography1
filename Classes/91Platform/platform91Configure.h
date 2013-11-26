@@ -20,7 +20,7 @@
 //注销登录，传入0表示注销； 传入1表示注销并清除自动登录。
 - (void)platform91Logout:(int) type;
 
-- (void)buyCommodities;
+- (void)buyCommodities:(NSString *) orderSerial productId:(NSString *) proId price:(float) price originPrice:(float) oriPrice count:(int) count;
 
 - (void)shared;
 

@@ -42,7 +42,7 @@ const std::string CG_GamePathes[9] =
     "provinces/",                               //----------关卡资源目录
     "CrazyGeography/ControlerUI_volume.ExportJson",     ///-----------游戏音效设置界面
     
-    "CrazyGeography/GameShopUI.ExportJson"      //--------游戏商店
+    "CrazyGeography/GameShopUI.ExportJson",      //--------游戏商店
     
     "CrazyGeography/Chapter_Accesary.ExportJson",     //------------一些特定的控件
 };
@@ -59,6 +59,20 @@ const std::string CG_GAME_DATA[2] =
     "CGChapter.xml",    //-----------章节xml配置表路径
     "CGSetting.xml",    ///----------游戏设置文件
 };
+
+//游戏中时间奖励
+#define CG_GAME_GOLD_KEY  "C1G1_2G1A1M2E_G1O1L2D_1K1E2Y_1X1S2Y"
+#define CG_GAME_CD_LV1          12
+#define CG_GAME_CD_LV2          8
+#define CG_GAME_CD_LV3          5
+
+enum  {
+    
+    kGameAward_LV1 = 3,
+    KGameAward_LV2 = 7,
+    kGameAward_LV3 = 10,
+    };
+
 
 
 typedef std::map<std::string, std::string> Map_str_str;

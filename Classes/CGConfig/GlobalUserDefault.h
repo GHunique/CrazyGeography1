@@ -33,6 +33,11 @@ public:
     CCDictionary *currPassInfo();
     
     /**
+     * 修改关卡信息【定要早于nextPass() 调用 】
+     */
+    void setPassInfo(int star);
+    
+    /**
      * 自动切换时候调用 【下一关】
      */
     void nextPass();
@@ -97,9 +102,12 @@ public:
     
     /**
      * 游戏中金币的处理
+     * @param gold 金币数量
      */
-    void addGameGold(int addGold);
-    void 
+    void increaseGameGold(int gold);
+    void reduceGameGold(int gold);
+    
+    int getGameGold();      //获得当前金币
     
 private:
     

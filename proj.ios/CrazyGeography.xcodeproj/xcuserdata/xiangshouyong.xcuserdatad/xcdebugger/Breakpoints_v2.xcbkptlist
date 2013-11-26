@@ -113,36 +113,6 @@
             endingLineNumber = "385"
             landmarkName = "-removeRecord:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[platform91Configure removeRecord:]"
-                  moduleName = "CrazyGeography"
-                  urlString = "file://localhost/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Classes/91Platform/platform91Configure.m"
-                  timestampString = "407124261.508686"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "385"
-                  endingLineNumber = "385"
-                  offsetFromSymbolStart = "3">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[platform91Configure removeRecord:]"
-                  moduleName = "CrazyGeography"
-                  urlString = "file://localhost/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Classes/91Platform/platform91Configure.m"
-                  timestampString = "407124261.508941"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "385"
-                  endingLineNumber = "385"
-                  offsetFromSymbolStart = "205">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -191,6 +161,100 @@
             endingLineNumber = "222"
             landmarkName = "-unlockAchievementDidFinish:"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/91Platform/platform91Configure.mm"
+            timestampString = "407128667.183197"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "-NdUniPayResult:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/CGConfig/GlobalUserDefault.mm"
+            timestampString = "407144991.8729"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "626"
+            endingLineNumber = "626"
+            landmarkName = "GlobalUserDefault::reduceGameGold(int reGold)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/CGConfig/GlobalUserDefault.mm"
+            timestampString = "407144991.8729"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "642"
+            endingLineNumber = "642"
+            landmarkName = "GlobalUserDefault::getGameGold()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/CGConfig/GlobalUserDefault.mm"
+            timestampString = "407144262.384666"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "467"
+            endingLineNumber = "467"
+            landmarkName = "GlobalUserDefault::setPassInfo(int star)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GlobalUserDefault::setPassInfo(int)"
+                  moduleName = "CrazyGeography"
+                  urlString = "file://localhost/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Classes/CGConfig/GlobalUserDefault.mm"
+                  timestampString = "407145095.700171"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "468"
+                  endingLineNumber = "468"
+                  offsetFromSymbolStart = "283">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GlobalUserDefault::setPassInfo(int)"
+                  moduleName = "CrazyGeography"
+                  urlString = "file://localhost/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Classes/CGConfig/GlobalUserDefault.mm"
+                  timestampString = "407145095.700391"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "468"
+                  endingLineNumber = "468"
+                  offsetFromSymbolStart = "379">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -13,9 +13,14 @@
 #include "CGconfig.h"
 #include "base64.h"
 #include "SharedMultiPlatform.h"
-//<---------------------------->//
+
+//<-----91平台ios处理头文件------>//
 #import "platform91Configure.h"
-//<----->
+//<--------------------------->
+
+//<--------加密头文件----------->
+#include "DataBase64Himi.h"
+//<--------------------------->
 
 #define BGMUSIC_VOLUME  "background_music"
 #define EFFMUSIC_VOLUME "effect_music"
@@ -454,6 +459,18 @@ CCDictionary *GlobalUserDefault::currPassInfo()
     return g_currPassInfo;
 }
 
+void GlobalUserDefault::setPassInfo(int star)
+{
+    //先要得到关卡名字才能继续读取当前关卡信息
+    std::string pass_name = CG_GamePathes[kGameProvincePath];
+    pass_name = pass_name +_currChapterName + "/" + _currChapterName + ".xml";
+    
+    if( XMLOperation::fixAttribute1(makeCacheFileData(makeCacheFileData(pass_name)).c_str(), CGHelper::getChar(_currPass), "star", CGHelper::getChar(star),"id",true))
+    {
+        CCLog("<------修改关卡完成------>");
+    }
+}
+
 void GlobalUserDefault::nextPass()
 {
     int passNum = _currPass + 1;
@@ -509,7 +526,7 @@ std::string GlobalUserDefault::makeCacheFileData(std::string filePath,bool chang
     if (!existFile)
     {
         using namespace tinyxml2;
-        std::string filePath_resource = cocos2d::CCFileUtils::sharedFileUtils()->fullPathForFilename(filePath.c_str());
+        std::string filePath_resource = cocos2d::CCFileUtils::sharedFileUtils()->fullPathForFilename(filePath.c_str());//获得源文件路径
         XMLDocument *pDoc = new XMLDocument();
         pDoc->LoadFile(filePath_resource.c_str());
         if (pDoc->SaveFile(filePath_full.c_str()) != XML_SUCCESS)
@@ -540,7 +557,11 @@ void GlobalUserDefault::cancelAllAuth()
 
 void GlobalUserDefault::buyCommodities(const char *commId, const char *commName, float price, int count)
 {
-    [[platform91Configure instance] buyCommodities];
+    NSString *commIdStr = [NSString stringWithUTF8String:commId];
+    NSString *commNameStr = [NSString stringWithUTF8String:commName];
+    
+    //没有打折所以原价和当前价格一样
+    [[platform91Configure instance] buyCommodities:commIdStr productId:commNameStr price:price originPrice:price count:count];
 }
 
 void GlobalUserDefault::show91ToolBar(bool show)
@@ -579,5 +600,57 @@ void GlobalUserDefault::unLockAchievement(int achieId, int percent, const char *
      NSString *disString = [NSString stringWithUTF8String:displayText];
     [[platform91Configure instance] unLockAchievement:achieId currValuePercent:percent displayText:disString];
 }
+
+#pragma mark - 本地游戏金币处理
+
+void GlobalUserDefault::increaseGameGold(int addGold)
+{
+    int local_gold = getGameGold();
+    
+    local_gold += addGold;
+    
+    std::string sValue = CGHelper::getstring(local_gold);
+    CCLog("----------存储");
+    CCLog("存储之前数据 key：index: Himi, value: %s  ",sValue.c_str());
+    string value_str = himiSaveData(reinterpret_cast<const unsigned char*>(sValue.c_str()), sValue.length());
+    CCLog("存储加密后的数据 key：index: Himi, value: %s  ",value_str.c_str());
+    CCUserDefault::sharedUserDefault()->setStringForKey(CG_GAME_GOLD_KEY, value_str);
+    CCUserDefault::sharedUserDefault()->flush();
+    
+}
+
+void GlobalUserDefault::reduceGameGold(int reGold)
+{
+    int local_gold = getGameGold();
+    
+    local_gold -= reGold;
+    
+    std::string sValue = CGHelper::getstring(local_gold);
+    CCLog("----------存储");
+    CCLog("存储之前数据 key：index: Himi, value: %s  ",sValue.c_str());
+    string value_str = himiSaveData(reinterpret_cast<const unsigned char*>(sValue.c_str()), sValue.length());
+    CCLog("存储加密后的数据 key：index: Himi, value: %s  ",value_str.c_str());
+    CCUserDefault::sharedUserDefault()->setStringForKey(CG_GAME_GOLD_KEY, value_str);
+    CCUserDefault::sharedUserDefault()->flush();
+}
+
+int GlobalUserDefault::getGameGold()
+{
+    CCUserDefault *userDefault = CCUserDefault::sharedUserDefault();
+    
+    std::string local_gold_str = userDefault->getStringForKey(CG_GAME_GOLD_KEY);
+    local_gold_str = himiParseData(local_gold_str);         //解密
+    
+    int local_gold = 0;
+    if (!local_gold_str.empty())
+    {
+        local_gold = CGHelper::getint(local_gold_str);      //得到当前金币数量
+    }
+    
+    return local_gold;
+}
+
+
+
 
 
