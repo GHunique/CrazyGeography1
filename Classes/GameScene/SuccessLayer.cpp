@@ -134,6 +134,9 @@ void SuccessLayer::setSuccessData(Map_str_str &dic)
         xingImage->setTexture("xing-xing1.png",UI_TEX_TYPE_PLIST);
         
     }
+    
+    CCLog("<!!-----通关时间为 #%d#----!!>",CGHelper::getint(dic.at("shijian")));
+//    dic.at("shijian").c_str();          //通关所用时间
 }
 
 

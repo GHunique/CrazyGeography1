@@ -109,6 +109,25 @@ bool ProvinceButton::init()
     return true;
 }
 
+void ProvinceButton::lock(bool lock)
+{
+    UIImageView *lock_image = static_cast<UIImageView *>(_onlybutt->getChildByName("lock_image"));
+    lock_image->setZOrder(4);
+    UILabelBMFont *sNameLabel = static_cast<UILabelBMFont *>(_onlybutt->getChildByName("labelBMF"));
+    
+    if (lock) {
+        this->setColor(ccGRAY);
+        this->setCGButtonTouchEnable(false);
+        lock_image->setVisible(true);
+        sNameLabel->setVisible(false);
+    }else{
+        this->setColor(ccWHITE);
+        this->setCGButtonTouchEnable(true);
+        lock_image->setVisible(false);
+        sNameLabel->setVisible(true);
+    }
+}
+
 #pragma mark - PassButton class
 
 bool PassButton::init()

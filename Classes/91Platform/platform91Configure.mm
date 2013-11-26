@@ -15,6 +15,10 @@
 #import <NdComPlatform/NdCPNotifications.h>
 #import <NdComPlatform/NdComPlatformError.h>
 
+//本地游戏数据处理
+#import "GlobalUserDefault.h"
+
+
 #define DEBUG_RELEASE_91 1
 #define BUY_RECORD_KEY   @"BUY_RECORD_KEY"
 
@@ -118,7 +122,7 @@ static platform91Configure *_platform91;
     [[NdComPlatform defaultPlatform] NdLogout:type];
 }
 
-- (void)buyCommodities
+- (void)buyCommodities:(NSString *)orderSerial productId:(NSString *)proId price:(float)price originPrice:(float)oriPrice count:(int)count
 {
     NdBuyInfo *buyInfo = [[NdBuyInfo new] autorelease];
     //订单号必须唯一！
@@ -126,9 +130,9 @@ static platform91Configure *_platform91;
     //你的产品id
     buyInfo.productId = @"com.91.product.apple";
     buyInfo.productName = @"苹果";
-    buyInfo.productPrice = 0.1; //价格不能为0！
-    buyInfo.productOrignalPrice = 0.1; //原价不能为0！
-    buyInfo.productCount = 1;
+    buyInfo.productPrice = price; //价格不能为0！
+    buyInfo.productOrignalPrice = oriPrice; //原价不能为0！
+    buyInfo.productCount = count;
     //发起请求并检查返回值。注意！该返回值并不是交易结果！
     int res = [[NdComPlatform defaultPlatform] NdUniPay:buyInfo];
     if (res < 0)
@@ -139,6 +143,47 @@ static platform91Configure *_platform91;
         //记录下该笔交易
         [self addRecord:buyInfo.cooOrderSerial];
     }
+}
+
+//购买完成后，您的监听函数会被回调。在你的监听函数中，可以获取到本次购买的订单序列号，购买结果以及错误信息。示例代码如下：
+- (void)NdUniPayResult:(NSNotification*)notify
+{
+    NSDictionary *dic = [notify userInfo];
+    BOOL bSuccess = [[dic objectForKey:@"result"] boolValue];
+    NSString* str = bSuccess ? @"购买成功" : @"购买失败";
+    
+    NdBuyInfo* buyInfo = (NdBuyInfo*)[dic objectForKey:@"buyInfo"];
+    
+    if (!bSuccess) {
+        //TODO: 购买失败处理
+        NSString* strError = nil;
+        int nErrorCode = [[dic objectForKey:@"error"] intValue];
+        switch (nErrorCode) {
+            case ND_COM_PLATFORM_ERROR_USER_CANCEL:
+                strError = @"用户取消操作";
+                break;
+            case ND_COM_PLATFORM_ERROR_NETWORK_FAIL:
+                strError = @"网络连接错误";
+                break;
+            case ND_COM_PLATFORM_ERROR_SERVER_RETURN_ERROR:
+                strError = @"服务端处理失败";
+                break;
+            default:
+                strError = @"购买过程发生错误";
+                break;
+        }
+        str = [str stringByAppendingFormat:@"\n%@", strError];
+    }
+    else {
+        //TODO: 购买成功处理
+        GlobalUserDefault::instance()->increaseGameGold(buyInfo.productPrice * buyInfo.productCount);
+    }
+    //本次购买的请求参数
+    GlobalUserDefault::instance()->increaseGameGold(buyInfo.productPrice * buyInfo.productCount); // ---- 删除
+    str = [str stringByAppendingFormat:@"\n<productId = %@, productCount = %d, cooOrderSerial = %@>",
+           buyInfo.productId, buyInfo.productCount, buyInfo.cooOrderSerial];
+    NSLog(@"NdUiPayResult: %@", str);
+    [self removeRecord:buyInfo.cooOrderSerial];
 }
 
 - (void)shared
@@ -318,44 +363,6 @@ static platform91Configure *_platform91;
 - (void)SNSPauseExit:(NSNotification *)notify
 {
     //do what you want
-}
-
-//购买完成后，您的监听函数会被回调。在你的监听函数中，可以获取到本次购买的订单序列号，购买结果以及错误信息。示例代码如下：
-- (void)NdUniPayResult:(NSNotification*)notify
-{
-    NSDictionary *dic = [notify userInfo];
-    BOOL bSuccess = [[dic objectForKey:@"result"] boolValue];
-    NSString* str = bSuccess ? @"购买成功" : @"购买失败";
-    if (!bSuccess) {
-        //TODO: 购买失败处理
-        NSString* strError = nil;
-        int nErrorCode = [[dic objectForKey:@"error"] intValue];
-        switch (nErrorCode) {
-            case ND_COM_PLATFORM_ERROR_USER_CANCEL:
-                strError = @"用户取消操作";
-                break;
-            case ND_COM_PLATFORM_ERROR_NETWORK_FAIL:
-                strError = @"网络连接错误";
-                break;
-            case ND_COM_PLATFORM_ERROR_SERVER_RETURN_ERROR:
-                strError = @"服务端处理失败";
-                break;
-            default:
-                strError = @"购买过程发生错误";
-                break;
-        }
-        str = [str stringByAppendingFormat:@"\n%@", strError];
-    }
-    else {
-        //TODO: 购买成功处理
-        
-    }
-    //本次购买的请求参数
-    NdBuyInfo* buyInfo = (NdBuyInfo*)[dic objectForKey:@"buyInfo"];
-    str = [str stringByAppendingFormat:@"\n<productId = %@, productCount = %d, cooOrderSerial = %@>",
-           buyInfo.productId, buyInfo.productCount, buyInfo.cooOrderSerial];
-    NSLog(@"NdUiPayResult: %@", str);
-    [self removeRecord:buyInfo.cooOrderSerial];
 }
 
 //NdGetMyInfoDetail 和NdGetUserInfoDetail 的回调

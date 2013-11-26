@@ -12,7 +12,8 @@
     "CrazyGeography0.plist",
     "CrazyGeography1.plist",
     "CrazyGeography2.plist",
-    "CrazyGeography3.plist"
+    "CrazyGeography3.plist",
+    "CrazyGeography4.plist"
   ],
   "version": "1.0.2.0",
   "widgetTree": {
@@ -37,7 +38,7 @@
           "colorR": 255,
           "flipX": false,
           "flipY": false,
-          "height": 940,
+          "height": 960,
           "ignoreSize": false,
           "opacity": 255,
           "rotation": 0,
@@ -47,7 +48,7 @@
           "touchAble": false,
           "useMergedTexture": true,
           "visible": true,
-          "width": 620,
+          "width": 640,
           "x": 319,
           "xProportion": 0.4984375,
           "y": 479,
@@ -63,8 +64,8 @@
             "resourceType": 1
           },
           "scale9Enable": false,
-          "scale9Height": 940,
-          "scale9Width": 620
+          "scale9Height": 960,
+          "scale9Width": 640
         }
       },
       {
@@ -134,7 +135,7 @@
           "flipX": false,
           "flipY": false,
           "height": 88,
-          "ignoreSize": false,
+          "ignoreSize": true,
           "opacity": 255,
           "rotation": 0,
           "scaleX": 1,
@@ -143,11 +144,11 @@
           "touchAble": false,
           "useMergedTexture": true,
           "visible": true,
-          "width": 620,
+          "width": 640,
           "x": 320,
           "xProportion": 0.5,
-          "y": 905,
-          "yProportion": 0.9427083,
+          "y": 917,
+          "yProportion": 0.955208361,
           "capInsetsHeight": 0,
           "capInsetsWidth": 0,
           "capInsetsX": 0,
@@ -160,7 +161,7 @@
           },
           "scale9Enable": false,
           "scale9Height": 88,
-          "scale9Width": 620
+          "scale9Width": 640
         }
       },
       {
@@ -255,7 +256,7 @@
           "capInsetsX": 0,
           "capInsetsY": 0,
           "clipAble": false,
-          "colorType": 2,
+          "colorType": 0,
           "direction": 2,
           "innerHeight": 960,
           "innerWidth": 640,
@@ -294,8 +295,8 @@
           "width": 119,
           "x": 69,
           "xProportion": 0.1078125,
-          "y": 905,
-          "yProportion": 0.9427083,
+          "y": 915,
+          "yProportion": 0.953125,
           "capInsetsHeight": 0,
           "capInsetsWidth": 0,
           "capInsetsX": 0,
@@ -361,8 +362,8 @@
           "width": 152,
           "x": 320,
           "xProportion": 0.5,
-          "y": 912,
-          "yProportion": 0.95,
+          "y": 917,
+          "yProportion": 0.955208361,
           "fileNameData": {
             "path": "TitleFont-wawatiSC.fnt",
             "plistFile": null,

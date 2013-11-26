@@ -4,37 +4,18 @@
 	<dict>
 		<key>frames</key>
 		<dict>
-			<key>pass_info_passed.png</key>
+			<key>answer_success_bg.jpg</key>
 			<dict>
 				<key>width</key>
-				<integer>250</integer>
+				<integer>640</integer>
 				<key>height</key>
-				<integer>250</integer>
+				<integer>960</integer>
 				<key>originalWidth</key>
-				<integer>250</integer>
+				<integer>640</integer>
 				<key>originalHeight</key>
-				<integer>250</integer>
+				<integer>960</integer>
 				<key>x</key>
 				<integer>0</integer>
-				<key>y</key>
-				<integer>0</integer>
-				<key>offsetX</key>
-				<real>0</real>
-				<key>offsetY</key>
-				<real>0</real>
-			</dict>
-			<key>bluebutt_pressed.png</key>
-			<dict>
-				<key>width</key>
-				<integer>348</integer>
-				<key>height</key>
-				<integer>138</integer>
-				<key>originalWidth</key>
-				<integer>348</integer>
-				<key>originalHeight</key>
-				<integer>138</integer>
-				<key>x</key>
-				<integer>252</integer>
 				<key>y</key>
 				<integer>0</integer>
 				<key>offsetX</key>

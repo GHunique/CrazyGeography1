@@ -13,7 +13,7 @@
 
 ChapterLayer::ChapterLayer()
 {
-    _firstPoint = ccp(120,700);
+    _firstPoint = ccp(70,600);
     _passesInterval = CCSizeMake(120, 130);
 }
 
@@ -105,8 +105,7 @@ void ChapterLayer::provincesLayout()
         }else
         {
 //            probutt->setOpacity(180);
-            probutt->setColor(ccGRAY);
-            probutt->setCGButtonTouchEnable(false);
+            probutt->lock(true);
         }
         
 //        probutt->setTouchEnable(true);
@@ -123,7 +122,7 @@ void ChapterLayer::provincesLayout()
         scroll_page = passesAmount/totalPasses_perPage + 1;
     }
     
-    CCSize newSize = CCSizeMake(innerSize.width * scroll_page, innerSize.height);
+    CCSize newSize = CCSizeMake(viewSize.width * scroll_page, viewSize.height);
     _scrollView->setInnerContainerSize(newSize);
 }
 

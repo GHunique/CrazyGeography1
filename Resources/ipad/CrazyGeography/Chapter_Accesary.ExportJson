@@ -12,7 +12,8 @@
     "CrazyGeography0.plist",
     "CrazyGeography1.plist",
     "CrazyGeography2.plist",
-    "CrazyGeography3.plist"
+    "CrazyGeography3.plist",
+    "CrazyGeography4.plist"
   ],
   "version": "1.0.2.0",
   "widgetTree": {
@@ -601,6 +602,54 @@
               "scale9Enable": false,
               "scale9Height": 96,
               "scale9Width": 96
+            }
+          },
+          {
+            "classname": "ImageView",
+            "name": null,
+            "children": [],
+            "options": {
+              "__type": "ComGUIImageViewSurrogate:#EditorCommon.JsonModel.Component.GUI",
+              "classname": "ImageView",
+              "name": "lock_image",
+              "ZOrder": 0,
+              "actiontag": 139,
+              "anchorPointX": 0.5,
+              "anchorPointY": 0.5,
+              "classType": null,
+              "colorB": 255,
+              "colorG": 255,
+              "colorR": 255,
+              "flipX": false,
+              "flipY": false,
+              "height": 32,
+              "ignoreSize": true,
+              "opacity": 255,
+              "rotation": 0,
+              "scaleX": 1.1,
+              "scaleY": 1.1,
+              "tag": 105,
+              "touchAble": false,
+              "useMergedTexture": true,
+              "visible": false,
+              "width": 32,
+              "x": 0,
+              "xProportion": 0,
+              "y": 11,
+              "yProportion": 0.11,
+              "capInsetsHeight": 0,
+              "capInsetsWidth": 0,
+              "capInsetsX": 0,
+              "capInsetsY": 0,
+              "fileName": null,
+              "fileNameData": {
+                "path": "accessary/lock.png",
+                "plistFile": null,
+                "resourceType": 1
+              },
+              "scale9Enable": false,
+              "scale9Height": 32,
+              "scale9Width": 32
             }
           }
         ],

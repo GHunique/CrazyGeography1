@@ -12,7 +12,8 @@
     "CrazyGeography0.plist",
     "CrazyGeography1.plist",
     "CrazyGeography2.plist",
-    "CrazyGeography3.plist"
+    "CrazyGeography3.plist",
+    "CrazyGeography4.plist"
   ],
   "version": "1.0.2.0",
   "widgetTree": {
@@ -255,7 +256,7 @@
           "capInsetsX": 0,
           "capInsetsY": 0,
           "clipAble": false,
-          "colorType": 2,
+          "colorType": 0,
           "direction": 2,
           "innerHeight": 960,
           "innerWidth": 640,

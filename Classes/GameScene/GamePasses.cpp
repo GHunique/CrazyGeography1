@@ -15,7 +15,7 @@
 
 GamePasses::GamePasses()
 {
-    _firstPoint = ccp(110,700);
+    _firstPoint = ccp(30,600);
     _passesInterval = CCSizeMake(120, 130);
 }
 
@@ -120,7 +120,7 @@ void GamePasses::passesLayout()
         scroll_page = passesAmount/totalPasses_perPage + 1;
     }
     
-    CCSize newSize = CCSizeMake(innerSize.width * scroll_page, innerSize.height);
+    CCSize newSize = CCSizeMake(viewSize.width * scroll_page, viewSize.height);
     _scrollView->setInnerContainerSize(newSize);
 }
 

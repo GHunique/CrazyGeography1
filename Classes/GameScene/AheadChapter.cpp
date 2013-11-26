@@ -10,7 +10,6 @@
 #include "ChapterLayer.h"
 #include "GlobalUserDefault.h"
 #include "UIControlLayer.h"
-#include "DataBase64Himi.h"
 
 
 AheadChapter::AheadChapter()
@@ -101,25 +100,13 @@ void AheadChapter::reSetGame(cocos2d::extension::UIButton *pSender, TouchEventTy
         case TOUCH_EVENT_ENDED:
         {
             
-//            GlobalUserDefault::instance()->sharedGame(0);
+            GlobalUserDefault::instance()->sharedGame(0);
             
-//            GlobalUserDefault::instance()->buyCommodities("", "", 0, 0);
+//            GlobalUserDefault::instance()->buyCommodities("", "", 68, 1);
 
 //            GlobalUserDefault::instance()->enterAccountManage();
             
-            GlobalUserDefault::instance()->unLockAchievement(1, 50, "我去这么好的游戏");
-            
-//            int iKey = 2;
-//            std::string sValue = "此项目已存在保存数据的xml文件";
-//            char buffer[32];
-//            sprintf(buffer, "%s%d", "Himi",iKey);
-//            CCLog("----------存储");
-//            CCLog("存储之前数据 key：index: Himi%i, value: %s  ",iKey,sValue.c_str());
-//            string sKey = himiSaveData(reinterpret_cast<const unsigned char*>(sValue.c_str()), sValue.length());
-//            CCLog("存储加密后的数据 key：index: Himi%i, value: %s  ",iKey,sKey.c_str());
-//            CCUserDefault::sharedUserDefault()->setStringForKey(buffer, sKey);
-//            CCUserDefault::sharedUserDefault()->flush();
-            
+//            GlobalUserDefault::instance()->unLockAchievement(1, 50, "我去这么好的游戏");
             
         }
             break;

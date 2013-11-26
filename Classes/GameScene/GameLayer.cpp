@@ -13,6 +13,7 @@
 #include "MacroDefine.h"
 #include "GamePasses.h"
 #include "GlobalUserDefault.h"
+#include "CGShop.h"
 
 using namespace std;
 
@@ -97,7 +98,7 @@ bool GameLayer::init()
    
     _processShow = static_cast<UILabelBMFont *>(_play_root->getChildByName("process_BMFLabel"));
     
-    
+    _gameGold_BMF = static_cast<UILabelBMFont *>(_play_root->getChildByName("gameGold_BMFLabel"));
     
     return true;
 }
@@ -107,6 +108,15 @@ void GameLayer::onEnter()
     cocos2d::CCLayer::onEnter();
     
     this->refreshGameData();                                    //设置游戏参数
+    
+    //当前系统时间
+    struct cc_timeval now;
+    CCTime::gettimeofdayCocos2d(&now, NULL);
+    _start_cd_seconds = now.tv_sec;
+    _startCD = true;
+    _total_award_cd = CG_GAME_CD_LV1;
+    this->scheduleUpdate();             //启动计时器
+
 }
 
 void GameLayer::onExit()
@@ -152,6 +162,13 @@ void GameLayer::getGoldButt(cocos2d::extension::UIButton *pSender, TouchEventTyp
     }else if (type == TOUCH_EVENT_ENDED) {
          CCLog("(end ++ --),%d",end + 1);
         end++;
+        
+        CCScene *scene = CCScene::create();                 //添加场景
+        CGShop *gameLayer = CGShop::create();               //章节
+        scene->addChild(gameLayer);
+        CCTransitionScene *transition = CCTransitionProgressInOut::create(0.2, scene);
+//        CCTransitionScene *transition = GlobalUserDefault::instance()->randomTransitionScene(scene);
+        CCDirector::sharedDirector()->replaceScene(transition);
     }
 }
 
@@ -200,6 +217,8 @@ void GameLayer::shareButt(cocos2d::extension::UIButton *pSender, TouchEventType 
         CCLog("(moving moving 移动)");
     }else if (type == TOUCH_EVENT_ENDED) {
         pSender->setOpacity(255);
+        
+        GlobalUserDefault::instance()->sharedGame(0);       //分享
         
         if (end <= _standardAnswer.length()) {
             
@@ -405,21 +424,48 @@ void GameLayer::compareAnswer()
     if (strcmp(anSwer.c_str(), _standardAnswer.c_str()) == 0)//匹配成功跳转到下一题目
     {
         std::cout<<"匹配成功  ："<<anSwer<<"  "<<_standardAnswer<<std::endl;
+        _startCD = false;
+        
+        struct cc_timeval now;
+        CCTime::gettimeofdayCocos2d(&now, NULL);
+        long curr_seconds = now.tv_sec;
+        _total_award_cd = curr_seconds - _start_cd_seconds;
+        
+        int award_amount;
+        int star_amount;
+        
+        if (_total_award_cd <= CG_GAME_CD_LV3)
+        {
+            award_amount = kGameAward_LV3;
+            star_amount = 3;
+        }else if(_total_award_cd <= CG_GAME_CD_LV2)
+        {
+            award_amount = KGameAward_LV2;
+            star_amount = 2;
+        }else
+        {
+            award_amount = kGameAward_LV1;
+            star_amount = 1;
+        }
         
         /**
-         * 设置下一关章节和关卡id
+         * 1.）修改通关结果
+         * 2.) 设置下一关章节和关卡id
+         * 3.) 获得奖励后修改金币数量
          */
-        GlobalUserDefault::instance()->nextPass();          //下一关
+        GlobalUserDefault::instance()->setPassInfo(star_amount);
+        GlobalUserDefault::instance()->nextPass();                  //下一关
+        GlobalUserDefault::instance()->increaseGameGold(award_amount);
         
-        _succLayer = SuccessLayer::create();
-        
+        SuccessLayer *_succLayer  = SuccessLayer::create();         //通关界面
         CCScene *success_scene = CCScene::create();
         success_scene->addChild(_succLayer,10);
         
         Map_str_str dic;
-        dic.insert(make_pair("xingshu","1"));
+        dic.insert(make_pair("xingshu",CGHelper::getChar(star_amount)));
         dic.insert(make_pair("answer", _standardAnswer));
-        dic.insert(make_pair("jiangli", "6"));
+        dic.insert(make_pair("jiangli", CGHelper::getChar(award_amount)));
+        dic.insert(make_pair("shijian", CGHelper::getChar(_total_award_cd)));
         _succLayer->setSuccessData(dic);
         
         CCTransitionScene *transition = GlobalUserDefault::instance()->randomTransitionScene(success_scene);
@@ -516,6 +562,21 @@ void GameLayer::initialTipView()
     this->setProcessShow(0);                                            //设置进度
 }
 
-
+#pragma mark - 倒计时
+void GameLayer::update(float delta)
+{
+    if (!_startCD) return;                  //没有开始倒计时不执行代码
+    
+    struct cc_timeval now;
+    CCTime::gettimeofdayCocos2d(&now, NULL);
+    long long curr_seconds = now.tv_sec;
+    
+    if (curr_seconds - _start_cd_seconds >= CG_GAME_CD_LV1) //时间到
+    {
+        _startCD = false;
+        CCLog(" <------规定时间没有完成，所以没有奖励了----->  ");
+    }
+    
+}
 
 

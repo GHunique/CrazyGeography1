@@ -274,6 +274,12 @@
 		AC0D4A5C183F5B52001213FE /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0D4A5B183F5B52001213FE /* libicucore.dylib */; };
 		AC0D4A5E183F5B5C001213FE /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0D4A5D183F5B5C001213FE /* libz.1.2.5.dylib */; };
 		AC0D4A60183F5CC7001213FE /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0D4A5F183F5CC7001213FE /* libsqlite3.dylib */; };
+<<<<<<< HEAD
+=======
+		AC0D4A63183F5FB7001213FE /* ShareSDKiPadDefaultShareViewUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC0D4A61183F5FB7001213FE /* ShareSDKiPadDefaultShareViewUI.bundle */; };
+		AC0D4A64183F5FB7001213FE /* ShareSDKiPadDefaultShareViewUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0D4A62183F5FB7001213FE /* ShareSDKiPadDefaultShareViewUI.framework */; };
+		AC3B03841844D12D0072A057 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AC3B03831844D12D0072A057 /* libstdc++.dylib */; };
+>>>>>>> bc69049dd70f02aa6d8731fd02200614838f6594
 		AC40768D1832060100BC64A5 /* ChapterLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC40768B1832060100BC64A5 /* ChapterLayer.cpp */; };
 		AC5F7203183AF9DF0085D184 /* GamePasses.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC5F7201183AF9DF0085D184 /* GamePasses.cpp */; };
 		AC6BED1318222AD900724ABD /* CGHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC6BED0F18222AD900724ABD /* CGHelper.cpp */; };
@@ -287,12 +293,13 @@
 		AC7E6C5C1839A09200BF352A /* CGAccessaryButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC7E6C5A1839A09200BF352A /* CGAccessaryButton.cpp */; };
 		AC82DA151834C81500969C15 /* AheadChapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC82DA131834C81500969C15 /* AheadChapter.cpp */; };
 		AC82DA1B1834D2B600969C15 /* UIControlLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC82DA191834D2B600969C15 /* UIControlLayer.cpp */; };
+		AC89BF63184436BE008FCDBC /* CGShop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC89BF61184436BE008FCDBC /* CGShop.cpp */; };
+		AC89BF65184442AD008FCDBC /* platform91Configure.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC89BF64184442AD008FCDBC /* platform91Configure.mm */; };
 		AC8C9EAA1828C9EB0000F27D /* CPPSingleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC8C9EA81828C9EB0000F27D /* CPPSingleton.cpp */; };
 		AC99D9491842E59B008EC1D6 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC99D9481842E59B008EC1D6 /* AddressBook.framework */; };
 		AC99D94B1842E617008EC1D6 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC99D94A1842E617008EC1D6 /* MessageUI.framework */; };
 		AC99D95F1842E7DD008EC1D6 /* NdComPlatform_SNS_Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC99D95E1842E7DD008EC1D6 /* NdComPlatform_SNS_Resources.bundle */; };
 		AC99D9691842F642008EC1D6 /* 91platformConfigure.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC99D9681842F642008EC1D6 /* 91platformConfigure.mm */; };
-		AC99D96C184300E4008EC1D6 /* platform91Configure.m in Sources */ = {isa = PBXBuildFile; fileRef = AC99D96B184300E4008EC1D6 /* platform91Configure.m */; };
 		ACC9E25018337FCF006A3D65 /* UIFUAlert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACC9E24E18337FCF006A3D65 /* UIFUAlert.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
@@ -840,6 +847,12 @@
 		AC0D4A5B183F5B52001213FE /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		AC0D4A5D183F5B5C001213FE /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		AC0D4A5F183F5CC7001213FE /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+<<<<<<< HEAD
+=======
+		AC0D4A61183F5FB7001213FE /* ShareSDKiPadDefaultShareViewUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDKiPadDefaultShareViewUI.bundle; sourceTree = "<group>"; };
+		AC0D4A62183F5FB7001213FE /* ShareSDKiPadDefaultShareViewUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKiPadDefaultShareViewUI.framework; sourceTree = "<group>"; };
+		AC3B03831844D12D0072A057 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+>>>>>>> bc69049dd70f02aa6d8731fd02200614838f6594
 		AC40768B1832060100BC64A5 /* ChapterLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChapterLayer.cpp; sourceTree = "<group>"; };
 		AC40768C1832060100BC64A5 /* ChapterLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterLayer.h; sourceTree = "<group>"; };
 		AC5F7201183AF9DF0085D184 /* GamePasses.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GamePasses.cpp; sourceTree = "<group>"; };
@@ -863,6 +876,9 @@
 		AC82DA141834C81500969C15 /* AheadChapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AheadChapter.h; sourceTree = "<group>"; };
 		AC82DA191834D2B600969C15 /* UIControlLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIControlLayer.cpp; sourceTree = "<group>"; };
 		AC82DA1A1834D2B600969C15 /* UIControlLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIControlLayer.h; sourceTree = "<group>"; };
+		AC89BF61184436BE008FCDBC /* CGShop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CGShop.cpp; sourceTree = "<group>"; };
+		AC89BF62184436BE008FCDBC /* CGShop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGShop.h; sourceTree = "<group>"; };
+		AC89BF64184442AD008FCDBC /* platform91Configure.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = platform91Configure.mm; sourceTree = "<group>"; };
 		AC8C9EA81828C9EB0000F27D /* CPPSingleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CPPSingleton.cpp; sourceTree = "<group>"; };
 		AC8C9EA91828C9EB0000F27D /* CPPSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPPSingleton.h; sourceTree = "<group>"; };
 		AC8C9EAC1828CFA90000F27D /* GlobalUserDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalUserDefault.h; sourceTree = "<group>"; };
@@ -872,7 +888,6 @@
 		AC99D9671842F642008EC1D6 /* 91PlatformConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 91PlatformConfigure.h; sourceTree = "<group>"; };
 		AC99D9681842F642008EC1D6 /* 91platformConfigure.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = 91platformConfigure.mm; sourceTree = "<group>"; };
 		AC99D96A184300E4008EC1D6 /* platform91Configure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform91Configure.h; sourceTree = "<group>"; };
-		AC99D96B184300E4008EC1D6 /* platform91Configure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = platform91Configure.m; sourceTree = "<group>"; };
 		ACC9E24E18337FCF006A3D65 /* UIFUAlert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIFUAlert.cpp; sourceTree = "<group>"; };
 		ACC9E24F18337FCF006A3D65 /* UIFUAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIFUAlert.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -896,7 +911,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				046F3D131844170B00B0ECBB /* TencentOpenAPI.framework in Frameworks */,
+=======
+				AC0D4A60183F5CC7001213FE /* libsqlite3.dylib in Frameworks */,
+				AC3B03841844D12D0072A057 /* libstdc++.dylib in Frameworks */,
+				AC99D9581842E772008EC1D6 /* Log.framework in Frameworks */,
+>>>>>>> bc69049dd70f02aa6d8731fd02200614838f6594
 				BF1712471292920000B8313A /* libz.dylib in Frameworks */,
 				AC99D94B1842E617008EC1D6 /* MessageUI.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
@@ -905,11 +926,16 @@
 				046F3D2C1844172E00B0ECBB /* NDUtility.framework in Frameworks */,
 				046F3D0D1844170B00B0ECBB /* TencentWeiboConnection.framework in Frameworks */,
 				AC99D9491842E59B008EC1D6 /* AddressBook.framework in Frameworks */,
+<<<<<<< HEAD
 				AC0D4A60183F5CC7001213FE /* libsqlite3.dylib in Frameworks */,
 				046F3D0F1844170B00B0ECBB /* AGCommon.framework in Frameworks */,
 				046F3D0A1844170B00B0ECBB /* QQConnection.framework in Frameworks */,
 				046F3D291844172E00B0ECBB /* Encrypt.framework in Frameworks */,
 				046F3D0E1844170B00B0ECBB /* WeChatConnection.framework in Frameworks */,
+=======
+				AC99D95A1842E772008EC1D6 /* NDUtility.framework in Frameworks */,
+				AC99D9571842E772008EC1D6 /* Encrypt.framework in Frameworks */,
+>>>>>>> bc69049dd70f02aa6d8731fd02200614838f6594
 				AC0D4A5E183F5B5C001213FE /* libz.1.2.5.dylib in Frameworks */,
 				046F3D121844170B00B0ECBB /* ShareSDKCoreService.framework in Frameworks */,
 				046F3D161844170B00B0ECBB /* libWeChatSDK.a in Frameworks */,
@@ -1695,6 +1721,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AC3B03831844D12D0072A057 /* libstdc++.dylib */,
 				AC99D94A1842E617008EC1D6 /* MessageUI.framework */,
 				AC99D9481842E59B008EC1D6 /* AddressBook.framework */,
 				AC0D4A5F183F5CC7001213FE /* libsqlite3.dylib */,
@@ -2074,6 +2101,8 @@
 		AC7DEF32181F45C100EF9479 /* GameScene */ = {
 			isa = PBXGroup;
 			children = (
+				AC89BF61184436BE008FCDBC /* CGShop.cpp */,
+				AC89BF62184436BE008FCDBC /* CGShop.h */,
 				AC5F7201183AF9DF0085D184 /* GamePasses.cpp */,
 				AC5F7202183AF9DF0085D184 /* GamePasses.h */,
 				AC82DA131834C81500969C15 /* AheadChapter.cpp */,
@@ -2118,7 +2147,7 @@
 				AC99D9671842F642008EC1D6 /* 91PlatformConfigure.h */,
 				AC99D9681842F642008EC1D6 /* 91platformConfigure.mm */,
 				AC99D96A184300E4008EC1D6 /* platform91Configure.h */,
-				AC99D96B184300E4008EC1D6 /* platform91Configure.m */,
+				AC89BF64184442AD008FCDBC /* platform91Configure.mm */,
 			);
 			name = 91Platform;
 			path = ../Classes/91Platform;
@@ -2293,7 +2322,6 @@
 				15A3D9231682F7D5002FB0C5 /* b2Joint.cpp in Sources */,
 				15A3D9241682F7D5002FB0C5 /* b2MouseJoint.cpp in Sources */,
 				15A3D9251682F7D5002FB0C5 /* b2PrismaticJoint.cpp in Sources */,
-				AC99D96C184300E4008EC1D6 /* platform91Configure.m in Sources */,
 				15A3D9261682F7D5002FB0C5 /* b2PulleyJoint.cpp in Sources */,
 				15A3D9271682F7D5002FB0C5 /* b2RevoluteJoint.cpp in Sources */,
 				15A3D9281682F7D5002FB0C5 /* b2RopeJoint.cpp in Sources */,
@@ -2336,6 +2364,7 @@
 				15A3DA311682F826002FB0C5 /* CCBAnimationManager.cpp in Sources */,
 				15A3DA321682F826002FB0C5 /* CCBFileLoader.cpp in Sources */,
 				15A3DA331682F826002FB0C5 /* CCBKeyframe.cpp in Sources */,
+				AC89BF65184442AD008FCDBC /* platform91Configure.mm in Sources */,
 				15A3DA341682F826002FB0C5 /* CCBReader.cpp in Sources */,
 				15A3DA351682F826002FB0C5 /* CCBSequence.cpp in Sources */,
 				15A3DA361682F826002FB0C5 /* CCBSequenceProperty.cpp in Sources */,
@@ -2383,6 +2412,7 @@
 				15A3DA5E1682F826002FB0C5 /* CCPhysicsDebugNode.cpp in Sources */,
 				15A3DA5F1682F826002FB0C5 /* CCPhysicsSprite.cpp in Sources */,
 				15A3DAEB1682F8A6002FB0C5 /* CDAudioManager.m in Sources */,
+				AC89BF63184436BE008FCDBC /* CGShop.cpp in Sources */,
 				15A3DAEC1682F8A6002FB0C5 /* CDOpenALSupport.m in Sources */,
 				15A3DAED1682F8A6002FB0C5 /* CocosDenshion.m in Sources */,
 				15A3DAEE1682F8A6002FB0C5 /* SimpleAudioEngine.mm in Sources */,
