@@ -62,8 +62,9 @@ const std::string CG_GAME_DATA[2] =
     "CGSetting.xml",    ///----------游戏设置文件
 };
 
-//游戏中时间奖励
+//金币对应的标示
 #define CG_GAME_GOLD_KEY  "C1G1_2G1A1M2E_G1O1L2D_1K1E2Y_1X1S2Y"
+//游戏中完成关卡所用时间对应等级
 #define CG_GAME_CD_LV1          12
 #define CG_GAME_CD_LV2          8
 #define CG_GAME_CD_LV3          5
@@ -73,7 +74,8 @@ const std::string CG_GAME_DATA[2] =
 //游戏初始化金币
 #define CG_GAME_INIT_GOLD    120
 
-enum  {
+
+enum  {//配置么个等级获得奖励
     
     kGameAward_LV1 = 3,
     KGameAward_LV2 = 7,

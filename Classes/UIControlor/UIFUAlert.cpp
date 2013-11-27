@@ -48,6 +48,11 @@ bool UIFUAlert::init()
     
     _cancleButt  = static_cast<UIButton *>(_alert_root->getChildByName(""));
     _confirmButt = static_cast<UIButton *>(_alert_root->getChildByName(""));
+    _cancleButt->addTouchEventListener(this, toucheventselector(UIFUAlert::cancelButt));
+    
+    this->setTouchEnabled(true);
+    this->setTouchMode(kCCTouchesOneByOne);
+    this->setTouchPriority(-12);   //设置触摸事件相应等级
     
     return true;
 }
@@ -75,7 +80,7 @@ void UIFUAlert::cancelButt(cocos2d::extension::UIButton *pSender, TouchEventType
         case TOUCH_EVENT_MOVED:
             break;
         case TOUCH_EVENT_ENDED:
-            this->removeFromParent();           //从父节点移除
+            this->removeFromParentAndCleanup(true);           //从父节点移除
             break;
         case TOUCH_EVENT_CANCELED:
             break;
@@ -99,4 +104,12 @@ void UIFUAlert::confirmButt(cocos2d::extension::UIButton *pSender, TouchEventTyp
             break;
     }
 }
+
+void UIFUAlert::boundConfirmEvent(cocos2d::CCObject *target, SEL_TouchEvent selector)
+{
+    _confirmButt->addTouchEventListener(target, selector);
+}
+
+
+
 

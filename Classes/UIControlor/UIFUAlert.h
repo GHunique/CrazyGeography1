@@ -28,6 +28,8 @@ public:
     void onEnter();
     void onExit();
     
+    void boundConfirmEvent(cocos2d::CCObject *target,SEL_TouchEvent selector);//绑定确定按钮事件
+    
 private:
     UILayer *_aUILayer;
     Layout  *_alert_root;
@@ -39,6 +41,9 @@ private:
 private:
     void cancelButt(UIButton *pSender,TouchEventType type);
     void confirmButt(UIButton *pSender,TouchEventType type);
+    
+    //屏蔽优先级低的界面触摸事件
+    virtual bool ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent){return true;};
     
 };
 #endif /* defined(__CrazyGeography__UIFUAlert__) */
