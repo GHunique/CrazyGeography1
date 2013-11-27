@@ -103,7 +103,7 @@ static AppDelegate s_sharedApplication;
 #pragma mark - 分享
 - (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
 {
-    return UIInterfaceOrientationMaskAll;
+    return UIInterfaceOrientationMaskPortrait|UIInterfaceOrientationMaskPortraitUpsideDown;
 }
 
 - (BOOL)application:(UIApplication *)application  handleOpenURL:(NSURL *)url

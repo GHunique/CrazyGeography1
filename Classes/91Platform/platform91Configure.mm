@@ -57,10 +57,9 @@ static platform91Configure *_platform91;
     //versionCheckLevel的设置详见上面的说明
     cfg.versionCheckLevel = ND_VERSION_CHECK_LEVEL_STRICT;
     //orientation的设置详见上面的说明(这里以设置竖屏为例)
-      cfg.orientation = UIInterfaceOrientationPortrait|UIInterfaceOrientationPortraitUpsideDown
-        |UIInterfaceOrientationLandscapeLeft|UIInterfaceOrientationLandscapeRight;
+      cfg.orientation = UIInterfaceOrientationPortrait;
     
-//    [[NdComPlatform defaultPlatform] NdSetScreenOrientation:UIInterfaceOrientationPortrait];
+    [[NdComPlatform defaultPlatform] NdSetScreenOrientation:UIInterfaceOrientationPortrait];
     
     [[NdComPlatform defaultPlatform] NdInit:cfg];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(SNSInitResult:) name:(NSString *)kNdCPInitDidFinishNotification object:nil];
