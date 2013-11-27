@@ -68,8 +68,10 @@ const std::string CG_GAME_DATA[2] =
 #define CG_GAME_CD_LV2          8
 #define CG_GAME_CD_LV3          5
 
+//标示是否第一次进入游戏
+#define CG_GAME_IS_FRISTIN   "FIRST_IN_GAME"
 //游戏初始化金币
-#define CG_GAME_REFRESH_GOLD    120
+#define CG_GAME_INIT_GOLD    120
 
 enum  {
     

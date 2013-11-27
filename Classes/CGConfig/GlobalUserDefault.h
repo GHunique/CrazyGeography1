@@ -109,6 +109,7 @@ public:
     
     int  getGameGold();      //获得当前金币
     void refreshGameGold();  //重置游戏金币
+    void initGameGold();     //初始化游戏金币
     
 private:
     

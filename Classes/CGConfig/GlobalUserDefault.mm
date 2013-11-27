@@ -44,8 +44,9 @@ GlobalUserDefault::GlobalUserDefault()
     
     this->chapterMapData();     //初始化章节关卡信息，加载图片资源
     
-    //初始化分享数据
-    _shareMultPla = new SharedMultiPlatform();
+    
+    _shareMultPla = new SharedMultiPlatform();  //初始化分享数据
+    this->initGameGold();                       //初始化金币
 }
 
 GlobalUserDefault::~GlobalUserDefault()
@@ -610,10 +611,7 @@ void GlobalUserDefault::increaseGameGold(int addGold)
     local_gold += addGold;
     
     std::string sValue = CGHelper::getstring(local_gold);
-    CCLog("----------存储");
-    CCLog("存储之前数据 key：index: Himi, value: %s  ",sValue.c_str());
     string value_str = himiSaveData(reinterpret_cast<const unsigned char*>(sValue.c_str()), sValue.length());
-    CCLog("存储加密后的数据 key：index: Himi, value: %s  ",value_str.c_str());
     CCUserDefault::sharedUserDefault()->setStringForKey(CG_GAME_GOLD_KEY, value_str);
     CCUserDefault::sharedUserDefault()->flush();
     
@@ -633,9 +631,9 @@ void GlobalUserDefault::reduceGameGold(int reGold)
 #endif
     
     string value_str = himiSaveData(reinterpret_cast<const unsigned char*>(sValue.c_str()), sValue.length());
-    if (GLOBAL_DEBUG) {
+#ifdef GLOBAL_DEBUG
         CCLog("存储加密后的数据 key：index: Himi, value: %s  ",value_str.c_str());
-    }
+#endif
     
     CCUserDefault::sharedUserDefault()->setStringForKey(CG_GAME_GOLD_KEY, value_str);
     CCUserDefault::sharedUserDefault()->flush();
@@ -663,11 +661,32 @@ int GlobalUserDefault::getGameGold()
 
 void GlobalUserDefault::refreshGameGold()
 {
-    //初始化游戏金币
-    CCUserDefault *userDefault = CCUserDefault::sharedUserDefault();
-    userDefault->setStringForKey(CG_GAME_GOLD_KEY, CGHelper::getstring(CG_GAME_REFRESH_GOLD));
+    std::string sValue = CGHelper::getstring(CG_GAME_INIT_GOLD);
+    
+#ifdef GLOBAL_DEBUG
+    CCLog("----------存储------");
+    CCLog("存储之前数据 key：index: Himi, value: %s  ",sValue.c_str());
+#endif
+    
+    string value_str = himiSaveData(reinterpret_cast<const unsigned char*>(sValue.c_str()), sValue.length());
+#ifdef GLOBAL_DEBUG
+        CCLog("存储加密后的数据 key：index: Himi, value: %s  ",value_str.c_str());
+    
+#endif
+    CCUserDefault::sharedUserDefault()->setStringForKey(CG_GAME_GOLD_KEY, value_str);
+    CCUserDefault::sharedUserDefault()->flush();
 }
 
-
+void GlobalUserDefault::initGameGold()
+{
+    CCUserDefault *userDefault = CCUserDefault::sharedUserDefault();
+    int inGameFirst = userDefault->getIntegerForKey(CG_GAME_IS_FRISTIN);// 0 标示是第一次进入游戏
+    if (inGameFirst == 0)
+    {
+        //初始化游戏金币
+        userDefault->setIntegerForKey(CG_GAME_IS_FRISTIN, 1);
+        increaseGameGold(CG_GAME_INIT_GOLD);                    //   初始化游戏币
+    }
+}
 
 
