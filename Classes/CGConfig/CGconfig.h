@@ -68,12 +68,17 @@ const std::string CG_GAME_DATA[2] =
 #define CG_GAME_CD_LV2          8
 #define CG_GAME_CD_LV3          5
 
+//游戏初始化金币
+#define CG_GAME_REFRESH_GOLD    120
+
 enum  {
     
     kGameAward_LV1 = 3,
     KGameAward_LV2 = 7,
     kGameAward_LV3 = 10,
-    };
+    
+    
+};
 
 
 

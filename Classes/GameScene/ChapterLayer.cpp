@@ -10,6 +10,7 @@
 #include "GamePasses.h"
 #include "GlobalUserDefault.h"
 #include "CGAccessaryButton.h"
+#include "AheadChapter.h"
 
 ChapterLayer::ChapterLayer()
 {
@@ -37,7 +38,16 @@ bool ChapterLayer::init()
     _scrollView->setZOrder(10);
     _scrollView->setDirection(SCROLLVIEW_DIR_HORIZONTAL);
     
-    "back_butt_1" "back_butt_2"
+    UIButton *back_butt_1 = static_cast<UIButton *>(_chapter_root->getChildByName("back_butt_1"));
+    back_butt_1->setTouchEnable(true);
+    back_butt_1->addTouchEventListener(this, toucheventselector(ChapterLayer::gotoAheadLayer));
+    UIButton *back_butt_2 = static_cast<UIButton *>(_chapter_root->getChildByName("back_butt_2"));
+    back_butt_2->setTouchEnable(true);
+    back_butt_2->addTouchEventListener(this, toucheventselector(ChapterLayer::gotoAheadLayer));
+    
+    UIButton *back_butt_3 = static_cast<UIButton *>(_chapter_root->getChildByName("back_butt_3"));
+    back_butt_3->setTouchEnable(true);
+    back_butt_3->addTouchEventListener(this, toucheventselector(ChapterLayer::gotoAheadLayer));
     
     this->provincesLayout();
     
@@ -158,4 +168,29 @@ void ChapterLayer::gotoDirectlyPass(CCObject *pSender, TouchEventType type)
             break;
     }
 }
+
+void ChapterLayer::gotoAheadLayer(cocos2d::extension::UIButton *pSender, TouchEventType tyep)
+{
+    switch (tyep) {
+        case cocos2d::extension::TOUCH_EVENT_ENDED:
+        {
+            CCScene *scene = CCScene::create();                 //添加场景
+            AheadChapter *gameLayer = AheadChapter::create();
+            scene->addChild(gameLayer);
+            
+            CCTransitionScene *transition = CCTransitionProgressVertical::create(0.2, scene);
+            CCDirector::sharedDirector()->replaceScene(transition);
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
+
+
+
+
+
 

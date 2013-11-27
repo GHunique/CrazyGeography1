@@ -24,7 +24,7 @@ using namespace CocosDenshion;
 
 UIControlLayer::UIControlLayer()
 {
-    
+    GlobalUserDefault::instance()->show91ToolBar(true);
 }
 
 UIControlLayer::~UIControlLayer()

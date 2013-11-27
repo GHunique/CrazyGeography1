@@ -107,7 +107,8 @@ public:
     void increaseGameGold(int gold);
     void reduceGameGold(int gold);
     
-    int getGameGold();      //获得当前金币
+    int  getGameGold();      //获得当前金币
+    void refreshGameGold();  //重置游戏金币
     
 private:
     

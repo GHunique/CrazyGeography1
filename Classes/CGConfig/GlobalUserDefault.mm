@@ -661,6 +661,12 @@ int GlobalUserDefault::getGameGold()
     return local_gold;
 }
 
+void GlobalUserDefault::refreshGameGold()
+{
+    //初始化游戏金币
+    CCUserDefault *userDefault = CCUserDefault::sharedUserDefault();
+    userDefault->setStringForKey(CG_GAME_GOLD_KEY, CGHelper::getstring(CG_GAME_REFRESH_GOLD));
+}
 
 
 

@@ -100,8 +100,6 @@ void AheadChapter::reSetGame(cocos2d::extension::UIButton *pSender, TouchEventTy
         case TOUCH_EVENT_ENDED:
         {
             
-            GlobalUserDefault::instance()->sharedGame(0);
-            
 //            GlobalUserDefault::instance()->buyCommodities("", "", 68, 1);
 
 //            GlobalUserDefault::instance()->enterAccountManage();
@@ -121,6 +119,8 @@ void AheadChapter::settingGame(cocos2d::extension::UIButton *pSender, TouchEvent
 {
     switch (type) {
         case TOUCH_EVENT_BEGAN:
+        {
+                    }
             break;
         case TOUCH_EVENT_MOVED:
             break;
@@ -128,9 +128,10 @@ void AheadChapter::settingGame(cocos2d::extension::UIButton *pSender, TouchEvent
         {
 //            GlobalUserDefault::instance()->submitScoreTo91(1, 1, "用户获得了哈");
 //            GlobalUserDefault::instance()->openScoreBoard(0);
-            GlobalUserDefault::instance()->openAchievement();
-            return;
-            
+//            GlobalUserDefault::instance()->openAchievement();
+//            return;
+            GlobalUserDefault::instance()->show91ToolBar(false);
+
             CCScene *scene = CCScene::create();                         //添加场景
             UIControlLayer *gameLayer = UIControlLayer::create();        //章节
             scene->addChild(gameLayer);

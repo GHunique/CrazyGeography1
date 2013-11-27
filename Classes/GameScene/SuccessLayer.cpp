@@ -135,8 +135,11 @@ void SuccessLayer::setSuccessData(Map_str_str &dic)
         
     }
     
-    CCLog("<!!-----通关时间为 #%d#----!!>",CGHelper::getint(dic.at("shijian")));
-//    dic.at("shijian").c_str();          //通关所用时间
+    //通关所用时间
+    UILabel *used_time_label = static_cast<UILabel *>(_rootLayout->getChildByName("time_label"));
+    std::string time_str = " " + dic.at("shijian") + " 秒";
+    used_time_label->setText(time_str.c_str());
+    
 }
 
 

@@ -310,7 +310,7 @@ static platform91Configure *_platform91;
     NSDictionary *dict = [notify userInfo];
     BOOL success = [[dict objectForKey:@"result"] boolValue];
     NdGuestAccountStatus* guestStatus = (NdGuestAccountStatus*)[dict objectForKey:@"NdGuestAccountStatus"];
-    //登录成功后处理
+    //TODO:登录成功后处理
     if([[NdComPlatform defaultPlatform] isLogined] && success) {
         //也可以通过[[NdComPlatform defaultPlatform] getCurrentLoginState]判断是否游客登录状态
         if (guestStatus) {
@@ -325,8 +325,6 @@ static platform91Configure *_platform91;
         else {
             NSLog(@" //普通账号登录成功！");
         }
-        
-         [[NdComPlatform defaultPlatform] NdShowToolBar:NdToolBarAtBottomRight];
     }
     //登录失败处理和相应提示
     else {
@@ -355,6 +353,8 @@ static platform91Configure *_platform91;
                 break;
         }
     }
+    
+    [[NdComPlatform defaultPlatform] NdShowToolBar:NdToolBarAtBottomRight];
     
 }
 

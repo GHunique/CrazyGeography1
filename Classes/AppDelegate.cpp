@@ -60,7 +60,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     
 //    yDirector->setContentScaleFactor(resourceSize.height/designSize.height);
  
-    yEGLView->setDesignResolutionSize(designSize.width, designSize.height,kResolutionExactFit);
+    yEGLView->setDesignResolutionSize(designSize.width, designSize.height,kResolutionShowAll);
     
     CCScene *scene = CCScene::create();                 //添加场景
     AheadChapter *gameLayer = AheadChapter::create();

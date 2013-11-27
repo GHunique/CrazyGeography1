@@ -28,7 +28,6 @@ GameLayer::GameLayer()
     
     CG_MAX_ANSWER_NUMBER = 0;
     CG_ENGLISH_ANSWER_NUMBER = 0;
-    
     GlobalUserDefault::instance()->show91ToolBar(false);
 }
 
@@ -62,6 +61,9 @@ bool GameLayer::init()
     getGold_butt->setTouchEnable(true);
     getGold_butt->setZOrder(4);
     getGold_butt->addTouchEventListener(this, toucheventselector(GameLayer::getGoldButt));
+    std::string gold_str = "     ";
+    gold_str += CGHelper::getstring(GlobalUserDefault::instance()->getGameGold());
+    getGold_butt->setText(gold_str.c_str());
     
     //帮组按钮
     UIButton *help_butt = static_cast<UIButton *>(_play_root->getChildByName("help_butt"));
@@ -250,9 +252,9 @@ void GameLayer::nextButt(cocos2d::extension::UIButton *pSender, TouchEventType t
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT) || (CC_TARGET_PLATFORM == CC_PLATFORM_WP8)
         CCMessageBox("You pressed the close button. Windows Store Apps do not implement a close button.","Alert");
 #else
-        CCDirector::sharedDirector()->end();
+//        CCDirector::sharedDirector()->end();
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-        exit(0);
+//        exit(0);
 #endif
 #endif
     }

@@ -8,6 +8,7 @@
 
 #include "CGShop.h"
 #include "GlobalUserDefault.h"
+#include "GameLayer.h"
 
 enum  {
     kBUY_280_$_6        = 2806,
@@ -50,13 +51,22 @@ bool CGShop::init()
     butt68->addTouchEventListener(this, toucheventselector(CGShop::buyGold)); butt68->setTag(kBUY_3800_$_68);
     butt128->addTouchEventListener(this, toucheventselector(CGShop::buyGold));butt128->setTag(kBUY_8000_$_128);
     
+    UIButton *back_butt = static_cast<UIButton *>(_shop_root->getChildByName("back_butt")); //返回游戏界面按钮
+    back_butt->setZOrder(5);
+    back_butt->setTouchEnable(true);
+    back_butt->addTouchEventListener(this, toucheventselector(CGShop::backButton));
     
+    GlobalUserDefault::instance()->show91ToolBar(false);
     
     return true;
 }
 
 void CGShop::buyGold(cocos2d::extension::UIButton *pSender, TouchEventType type)
 {
+   
+    if (type != TOUCH_EVENT_ENDED)
+        return;
+    
     float price = 0.0;
     int count = 1;
     
@@ -101,5 +111,23 @@ void CGShop::buyGold(cocos2d::extension::UIButton *pSender, TouchEventType type)
     }
 }
 
+void CGShop::backButton(cocos2d::extension::UIButton *pSender, TouchEventType type)
+{
+    switch (type) {
+        case TOUCH_EVENT_ENDED:
+        {
+            CCScene *scene = CCScene::create();
+            GameLayer *game = GameLayer::create();
+            scene->addChild(game);
+            
+            CCTransitionScene *transition = GlobalUserDefault::instance()->randomTransitionScene(scene);
+            CCDirector::sharedDirector()->replaceScene(transition);
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
 
 
