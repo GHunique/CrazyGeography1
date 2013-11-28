@@ -21,6 +21,46 @@
     "name": null,
     "children": [
       {
+        "classname": "Label",
+        "name": null,
+        "children": [],
+        "options": {
+          "__type": "ComGUILabelSurrogate:#EditorCommon.JsonModel.Component.GUI",
+          "classname": "Label",
+          "name": "Label",
+          "ZOrder": 4,
+          "actiontag": 178,
+          "anchorPointX": 0,
+          "anchorPointY": 0.5,
+          "classType": null,
+          "colorB": 255,
+          "colorG": 255,
+          "colorR": 255,
+          "flipX": false,
+          "flipY": false,
+          "height": 22,
+          "ignoreSize": true,
+          "opacity": 255,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "tag": 144,
+          "touchAble": false,
+          "useMergedTexture": true,
+          "visible": true,
+          "width": 66,
+          "x": 547,
+          "xProportion": 0.8546875,
+          "y": 916,
+          "yProportion": 0.954166651,
+          "fontName": "黑体",
+          "fontSize": 22,
+          "fontType": 1,
+          "text": "234567",
+          "touchScaleEnable": false
+        }
+      },
+      {
         "classname": "TextButton",
         "name": null,
         "children": [],
@@ -81,7 +121,7 @@
           "scale9Enable": false,
           "scale9Height": 84,
           "scale9Width": 197,
-          "text": "     234",
+          "text": "",
           "textColorB": 181,
           "textColorG": 228,
           "textColorR": 255
@@ -2384,7 +2424,7 @@
           "colorR": 255,
           "flipX": false,
           "flipY": false,
-          "height": 126,
+          "height": 128,
           "ignoreSize": true,
           "opacity": 255,
           "rotation": 0,
@@ -2394,7 +2434,7 @@
           "touchAble": false,
           "useMergedTexture": true,
           "visible": true,
-          "width": 119,
+          "width": 128,
           "x": 56,
           "xProportion": 0.0875,
           "y": 732,
@@ -2405,25 +2445,25 @@
           "capInsetsY": 0,
           "disabled": null,
           "disabledData": {
-            "path": "btn_share.png",
+            "path": "accessary2/recycle_ori.png",
             "plistFile": null,
             "resourceType": 1
           },
           "normal": null,
           "normalData": {
-            "path": "btn_share.png",
+            "path": "accessary2/recycle_ori.png",
             "plistFile": null,
             "resourceType": 1
           },
           "pressed": null,
           "pressedData": {
-            "path": "btn_share.png",
+            "path": "accessary2/recycle_ori.png",
             "plistFile": null,
             "resourceType": 1
           },
           "scale9Enable": false,
-          "scale9Height": 126,
-          "scale9Width": 119
+          "scale9Height": 128,
+          "scale9Width": 128
         }
       }
     ],
