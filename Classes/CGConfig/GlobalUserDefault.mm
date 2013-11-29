@@ -605,6 +605,7 @@ void GlobalUserDefault::unLockAchievement(int achieId, int percent, const char *
 void GlobalUserDefault::enterVirtualShop()
 {
     [[platform91Configure instance] EnterVirtualShop];
+    [[platform91Configure instance] getVirtualCommodityList];
 }
 
 #pragma mark - 本地游戏金币处理

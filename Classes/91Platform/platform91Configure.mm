@@ -23,17 +23,20 @@
 #import "GlobalUserDefault.h"
 
 
-#define DEBUG_RELEASE_91 1
-#define BUY_RECORD_KEY   @"BUY_RECORD_KEY"
-#define BUY_CooOrderSerial @"120F6CD4018C4D9A8E852AF7D2F32666"
+#define DEBUG_RELEASE_91  1
+#define BUY_RECORD_KEY    @"BUY_RECORD_KEY"
+#define BUY_CooOrderSerial_HEAD  @"ZHIHUDIBIAOXSYLY"
 
 static platform91Configure *_platform91;
 
 @interface platform91Configure ()
 
-- (void)addRecord:(NSString *) record;
+- (void)addRecord:(NdBuyInfo *) buyInfo;
 - (void)removeRecord:(NSString *)record;
 - (NSArray *)getUnCheckedRecord;
+- (void)dealWithBuySuccess:(NSString *) cooOrderSerial;
+- (void)dealWithBuyFailure:(NSString *) cooOrderSerial;
+
 
 @end
 
@@ -57,15 +60,15 @@ static platform91Configure *_platform91;
     //完成您必要的初始化工作，例如设置您的rootViewController
     //初始化平台
     NdInitConfigure *cfg = [[[NdInitConfigure alloc] init] autorelease];
-//    cfg.appid =100010;
-//    cfg.appKey =@"C28454605B9312157C2F76F27A9BCA2349434E546A6E9C75";
+    //    cfg.appid =100010;
+    //    cfg.appKey =@"C28454605B9312157C2F76F27A9BCA2349434E546A6E9C75";
     //我自己的游戏
     cfg.appid =110237;
     cfg.appKey =@"1ec5e323e5d561ea0553ba2b76df5fed304ddff14bb5c6e2";
     //versionCheckLevel的设置详见上面的说明
     cfg.versionCheckLevel = ND_VERSION_CHECK_LEVEL_STRICT;
     //orientation的设置详见上面的说明(这里以设置竖屏为例)
-      cfg.orientation = UIInterfaceOrientationPortrait;
+    cfg.orientation = UIInterfaceOrientationPortrait;
     
     [[NdComPlatform defaultPlatform] NdSetScreenOrientation:UIInterfaceOrientationPortrait];
     
@@ -98,8 +101,12 @@ static platform91Configure *_platform91;
     
     //程序启动时检查未核对结果的交易在合适的地方添加类似以下的检查代码
     NSArray *recordArray = [self getUnCheckedRecord];
-    for (NSString *cooOrderSerial in recordArray) {
+    for (NSDictionary *infoDic in recordArray)
+    {
+        NSString *cooOrderSerial = [infoDic objectForKey:@"productId"];
+        NSLog(@"cooOrderSerial :%@",cooOrderSerial);
         [[NdComPlatform defaultPlatform] NdCheckPaySuccess : cooOrderSerial delegate : self];
+        //回调方法是 checkPaySuccessDidFinish
     }
     
     //获取我的详细信息
@@ -111,7 +118,6 @@ static platform91Configure *_platform91;
                                              selector:@selector(NdBuyCommodityResult:)
                                                  name:kNdCPBuyResultNotification
                                                object:nil];
-
     
     
     return self;
@@ -122,16 +128,14 @@ static platform91Configure *_platform91;
 - (void)SNSInitResult:(NSNotification *)notify
 {
     [[NdComPlatform defaultPlatform] NdLogin:0];
-//    [[NdComPlatform defaultPlatform] NdLoginEx:0];
-   
+    //    [[NdComPlatform defaultPlatform] NdLoginEx:0];
+    
 }
 
 - (void)willEnterForeground
 {
     [[NdComPlatform defaultPlatform] NdPause];
 }
-
-
 
 - (void)platform91Logout:(int)type
 {
@@ -142,7 +146,21 @@ static platform91Configure *_platform91;
 {
     NdBuyInfo *buyInfo = [[NdBuyInfo new] autorelease];
     //订单号必须唯一！
-    buyInfo.cooOrderSerial = BUY_CooOrderSerial;
+    NSDate *date = [[NSDate alloc] init];
+    NSTimeInterval timeinterval = [date timeIntervalSince1970];
+    NSString *time_str = [NSString stringWithFormat:@"%@%f",BUY_CooOrderSerial_HEAD,timeinterval * 1000000];
+    time_str = [time_str substringToIndex:32];
+//    NSLog(@" 单号 %@  ",time_str);
+    [date release];
+    /*
+     1385711941.252368
+     1385712020336631.000000
+     138571274246195
+     ZHIHUDIBIAOXYLY1385712954445276
+     ZHIHUDIBIAOXYLY1385713044236889.
+     ZHIHUDIBIAOXSYLY1385713149793058
+     */
+    buyInfo.cooOrderSerial = time_str;
     //你的产品id
     buyInfo.productId = proId;
     buyInfo.productName = productName;
@@ -157,7 +175,7 @@ static platform91Configure *_platform91;
     }else
     {
         //记录下该笔交易
-        [self addRecord:buyInfo.cooOrderSerial];
+        [self addRecord:buyInfo];
     }
 }
 
@@ -192,10 +210,31 @@ static platform91Configure *_platform91;
     }
     else {
         //TODO: 购买成功处理
-        GlobalUserDefault::instance()->increaseGameGold(buyInfo.productPrice * buyInfo.productCount);
+        int payPrice = (int)buyInfo.productPrice;
+        int add_gold = 0;
+        switch (payPrice) {
+            case kBuyGold_6RMB:
+                add_gold = kAddGolg_6RMB;
+                break;
+            case kBuyGold_12RMB:
+                add_gold = kAddGold_12RMB;
+                break;
+            case kBuyGold_30RMB:
+                add_gold = kAddGold_30RMB;
+                break;
+            case kBuyGold_68RMB:
+                add_gold = kAddGold_68RMB;
+                break;
+            case kBuyGold_128RMB:
+                add_gold = kAddGold_128RMB;
+                break;
+            default:
+                break;
+        }
+        
+        GlobalUserDefault::instance()->increaseGameGold(add_gold);
     }
     //本次购买的请求参数
-    GlobalUserDefault::instance()->increaseGameGold(buyInfo.productPrice * buyInfo.productCount); // ---- 删除
     str = [str stringByAppendingFormat:@"\n<productId = %@, productCount = %d, cooOrderSerial = %@>",
            buyInfo.productId, buyInfo.productCount, buyInfo.cooOrderSerial];
     NSLog(@"NdUiPayResult: %@", str);
@@ -237,7 +276,7 @@ static platform91Configure *_platform91;
 {
     //分页获取虚拟商品信息，不指定类别，计费类型
     NdPagination* pagination = [[NdPagination new] autorelease];
-    pagination.pageSize = 10; //5的倍数，不要超过50
+    pagination.pageSize = 5; //5的倍数，不要超过50
     pagination.pageIndex= 1; //获取页的索引值，从1开始，总共的页数可以通过返回接口里result.totalCount字段计算出来，第一次请求用1
     [[NdComPlatform defaultPlatform] NdGetCommodityList:nil feeType:7 pagination:pagination packageId:nil delegate: self];
 }
@@ -247,7 +286,7 @@ static platform91Configure *_platform91;
                           feeType:(int)feeType packageId:(NSString *)packageId result:(NdBasePageList*)result
 {
     if (error < 0) {
-        //TODO: 下载商品信息列表失败
+        NSLog(@"TODO: 下载商品信息列表失败 %d",error);
     }
     else {
         
@@ -343,6 +382,7 @@ static platform91Configure *_platform91;
                 NSLog(@"未登录");
                 break;
             case ND_COM_PLATFORM_ERROR_PARAM:
+                
                 NSLog(@"参数错误");
                 break;
             default:
@@ -444,7 +484,7 @@ static platform91Configure *_platform91;
         str = @"提交失败";
     }
     
-     NSLog(@" 提交成就情况 %@ ",str);
+    NSLog(@" 提交成就情况 %@ ",str);
     //TODO: 结果提示
 }
 
@@ -455,15 +495,15 @@ static platform91Configure *_platform91;
     if (bSuccess)
     {
         //说明该笔订单购买成功
-//        [self dealWithBuySuccess:cooOrderSerial];
+                [self dealWithBuySuccess:cooOrderSerial];
     }
     else
     {
         //说明该笔订单购买失败
-//        [self dealWithBuyFailure:cooOrderSerial];
+                [self dealWithBuyFailure:cooOrderSerial];
     }
     
-//    [self removeRecord:cooOrderSerial];
+    //    [self removeRecord:cooOrderSerial];
 }
 
 #pragma mark - notification methods
@@ -551,23 +591,57 @@ static platform91Configure *_platform91;
 
 
 #pragma mark -  ()
-- (void)addRecord:(NSString *)record
+- (void)addRecord:(NdBuyInfo *)buyInfo
 {
-    [_recordArr addObject:record];
-    [[NSUserDefaults standardUserDefaults] setValue:_recordArr forKey:BUY_RECORD_KEY];
+    NSMutableDictionary *buyInfoDic = [[NSMutableDictionary alloc] init];
+    
+    [buyInfoDic setValue:buyInfo.productId forKey:@"productId"];
+    [buyInfoDic setValue:buyInfo.productName forKey:@"productName"];
+    [buyInfoDic setValue:[NSNumber numberWithFloat: buyInfo.productPrice] forKey:@"productPrice"];
+    [buyInfoDic setValue:[NSNumber numberWithFloat: buyInfo.productOrignalPrice ] forKey:@"productOrignalPrice"];
+    [buyInfoDic setValue:[NSNumber numberWithUnsignedInt: buyInfo.productCount] forKey:@"productCount"];
+    
+    [_recordArr addObject:buyInfoDic];
+    [[NSUserDefaults standardUserDefaults] setObject:_recordArr forKey:BUY_RECORD_KEY];
+    [buyInfoDic release];
 }
 
 - (void)removeRecord:(NSString *)record
 {
     for (int i = 0; i < _recordArr.count; i++) {
-        NSString *cooOrderSerialStr = (NSString *)[_recordArr objectAtIndex:i];
-        if ([cooOrderSerialStr isEqualToString:record]) {
+        NSDictionary *buyInfo = (NSDictionary *)[_recordArr objectAtIndex:i];
+        
+        if ( [((NSString *)[buyInfo objectForKey:@"productId"]) isEqualToString:record])
+        {
             [_recordArr removeObjectAtIndex:i];
-            NSLog(@"移除购买了的东西 %@",cooOrderSerialStr);
+            NSLog(@"移除购买了的东西 %@",((NSString *)[buyInfo objectForKey:@"productId"]));
         }
     }
     
     [[NSUserDefaults standardUserDefaults] setValue:_recordArr forKey:BUY_RECORD_KEY];
+}
+
+- (void)dealWithBuySuccess:(NSString *)cooOrderSerial
+{
+    NSLog(@"您最近一次充值已经到账 %@",cooOrderSerial);
+}
+
+- (void)dealWithBuyFailure:(NSString *)cooOrderSerial
+{
+    for (int i = 0; i < _recordArr.count; i++) {
+        NSDictionary *buyInfo = (NSDictionary *)[_recordArr objectAtIndex:i];
+        if ([((NSString *)[buyInfo objectForKey:@"productId"]) isEqualToString:cooOrderSerial])
+        {
+            [self buyCommodities:((NSString *)[buyInfo objectForKey:@"productName"])
+                       productId:((NSString *)[buyInfo objectForKey:@"productId"])
+                           price:[[buyInfo objectForKey:@"productPrice"] floatValue]
+                     originPrice:[[buyInfo objectForKey:@"productOrignalPrice"] floatValue]
+                           count:[[buyInfo objectForKey:@"productCount"] unsignedIntValue]];
+            
+            NSLog(@"再次请求购买上次未能成功的商品 :%@",((NSString *)[buyInfo objectForKey:@"productName"]));
+        }
+    }
+   
 }
 
 - (NSArray *)getUnCheckedRecord
@@ -579,15 +653,15 @@ static platform91Configure *_platform91;
 {
     [_recordArr release];
     /*
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:kNdCPPauseDidExitNotification object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:kNdCPLeavePlatformNotification object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:kNdCPLoginNotification object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:kNdCPBuyResultNotification object:nil];
-    */
+     [[NSNotificationCenter defaultCenter] removeObserver:self
+     name:kNdCPPauseDidExitNotification object:nil];
+     [[NSNotificationCenter defaultCenter] removeObserver:self
+     name:kNdCPLeavePlatformNotification object:nil];
+     [[NSNotificationCenter defaultCenter] removeObserver:self
+     name:kNdCPLoginNotification object:nil];
+     [[NSNotificationCenter defaultCenter] removeObserver:self
+     name:kNdCPBuyResultNotification object:nil];
+     */
     [[NSNotificationCenter defaultCenter] removeObserver : self];
     
     [super dealloc];
