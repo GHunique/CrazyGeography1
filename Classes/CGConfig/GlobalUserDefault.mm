@@ -562,7 +562,7 @@ void GlobalUserDefault::buyCommodities(const char *commId, const char *commName,
     NSString *commNameStr = [NSString stringWithUTF8String:commName];
     
     //没有打折所以原价和当前价格一样
-    [[platform91Configure instance] buyCommodities:commIdStr productId:commNameStr price:price originPrice:price count:count];
+    [[platform91Configure instance] buyCommodities:commNameStr productId:commIdStr price:price originPrice:price count:count];
 }
 
 void GlobalUserDefault::show91ToolBar(bool show)
@@ -600,6 +600,12 @@ void GlobalUserDefault::unLockAchievement(int achieId, int percent, const char *
 {
      NSString *disString = [NSString stringWithUTF8String:displayText];
     [[platform91Configure instance] unLockAchievement:achieId currValuePercent:percent displayText:disString];
+}
+
+void GlobalUserDefault::enterVirtualShop()
+{
+    [[platform91Configure instance] EnterVirtualShop];
+    [[platform91Configure instance] getVirtualCommodityList];
 }
 
 #pragma mark - 本地游戏金币处理

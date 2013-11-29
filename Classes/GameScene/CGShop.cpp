@@ -69,32 +69,44 @@ void CGShop::buyGold(cocos2d::extension::UIButton *pSender, TouchEventType type)
     
     float price = 0.0;
     int count = 1;
+    const char * commId = "";
+    const char *commNam = "";
     
     switch (pSender->getTag())
     {
         case kBUY_280_$_6:
         {
-            price = 6;
+            price = kBuyGold_6RMB;
+            commId = "110237-20131129-111716744-46";
+            commNam = "280个金币";
         }
             break;
         case kBUY_600_$_12:
         {
-            price = 12;
+            price = kBuyGold_12RMB;
+            commId = "110237-20131129-135945194-16";
+            commNam = "600个金币";
         }
             break;
         case kBUY_1600_$_30:
         {
-            price = 30;
+            price = kBuyGold_30RMB;
+            commId = "110237-20131129-140022225-34";
+            commNam = "1600个金币";
         }
             break;
         case kBUY_3800_$_68:
         {
-            price = 68;
+            price = kBuyGold_68RMB;
+            commId = "110237-20131129-140145824-28";
+            commNam = "3800个金币";
         }
             break;
         case kBUY_8000_$_128:
         {
-            price = 128;
+            price = kBuyGold_128RMB;
+            commId = "110237-20131129-140212870-31";
+            commNam = "8000个金币";
         }
             break;
         default:
@@ -103,11 +115,11 @@ void CGShop::buyGold(cocos2d::extension::UIButton *pSender, TouchEventType type)
     
     if (price != 0.0)
     {
-        GlobalUserDefault::instance()->buyCommodities(shopInfo[kCommId], shopInfo[kCommName],price,count);
+        GlobalUserDefault::instance()->buyCommodities(commId, commNam,price,count);
     }
     else
     {
-        
+        //使用NdGetUserProduct() API 或NdGetUserProductsList() API
     }
 }
 

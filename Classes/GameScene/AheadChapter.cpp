@@ -10,6 +10,8 @@
 #include "ChapterLayer.h"
 #include "GlobalUserDefault.h"
 #include "UIControlLayer.h"
+//------
+#include "CGShop.h"
 
 
 AheadChapter::AheadChapter()
@@ -105,6 +107,13 @@ void AheadChapter::reSetGame(cocos2d::extension::UIButton *pSender, TouchEventTy
 //            GlobalUserDefault::instance()->enterAccountManage();
             
 //            GlobalUserDefault::instance()->unLockAchievement(1, 50, "我去这么好的游戏");
+//            GlobalUserDefault::instance()->enterVirtualShop();
+            CCScene *scene = CCScene::create();                 //添加场景
+            CGShop *gameLayer = CGShop::create();               //章节
+            scene->addChild(gameLayer);
+            CCTransitionScene *transition = CCTransitionProgressInOut::create(0.2, scene);
+            //        CCTransitionScene *transition = GlobalUserDefault::instance()->randomTransitionScene(scene);
+            CCDirector::sharedDirector()->replaceScene(transition);
             
         }
             break;

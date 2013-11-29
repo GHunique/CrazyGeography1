@@ -12,6 +12,20 @@
 #include "cocos2d.h"
 #include "CPPSingleton.h"
 
+enum  {
+    kBuyGold_6RMB   = 6,
+    kBuyGold_12RMB  =12,
+    kBuyGold_30RMB  =30,
+    kBuyGold_68RMB  =68,
+    kBuyGold_128RMB =128,
+    
+    kAddGolg_6RMB = 280,
+    kAddGold_12RMB = 600,
+    kAddGold_30RMB = 1600,
+    kAddGold_68RMB = 3800,
+    kAddGold_128RMB = 8000,
+    };
+
 class SharedMultiPlatform;
 
 USING_NS_CC;
@@ -100,6 +114,9 @@ public:
     void openAchievement();
     void unLockAchievement(int achieId,  int percent, const char* displayText);
     
+    void enterVirtualShop();
+    
+    //---- 91平台操作
     /**
      * 游戏中金币的处理
      * @param gold 金币数量
