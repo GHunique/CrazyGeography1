@@ -21,6 +21,73 @@
     "name": null,
     "children": [
       {
+        "classname": "TextButton",
+        "name": null,
+        "children": [],
+        "options": {
+          "__type": "ComGUITextButtonSurrogate:#EditorCommon.JsonModel.Component.GUI",
+          "classname": "TextButton",
+          "name": "earth_butt",
+          "ZOrder": 17,
+          "actiontag": 179,
+          "anchorPointX": 0.5,
+          "anchorPointY": 0.5,
+          "classType": null,
+          "colorB": 255,
+          "colorG": 255,
+          "colorR": 255,
+          "flipX": false,
+          "flipY": false,
+          "height": 128,
+          "ignoreSize": true,
+          "opacity": 255,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "tag": 111,
+          "touchAble": false,
+          "useMergedTexture": true,
+          "visible": true,
+          "width": 128,
+          "x": 67,
+          "xProportion": 0.1046875,
+          "y": 65,
+          "yProportion": 0.0677083358,
+          "capInsetsHeight": 0,
+          "capInsetsWidth": 0,
+          "capInsetsX": 0,
+          "capInsetsY": 0,
+          "disabled": null,
+          "disabledData": {
+            "path": null,
+            "plistFile": null,
+            "resourceType": 0
+          },
+          "fontName": "宋体",
+          "fontSize": 14,
+          "fontType": 0,
+          "normal": null,
+          "normalData": {
+            "path": "accessary2/earth.png",
+            "plistFile": null,
+            "resourceType": 1
+          },
+          "pressed": null,
+          "pressedData": {
+            "path": "accessary/gur-project-101.png",
+            "plistFile": null,
+            "resourceType": 1
+          },
+          "scale9Enable": false,
+          "scale9Height": 128,
+          "scale9Width": 128,
+          "text": "ZHDB",
+          "textColorB": 255,
+          "textColorG": 255,
+          "textColorR": 255
+        }
+      },
+      {
         "classname": "ImageView",
         "name": null,
         "children": [],
@@ -38,19 +105,19 @@
           "colorR": 255,
           "flipX": false,
           "flipY": false,
-          "height": 32,
+          "height": 128,
           "ignoreSize": true,
           "opacity": 255,
           "rotation": 0,
-          "scaleX": 1,
-          "scaleY": 1,
+          "scaleX": 0.399999917,
+          "scaleY": 0.399999917,
           "tag": 106,
           "touchAble": false,
           "useMergedTexture": true,
           "visible": true,
-          "width": 32,
-          "x": 250,
-          "xProportion": 0.390625,
+          "width": 128,
+          "x": 255,
+          "xProportion": 0.3984375,
           "y": 277,
           "yProportion": 0.288541675,
           "capInsetsHeight": 0,
@@ -59,13 +126,13 @@
           "capInsetsY": 0,
           "fileName": null,
           "fileNameData": {
-            "path": "accessary/refresh.png",
+            "path": "accessary2/super-mono-3d-183.png",
             "plistFile": null,
             "resourceType": 1
           },
           "scale9Enable": false,
-          "scale9Height": 32,
-          "scale9Width": 32
+          "scale9Height": 128,
+          "scale9Width": 128
         }
       },
       {
@@ -86,19 +153,19 @@
           "colorR": 255,
           "flipX": false,
           "flipY": false,
-          "height": 32,
+          "height": 128,
           "ignoreSize": true,
           "opacity": 255,
           "rotation": 0,
-          "scaleX": 1,
-          "scaleY": 1,
+          "scaleX": 0.399999917,
+          "scaleY": 0.399999917,
           "tag": 106,
           "touchAble": false,
           "useMergedTexture": true,
           "visible": true,
-          "width": 32,
-          "x": 250,
-          "xProportion": 0.390625,
+          "width": 128,
+          "x": 255,
+          "xProportion": 0.3984375,
           "y": 363,
           "yProportion": 0.378125,
           "capInsetsHeight": 0,
@@ -107,13 +174,13 @@
           "capInsetsY": 0,
           "fileName": null,
           "fileNameData": {
-            "path": "accessary/refresh.png",
+            "path": "accessary2/super-mono-3d-165.png",
             "plistFile": null,
             "resourceType": 1
           },
           "scale9Enable": false,
-          "scale9Height": 32,
-          "scale9Width": 32
+          "scale9Height": 128,
+          "scale9Width": 128
         }
       },
       {
@@ -134,19 +201,19 @@
           "colorR": 255,
           "flipX": false,
           "flipY": false,
-          "height": 32,
+          "height": 128,
           "ignoreSize": true,
           "opacity": 255,
           "rotation": 0,
-          "scaleX": 1,
-          "scaleY": 1,
+          "scaleX": 0.399999917,
+          "scaleY": 0.399999917,
           "tag": 106,
           "touchAble": false,
           "useMergedTexture": true,
           "visible": true,
-          "width": 32,
-          "x": 250,
-          "xProportion": 0.390625,
+          "width": 128,
+          "x": 255,
+          "xProportion": 0.3984375,
           "y": 191,
           "yProportion": 0.198958337,
           "capInsetsHeight": 0,
@@ -155,13 +222,13 @@
           "capInsetsY": 0,
           "fileName": null,
           "fileNameData": {
-            "path": "accessary/advanced.png",
+            "path": "accessary2/super-mono-3d-162.png",
             "plistFile": null,
             "resourceType": 1
           },
           "scale9Enable": false,
-          "scale9Height": 32,
-          "scale9Width": 32
+          "scale9Height": 128,
+          "scale9Width": 128
         }
       },
       {
@@ -177,9 +244,9 @@
           "anchorPointX": 0.5,
           "anchorPointY": 0.5,
           "classType": null,
-          "colorB": 0,
-          "colorG": 0,
-          "colorR": 139,
+          "colorB": 147,
+          "colorG": 20,
+          "colorR": 255,
           "flipX": false,
           "flipY": false,
           "height": 60,
@@ -208,7 +275,7 @@
             "resourceType": 0
           },
           "fontName": "微软雅黑",
-          "fontSize": 30,
+          "fontSize": 26,
           "fontType": 2,
           "normal": null,
           "normalData": {
@@ -225,8 +292,8 @@
           "scale9Enable": false,
           "scale9Height": 60,
           "scale9Width": 180,
-          "text": "  重置游戏",
-          "textColorB": 34,
+          "text": "   重置游戏",
+          "textColorB": 36,
           "textColorG": 34,
           "textColorR": 178
         }
@@ -275,7 +342,7 @@
             "resourceType": 0
           },
           "fontName": "微软雅黑",
-          "fontSize": 30,
+          "fontSize": 26,
           "fontType": 2,
           "normal": null,
           "normalData": {
@@ -292,10 +359,10 @@
           "scale9Enable": false,
           "scale9Height": 60,
           "scale9Width": 180,
-          "text": " 设  置",
-          "textColorB": 34,
-          "textColorG": 34,
-          "textColorR": 178
+          "text": "  设  置",
+          "textColorB": 42,
+          "textColorG": 42,
+          "textColorR": 193
         }
       },
       {
@@ -342,7 +409,7 @@
             "resourceType": 0
           },
           "fontName": "微软雅黑",
-          "fontSize": 30,
+          "fontSize": 26,
           "fontType": 2,
           "normal": null,
           "normalData": {
@@ -359,7 +426,7 @@
           "scale9Enable": false,
           "scale9Height": 60,
           "scale9Width": 180,
-          "text": "  开始游戏",
+          "text": "   开始游戏",
           "textColorB": 34,
           "textColorG": 34,
           "textColorR": 178
