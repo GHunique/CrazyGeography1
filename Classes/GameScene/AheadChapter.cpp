@@ -105,6 +105,7 @@ void AheadChapter::reSetGame(cocos2d::extension::UIButton *pSender, TouchEventTy
 //            GlobalUserDefault::instance()->enterAccountManage();
             
 //            GlobalUserDefault::instance()->unLockAchievement(1, 50, "我去这么好的游戏");
+            GlobalUserDefault::instance()->enterVirtualShop();
             
         }
             break;

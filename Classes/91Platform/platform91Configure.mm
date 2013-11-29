@@ -15,12 +15,17 @@
 #import <NdComPlatform/NdCPNotifications.h>
 #import <NdComPlatform/NdComPlatformError.h>
 
+//虚拟商店
+#import <NdComPlatform/NdComPlatform+VirtualGoods.h>
+#import <NdComPlatform/NdComPlatformAPIResponse+VirtualGoods.h>
+
 //本地游戏数据处理
 #import "GlobalUserDefault.h"
 
 
 #define DEBUG_RELEASE_91 1
 #define BUY_RECORD_KEY   @"BUY_RECORD_KEY"
+#define BUY_CooOrderSerial @"120F6CD4018C4D9A8E852AF7D2F32666"
 
 static platform91Configure *_platform91;
 
@@ -52,8 +57,11 @@ static platform91Configure *_platform91;
     //完成您必要的初始化工作，例如设置您的rootViewController
     //初始化平台
     NdInitConfigure *cfg = [[[NdInitConfigure alloc] init] autorelease];
-    cfg.appid =100010;
-    cfg.appKey =@"C28454605B9312157C2F76F27A9BCA2349434E546A6E9C75";
+//    cfg.appid =100010;
+//    cfg.appKey =@"C28454605B9312157C2F76F27A9BCA2349434E546A6E9C75";
+    //我自己的游戏
+    cfg.appid =110237;
+    cfg.appKey =@"1ec5e323e5d561ea0553ba2b76df5fed304ddff14bb5c6e2";
     //versionCheckLevel的设置详见上面的说明
     cfg.versionCheckLevel = ND_VERSION_CHECK_LEVEL_STRICT;
     //orientation的设置详见上面的说明(这里以设置竖屏为例)
@@ -68,7 +76,7 @@ static platform91Configure *_platform91;
     
     [[NdComPlatform defaultPlatform] NdSetDebugMode:0];
     
-    //离开91界面监听消息
+    //离开91界面监听消息 包括退出虚拟商店
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(SNSLeaveComplatformUI:)
                                                  name:(NSString *)kNdCPLeavePlatformNotification
@@ -97,6 +105,15 @@ static platform91Configure *_platform91;
     //获取我的详细信息
     [[NdComPlatform defaultPlatform] NdGetMyInfoDetail:self];
     
+    //监听虚拟商店的相关消息。
+    //1.每一次的购买结果
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(NdBuyCommodityResult:)
+                                                 name:kNdCPBuyResultNotification
+                                               object:nil];
+
+    
+    
     return self;
 }
 
@@ -121,14 +138,14 @@ static platform91Configure *_platform91;
     [[NdComPlatform defaultPlatform] NdLogout:type];
 }
 
-- (void)buyCommodities:(NSString *)orderSerial productId:(NSString *)proId price:(float)price originPrice:(float)oriPrice count:(int)count
+- (void)buyCommodities:(NSString *)productName productId:(NSString *)proId price:(float)price originPrice:(float)oriPrice count:(int)count
 {
     NdBuyInfo *buyInfo = [[NdBuyInfo new] autorelease];
     //订单号必须唯一！
-    buyInfo.cooOrderSerial = @"120F6CD4018C4D9A8E852AF7D2F32666";
+    buyInfo.cooOrderSerial = BUY_CooOrderSerial;
     //你的产品id
-    buyInfo.productId = @"com.91.product.apple";
-    buyInfo.productName = @"苹果";
+    buyInfo.productId = proId;
+    buyInfo.productName = productName;
     buyInfo.productPrice = price; //价格不能为0！
     buyInfo.productOrignalPrice = oriPrice; //原价不能为0！
     buyInfo.productCount = count;
@@ -185,6 +202,160 @@ static platform91Configure *_platform91;
     [self removeRecord:buyInfo.cooOrderSerial];
 }
 
+#pragma mark - 虚拟商店购买操作
+
+- (void)EnterVirtualShop
+{
+    //进入虚拟商店，显示所有类别，所有计费类型的商品
+    int nFeeType = ND_VG_FEE_TYPE_POSSESS | ND_VG_FEE_TYPE_SUBSCRIBE | ND_VG_FEE_TYPE_CONSUME;
+    [[NdComPlatform defaultPlatform] NdEnterVirtualShop:nil feeType:nFeeType];
+}
+
+- (void)getVirtualCategoryList
+{
+    //获取虚拟商品类别信息
+    [[NdComPlatform defaultPlatform] NdGetCategoryList: self];
+}
+
+//回去虚拟商品类别信息 需要实现的回调方法
+- (void)getCategoryListDidFinish:(int)error records:(NSArray *)records
+{
+    if (error < 0) {
+        //TODO: 下载类别信息失败
+    }
+    else {
+        //TODO: 类别信息处理
+        for (NdVGCategory* category in records) {
+            //...
+            NSLog(@"<-----上平类别 Id %@   名字 %@ ----->",category.strCateId,category.strCateName);
+            
+        }
+    }
+}
+
+- (void)getVirtualCommodityList
+{
+    //分页获取虚拟商品信息，不指定类别，计费类型
+    NdPagination* pagination = [[NdPagination new] autorelease];
+    pagination.pageSize = 10; //5的倍数，不要超过50
+    pagination.pageIndex= 1; //获取页的索引值，从1开始，总共的页数可以通过返回接口里result.totalCount字段计算出来，第一次请求用1
+    [[NdComPlatform defaultPlatform] NdGetCommodityList:nil feeType:7 pagination:pagination packageId:nil delegate: self];
+}
+
+//获取虚拟商品信息 需要实现的回调方法
+- (void)getCommodityListDidFinish:(int)error cateId:(NSString*)cateId
+                          feeType:(int)feeType packageId:(NSString *)packageId result:(NdBasePageList*)result
+{
+    if (error < 0) {
+        //TODO: 下载商品信息列表失败
+    }
+    else {
+        
+        //TODO: 返回某一页的信息列表
+        //result.pagination; 当前返回的页索引信息
+        //计算出总的页数，可以用来处理下一页的请求。如果没有商品时，nPageCount为0，可能需要特殊处理。
+        int nPageCount = (result.totalCount + result.pagination.pageSize - 1) / result.pagination.pageSize;
+        for (NdVGCommodityInfo* info in result.records) {
+            //商品信息，...
+            
+            NSLog(@"商品 id %@ . 商品名字 %@ 。 npage %d",info.strProductId,info.strProductName,nPageCount);
+            
+        }
+    }
+}
+
+- (void)NdBuyCommodityResult:(NSNotification*)notify
+{
+    NSDictionary *dic = [notify userInfo];
+    BOOL bSuccess = [[dic objectForKey:@"result"] boolValue];
+    NSString* str = bSuccess ? @"购买成功" : @"购买失败";
+    if (!bSuccess) {
+        //TODO: 购买失败处理
+        NSString* strError = nil;
+        int nErrorCode = [[dic objectForKey:@"error"] intValue];
+        switch (nErrorCode) {
+                // {{购买虚拟商品(91豆/游戏币)必须处理的错误码
+            case ND_COM_PLATFORM_ERROR_USER_CANCEL:
+                strError = @"用户取消操作";
+                break;
+            case ND_COM_PLATFORM_ERROR_NETWORK_FAIL:
+                strError = @"网络连接错误";
+                break;
+            case ND_COM_PLATFORM_ERROR_SERVER_RETURN_ERROR:
+                strError = @"服务端处理失败";
+                break;
+            case ND_COM_PLATFORM_ERROR_VG_MONEY_TYPE_FAILED:
+                strError = @"查询虚拟商品币种失败";
+                break;
+                // }}
+                // {{ 1.购买虚拟商品（91豆）必须处理的错误码
+            case ND_COM_PLATFORM_ERROR_ORDER_SERIAL_SUBMITTED:
+                //!!!: 异步支付，用户进入充值界面了
+                strError = @"支付订单已提交";
+                break;
+            case ND_COM_PLATFORM_ERROR_PARAM:
+                //可能是虚拟商品价格为0，或者总额超过最大值
+                strError = @"购买的虚拟商品91豆价格总额不合法";
+                break;
+            case ND_COM_PLATFORM_ERROR_VG_ORDER_FAILED:
+                strError = @"获取虚拟商品订单号失败";
+                break;
+                // }}
+                // {{ 2购买虚拟商品（游戏币）必须处理的错误码
+            case ND_COM_PLATFORM_ERROR_VG_BACK_FROM_RECHARGE:
+                strError = @"有进入虚拟币直充界面";
+                break;
+            case ND_COM_PLATFORM_ERROR_PAY_FAILED:
+                strError = @"购买虚拟商品失败";
+                break;
+                // }}
+            default:
+                strError = @"购买过程发生错误";
+                break;
+        }
+        str = [str stringByAppendingFormat:@"\n%@", strError];
+    }
+    else {
+        //TODO: 购买成功处理
+    }
+    // 如果购买失败，可能无法得到cooOrderSerial, productPrice等字段值
+    NdBuyInfo* buyInfo = (NdBuyInfo*)[dic objectForKey:@"buyInfo"];
+    str = [str stringByAppendingFormat:@"\n<productId = %@, productCount = %d, cooOrderSerial = %@>",
+           buyInfo.productId, buyInfo.productCount, buyInfo.cooOrderSerial];
+    // 如果购买虚拟商品失败，可以从vgErrorInfo获取具体失败详情，参照NdVGErrorInfo定义
+    NdVGErrorInfo* vgErrInfo = (NdVGErrorInfo*)[dic objectForKey:@"vgErrorInfo"];
+    if (vgErrInfo) {
+        str = [str stringByAppendingFormat:@"\n\n%@", vgErrInfo.strErrDesc];
+    }
+    NSLog(@" 打印: NdBuyCommodityResult: %@", str);
+}
+
+- (void)buyCommoditiesByFormVir:(NSString *)strProductId productCount:(NSInteger) nCount
+{
+    //购买虚拟商品
+    NdVGOrderRequest* orderRqst = [NdVGOrderRequest orderRequestWithProductId : strProductId
+                                                                 productCount : nCount payDescription:nil];
+    //orderRqst.vgCommodityInfo = vgCommodityInfo; //(建议)如果已经获取该商品信息，传入该值
+    int res = [[NdComPlatform defaultPlatform] NdBuyCommodity:orderRqst];
+    if (res < 0) {
+        switch (res) {
+            case ND_COM_PLATFORM_ERROR_NOT_LOGINED:
+                NSLog(@"未登录");
+                break;
+            case ND_COM_PLATFORM_ERROR_PARAM:
+                NSLog(@"参数错误");
+                break;
+            default:
+                NSLog(@"%@",[NSString stringWithFormat:@"购买失败error = %d", res]);
+                break;
+        }
+    }else
+    {
+        NSLog(@" 虚拟商品可以购买 ");
+    }
+}
+
+#pragma mark - 分享
 - (void)shared
 {
     NSDate* date = [NSDate date];
@@ -407,7 +578,7 @@ static platform91Configure *_platform91;
 - (void)dealloc
 {
     [_recordArr release];
-    
+    /*
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:kNdCPPauseDidExitNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self
@@ -416,6 +587,9 @@ static platform91Configure *_platform91;
                                                     name:kNdCPLoginNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:kNdCPBuyResultNotification object:nil];
+    */
+    [[NSNotificationCenter defaultCenter] removeObserver : self];
+    
     [super dealloc];
 }
 

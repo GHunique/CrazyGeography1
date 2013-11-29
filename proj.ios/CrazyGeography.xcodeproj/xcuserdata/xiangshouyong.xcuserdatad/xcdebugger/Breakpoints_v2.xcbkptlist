@@ -138,13 +138,283 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/91Platform/platform91Configure.mm"
-            timestampString = "407212532.719162"
+            timestampString = "407398396.771736"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "-NdUniPayResult:"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/GameScene/CGShop.cpp"
+            timestampString = "407388567.385113"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "CGShop::buyGold(cocos2d::extension::UIButton *pSender, TouchEventType type)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/91Platform/platform91Configure.mm"
+            timestampString = "407398396.771736"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "-buyCommodities:productId:price:originPrice:count:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/CGConfig/GlobalUserDefault.mm"
+            timestampString = "407388221.890502"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "563"
+            endingLineNumber = "563"
+            landmarkName = "GlobalUserDefault::buyCommodities(const char *commId, const char *commName, float price, int count)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/91Platform/platform91Configure.mm"
+            timestampString = "407398396.771736"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
+            landmarkName = "-getCategoryListDidFinish:records:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[platform91Configure getCategoryListDidFinish:records:]"
+                  moduleName = "CrazyGeography"
+                  urlString = "file://localhost/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Classes/91Platform/platform91Configure.mm"
+                  timestampString = "407399185.603429"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "230"
+                  endingLineNumber = "230"
+                  offsetFromSymbolStart = "82">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[platform91Configure getCategoryListDidFinish:records:]"
+                  moduleName = "CrazyGeography"
+                  urlString = "file://localhost/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Classes/91Platform/platform91Configure.mm"
+                  timestampString = "407399185.603666"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "230"
+                  endingLineNumber = "230"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[platform91Configure getCategoryListDidFinish:records:]"
+                  moduleName = "CrazyGeography"
+                  urlString = "file://localhost/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Classes/91Platform/platform91Configure.mm"
+                  timestampString = "407399185.603927"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "230"
+                  endingLineNumber = "230"
+                  offsetFromSymbolStart = "110">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[platform91Configure getCategoryListDidFinish:records:]"
+                  moduleName = "CrazyGeography"
+                  urlString = "file://localhost/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Classes/91Platform/platform91Configure.mm"
+                  timestampString = "407399185.604243"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "230"
+                  endingLineNumber = "230"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[platform91Configure getCategoryListDidFinish:records:]"
+                  moduleName = "CrazyGeography"
+                  urlString = "file://localhost/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Classes/91Platform/platform91Configure.mm"
+                  timestampString = "407399185.604482"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "230"
+                  endingLineNumber = "230"
+                  offsetFromSymbolStart = "138">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/91Platform/platform91Configure.mm"
+            timestampString = "407398396.771736"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
+            landmarkName = "-getCategoryListDidFinish:records:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[platform91Configure getCategoryListDidFinish:records:]"
+                  moduleName = "CrazyGeography"
+                  urlString = "file://localhost/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Classes/91Platform/platform91Configure.mm"
+                  timestampString = "407399185.604804"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "228"
+                  endingLineNumber = "228"
+                  offsetFromSymbolStart = "34">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[platform91Configure getCategoryListDidFinish:records:]"
+                  moduleName = "CrazyGeography"
+                  urlString = "file://localhost/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Classes/91Platform/platform91Configure.mm"
+                  timestampString = "407399185.605026"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "228"
+                  endingLineNumber = "228"
+                  offsetFromSymbolStart = "98">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[platform91Configure getCategoryListDidFinish:records:]"
+                  moduleName = "CrazyGeography"
+                  urlString = "file://localhost/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Classes/91Platform/platform91Configure.mm"
+                  timestampString = "407399185.605267"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "228"
+                  endingLineNumber = "228"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[platform91Configure getCategoryListDidFinish:records:]"
+                  moduleName = "CrazyGeography"
+                  urlString = "file://localhost/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Classes/91Platform/platform91Configure.mm"
+                  timestampString = "407399185.605494"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "228"
+                  endingLineNumber = "228"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[platform91Configure getCategoryListDidFinish:records:]"
+                  moduleName = "CrazyGeography"
+                  urlString = "file://localhost/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Classes/91Platform/platform91Configure.mm"
+                  timestampString = "407399185.605715"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "228"
+                  endingLineNumber = "228"
+                  offsetFromSymbolStart = "134">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/91Platform/platform91Configure.mm"
+            timestampString = "407398396.771736"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
+            landmarkName = "-EnterVirtualShop"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[platform91Configure EnterVirtualShop]"
+                  moduleName = "CrazyGeography"
+                  urlString = "file://localhost/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Classes/91Platform/platform91Configure.mm"
+                  timestampString = "407398259.370215"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "208"
+                  endingLineNumber = "208"
+                  offsetFromSymbolStart = "2">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[platform91Configure EnterVirtualShop]"
+                  moduleName = "CrazyGeography"
+                  urlString = "file://localhost/Users/xiangshouyong/Documents/androidWork/cocos2d-x-2.2.0/projects/CrazyGeography1/Classes/91Platform/platform91Configure.mm"
+                  timestampString = "407398259.370519"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "208"
+                  endingLineNumber = "208"
+                  offsetFromSymbolStart = "8">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

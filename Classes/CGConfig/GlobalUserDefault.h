@@ -100,6 +100,9 @@ public:
     void openAchievement();
     void unLockAchievement(int achieId,  int percent, const char* displayText);
     
+    void enterVirtualShop();
+    
+    //---- 91平台操作
     /**
      * 游戏中金币的处理
      * @param gold 金币数量

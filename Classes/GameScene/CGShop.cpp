@@ -69,12 +69,16 @@ void CGShop::buyGold(cocos2d::extension::UIButton *pSender, TouchEventType type)
     
     float price = 0.0;
     int count = 1;
+    const char * commId = "";
+    const char *commNam = "";
     
     switch (pSender->getTag())
     {
         case kBUY_280_$_6:
         {
-            price = 6;
+            price = 5;
+            commId = "110237-20131129-111716744-46";
+            commNam = "280金币本地";
         }
             break;
         case kBUY_600_$_12:
@@ -103,11 +107,11 @@ void CGShop::buyGold(cocos2d::extension::UIButton *pSender, TouchEventType type)
     
     if (price != 0.0)
     {
-        GlobalUserDefault::instance()->buyCommodities(shopInfo[kCommId], shopInfo[kCommName],price,count);
+        GlobalUserDefault::instance()->buyCommodities(commId, commNam,price,count);
     }
     else
     {
-        
+        //使用NdGetUserProduct() API 或NdGetUserProductsList() API
     }
 }
 
