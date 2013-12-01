@@ -197,7 +197,7 @@ void GameLayer::helpButt(cocos2d::extension::UIButton *pSender, TouchEventType t
         CCLog(" begin ++ ----- %d",begin + 1);
         pSender->setOpacity(255);
         begin++;
-    }
+            }
 }
 
 void GameLayer::shareButt(cocos2d::extension::UIButton *pSender, TouchEventType type)

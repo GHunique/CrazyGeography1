@@ -51,7 +51,7 @@ bool UIFUAlert::init()
     _cancleButt->setTouchEnable(true);
     _confirmButt = static_cast<UIButton *>(_alert_root->getChildByName("sure_butt"));
     _confirmButt->setTouchEnable(true);
-//    _cancleButt->addTouchEventListener(this, toucheventselector(UIFUAlert::cancelButt));
+    _cancleButt->addTouchEventListener(this, toucheventselector(UIFUAlert::cancelButt));
     _textArea    = static_cast<UITextArea *>(_alert_root->getChildByName("tips_textArea"));
     
     return true;
@@ -65,7 +65,7 @@ void UIFUAlert::onEnter()
     
     if (earth_action != NULL)
     {
-        earth_action->setLoop(true);
+        earth_action->setLoop(false);
         earth_action->play();
     }
 }
@@ -87,7 +87,16 @@ void UIFUAlert::cancelButt(cocos2d::extension::UIButton *pSender, TouchEventType
         case TOUCH_EVENT_MOVED:
             break;
         case TOUCH_EVENT_ENDED:
-            this->removeFromParentAndCleanup(true);           //从父节点移除
+        {ActionObject *earth_action = ActionManager::shareManager()->getActionByName("GameAlertUI.ExportJson", "Animation0");
+            
+            if (earth_action != NULL)
+            {
+                earth_action->setLoop(false);
+                earth_action->play();
+            }
+//            this->removeFromParentAndCleanup(true);           //从父节点移除
+        }
+            
             break;
         case TOUCH_EVENT_CANCELED:
             break;
@@ -114,7 +123,7 @@ void UIFUAlert::confirmButt(cocos2d::extension::UIButton *pSender, TouchEventTyp
 
 void UIFUAlert::boundCancelEvent(cocos2d::CCObject *target, SEL_TouchEvent selector)
 {
-    _cancleButt->addTouchEventListener(target, selector);
+//    _cancleButt->addTouchEventListener(target, selector);
 }
 
 void UIFUAlert::boundConfirmEvent(cocos2d::CCObject *target, SEL_TouchEvent selector)
