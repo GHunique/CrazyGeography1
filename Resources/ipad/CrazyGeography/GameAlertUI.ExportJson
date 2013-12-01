@@ -8,7 +8,79 @@
       {
         "classname": null,
         "name": "Animation0",
-        "actionnodelist": [],
+        "actionnodelist": [
+          {
+            "classname": null,
+            "name": "Panel",
+            "ActionTag": -1,
+            "actionframelist": [
+              {
+                "classname": null,
+                "name": null,
+                "colorb": 255,
+                "colorg": 255,
+                "colorr": 255,
+                "frameid": 0,
+                "opacity": 255,
+                "positionx": 257,
+                "positiony": 408,
+                "rotation": 0,
+                "scalex": 0.2,
+                "scaley": 0.2,
+                "starttime": 0,
+                "visible": false
+              },
+              {
+                "classname": null,
+                "name": null,
+                "colorb": 255,
+                "colorg": 255,
+                "colorr": 255,
+                "frameid": 3,
+                "opacity": 255,
+                "positionx": 0,
+                "positiony": 0,
+                "rotation": 0,
+                "scalex": 1,
+                "scaley": 1,
+                "starttime": 0,
+                "visible": false
+              },
+              {
+                "classname": null,
+                "name": null,
+                "colorb": 255,
+                "colorg": 255,
+                "colorr": 255,
+                "frameid": 5,
+                "opacity": 255,
+                "positionx": 33,
+                "positiony": 45,
+                "rotation": 0,
+                "scalex": 0.9,
+                "scaley": 0.9,
+                "starttime": 0,
+                "visible": false
+              },
+              {
+                "classname": null,
+                "name": null,
+                "colorb": 255,
+                "colorg": 255,
+                "colorr": 255,
+                "frameid": 6,
+                "opacity": 255,
+                "positionx": 0,
+                "positiony": 0,
+                "rotation": 0,
+                "scalex": 1,
+                "scaley": 1,
+                "starttime": 0,
+                "visible": false
+              }
+            ]
+          }
+        ],
         "loop": false,
         "unittime": 0.1
       }

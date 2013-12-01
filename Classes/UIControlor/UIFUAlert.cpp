@@ -65,7 +65,7 @@ void UIFUAlert::onEnter()
     
     if (earth_action != NULL)
     {
-        earth_action->setLoop(false);
+        earth_action->setLoop(true);
         earth_action->play();
     }
 }
