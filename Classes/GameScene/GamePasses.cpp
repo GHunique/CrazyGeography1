@@ -46,6 +46,14 @@ bool GamePasses::init()
     backButt->setTouchEnable(true);
     backButt->addTouchEventListener(this, toucheventselector(GamePasses::backChapterLayer));
     
+    ActionObject *earth_action = ActionManager::shareManager()->getActionByName("GamePassesUI.ExportJson", "game_Title_BMF_Animation");
+    
+    if (earth_action != NULL)
+    {
+        earth_action->setLoop(false);
+        earth_action->play();
+    }
+    
     return true;
 }
 
