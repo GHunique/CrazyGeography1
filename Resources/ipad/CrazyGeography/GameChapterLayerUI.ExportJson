@@ -4,7 +4,71 @@
   "animation": {
     "classname": null,
     "name": "AnimationManager",
-    "actionlist": []
+    "actionlist": [
+      {
+        "classname": null,
+        "name": "earth_roll",
+        "actionnodelist": [
+          {
+            "classname": null,
+            "name": "back_butt_3",
+            "ActionTag": 147,
+            "actionframelist": [
+              {
+                "classname": null,
+                "name": null,
+                "colorb": 255,
+                "colorg": 255,
+                "colorr": 255,
+                "frameid": 0,
+                "opacity": 255,
+                "positionx": 67,
+                "positiony": 65,
+                "rotation": 0,
+                "scalex": 1,
+                "scaley": 1,
+                "starttime": 0,
+                "visible": false
+              },
+              {
+                "classname": null,
+                "name": null,
+                "colorb": 255,
+                "colorg": 255,
+                "colorr": 255,
+                "frameid": 5,
+                "opacity": 255,
+                "positionx": 67,
+                "positiony": 65,
+                "rotation": 180,
+                "scalex": 1,
+                "scaley": 1,
+                "starttime": 0,
+                "visible": false
+              },
+              {
+                "classname": null,
+                "name": null,
+                "colorb": 255,
+                "colorg": 255,
+                "colorr": 255,
+                "frameid": 10,
+                "opacity": 255,
+                "positionx": 67,
+                "positiony": 65,
+                "rotation": 360,
+                "scalex": 1,
+                "scaley": 1,
+                "starttime": 0,
+                "visible": false
+              }
+            ]
+          }
+        ],
+        "loop": true,
+        "unittime": 0.5
+      }
+    ]
   },
   "designHeight": 960,
   "designWidth": 640,

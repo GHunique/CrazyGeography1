@@ -11,6 +11,7 @@
 
 #include "cocos-ext.h"
 #include "cocos2d.h"
+#include "CGconfig.h"
 
 USING_NS_CC;
 USING_NS_CC_EXT;
@@ -22,13 +23,15 @@ public:
     
     UIFUAlert();
     ~UIFUAlert();
-    static UIFUAlert* createWithFileName(const char *fileName);
+    static UIFUAlert* createWithFileName(const char *fileName = CG_GamePathes[kGameAlertUI].c_str());
     bool initWithFileName(const char *fileName);
     bool init();
     void onEnter();
     void onExit();
     
+    void boundCancelEvent(cocos2d::CCObject *target,SEL_TouchEvent selector);//绑定取消按钮事件
     void boundConfirmEvent(cocos2d::CCObject *target,SEL_TouchEvent selector);//绑定确定按钮事件
+    void setTipsTextArea(const char* tips);
     
 private:
     UILayer *_aUILayer;
@@ -37,6 +40,8 @@ private:
     
     UIButton *_cancleButt;
     UIButton *_confirmButt;
+    
+    UITextArea *_textArea;
     
 private:
     void cancelButt(UIButton *pSender,TouchEventType type);

@@ -13,6 +13,8 @@
 //------
 #include "CGShop.h"
 
+#include "MacroDefine.h"
+
 
 AheadChapter::AheadChapter()
 {
@@ -101,7 +103,16 @@ void AheadChapter::reSetGame(cocos2d::extension::UIButton *pSender, TouchEventTy
             break;
         case TOUCH_EVENT_ENDED:
         {
+            const char* animation_path = (CG_ANIMATION[kCGANIMATION_BASE_PATH] + CG_ANIMATION[kCGGoldJUMP_ANIMATION_NAME]+CG_ANIMATION[kCGDocument_SUFFIX]).c_str();
+            CCArmatureDataManager::sharedArmatureDataManager()->addArmatureFileInfo(animation_path);
             
+            CCArmature *armature = CCArmature::create(CG_ANIMATION[kCGGoldJUMP_ANIMATION_NAME].c_str());
+                            armature->getAnimation()->playByIndex(0,-1,-1,0);
+//            armature->getAnimation()->play("Animation2");
+            
+            armature->setPosition(ccp(0.5 * CG_ScreenSize.width,CG_ScreenSize.height * 0.45));
+            addChild(armature,19);
+            return;
 //            GlobalUserDefault::instance()->buyCommodities("", "", 68, 1);
 
 //            GlobalUserDefault::instance()->enterAccountManage();
@@ -135,6 +146,16 @@ void AheadChapter::settingGame(cocos2d::extension::UIButton *pSender, TouchEvent
             break;
         case TOUCH_EVENT_ENDED:
         {
+            const char* animation_path = (CG_ANIMATION[kCGANIMATION_BASE_PATH] + CG_ANIMATION[kCGGoldJUMP_ANIMATION_NAME]+CG_ANIMATION[kCGDocument_SUFFIX]).c_str();
+            CCArmatureDataManager::sharedArmatureDataManager()->addArmatureFileInfo(animation_path);
+            
+            CCArmature *armature = CCArmature::create(CG_ANIMATION[kCGGoldJUMP_ANIMATION_NAME].c_str());
+            armature->getAnimation()->playByIndex(1,-1,-1,0);
+            
+            armature->setPosition(ccp(0.5 * CG_ScreenSize.width,CG_ScreenSize.height * 0.45));
+            addChild(armature,19);
+            return;
+            
 //            GlobalUserDefault::instance()->submitScoreTo91(1, 1, "用户获得了哈");
 //            GlobalUserDefault::instance()->openScoreBoard(0);
 //            GlobalUserDefault::instance()->openAchievement();

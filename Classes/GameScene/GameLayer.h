@@ -195,6 +195,8 @@ private:
     void refreshGameData();                                         //每次刷新游戏数据函数
     void initialTipView();                                          //初始化提示信息界面(包括答案进度,答案位置提示)
     void update(float delta);
+    void nextButtCancel(UIButton *butt,TouchEventType type);
+    void nextButtConfirm(UIButton *butt,TouchEventType type);  //分享，下一关，提示处理
 };
 
 #endif /* defined(__CrazyGeography__GameLayer__) */

@@ -14,6 +14,7 @@
 #include "GamePasses.h"
 #include "GlobalUserDefault.h"
 #include "CGShop.h"
+#include "UIFUAlert.h"
 
 using namespace std;
 
@@ -248,7 +249,15 @@ void GameLayer::nextButt(cocos2d::extension::UIButton *pSender, TouchEventType t
         }
     }else if(type == TOUCH_EVENT_ENDED)
     {
-        pSender->setOpacity(255);
+       
+        UIFUAlert *alert = UIFUAlert::createWithFileName();
+        addChild(alert, 1,11211);
+        alert->boundCancelEvent(this, toucheventselector(GameLayer::nextButtCancel));
+        alert->boundConfirmEvent(this, toucheventselector(GameLayer::nextButtConfirm));
+        alert->setTipsTextArea("  你确定花费30金币跳过本关卡?");
+        
+        _play_root->setTouchEnable(false,true); //取消界面中所有触摸事件
+        
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT) || (CC_TARGET_PLATFORM == CC_PLATFORM_WP8)
         CCMessageBox("You pressed the close button. Windows Store Apps do not implement a close button.","Alert");
 #else
@@ -579,6 +588,39 @@ void GameLayer::update(float delta)
         CCLog(" <------规定时间没有完成，所以没有奖励了----->  ");
     }
     
+}
+
+void GameLayer::nextButtCancel(cocos2d::extension::UIButton *butt, TouchEventType type)
+{
+    if (type == TOUCH_EVENT_BEGAN)
+    {
+        
+    }else if (type == TOUCH_EVENT_MOVED)
+    {
+        
+    }else if (type == TOUCH_EVENT_ENDED)
+    {
+        this->getChildByTag(11211)->removeFromParentAndCleanup(true);
+        _play_root->setTouchEnable(true,true);
+    }
+
+}
+
+void GameLayer::nextButtConfirm(cocos2d::extension::UIButton *butt, TouchEventType type)
+
+{
+    if (type == TOUCH_EVENT_BEGAN)
+    {
+        
+    }else if (type == TOUCH_EVENT_MOVED)
+    {
+        
+    }else if (type == TOUCH_EVENT_ENDED)
+    {
+        this->getChildByTag(11211)->removeFromParentAndCleanup(true);
+        _play_root->setTouchEnable(true,true);
+    }
+
 }
 
 

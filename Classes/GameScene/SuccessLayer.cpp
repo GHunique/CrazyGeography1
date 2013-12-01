@@ -10,6 +10,7 @@
 #include "CGHelper.h"
 #include "GameLayer.h"
 #include "GlobalUserDefault.h"
+#include "MacroDefine.h"
 
 
 SuccessLayer::SuccessLayer()
@@ -140,6 +141,26 @@ void SuccessLayer::setSuccessData(Map_str_str &dic)
     std::string time_str = " " + dic.at("shijian") + " 秒";
     used_time_label->setText(time_str.c_str());
     
+    //显示特效
+    
+    if (xingshu <= 1)
+        return;
+    
+    const char* animation_path = (CG_ANIMATION[kCGANIMATION_BASE_PATH] + CG_ANIMATION[kCGGoldJUMP_ANIMATION_NAME]+CG_ANIMATION[kCGDocument_SUFFIX]).c_str();
+    CCArmatureDataManager::sharedArmatureDataManager()->addArmatureFileInfo(animation_path);
+    
+    CCArmature *armature = CCArmature::create(CG_ANIMATION[kCGGoldJUMP_ANIMATION_NAME].c_str());
+    if (xingshu >2)
+    {
+        armature->getAnimation()->playByIndex(0,-1,-1,0);
+       
+    }else if(xingshu > 1)
+    {
+        armature->getAnimation()->playByIndex(1,-1,-1,0);
+    }
+    
+    armature->setPosition(ccp(0.5 * CG_ScreenSize.width,CG_ScreenSize.height * 0.45));
+    addChild(armature,19);
 }
 
 

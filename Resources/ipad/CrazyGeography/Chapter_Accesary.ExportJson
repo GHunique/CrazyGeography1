@@ -674,7 +674,7 @@
           "scaleX": 1,
           "scaleY": 1,
           "tag": 75,
-          "touchAble": false,
+          "touchAble": true,
           "useMergedTexture": true,
           "visible": true,
           "width": 94,
@@ -700,7 +700,7 @@
           },
           "pressed": null,
           "pressedData": {
-            "path": "chapter_bg_image.png",
+            "path": "chapter_bg_image_sel.png",
             "plistFile": null,
             "resourceType": 1
           },

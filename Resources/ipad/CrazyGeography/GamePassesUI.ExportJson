@@ -4,7 +4,71 @@
   "animation": {
     "classname": null,
     "name": "AnimationManager",
-    "actionlist": []
+    "actionlist": [
+      {
+        "classname": null,
+        "name": "game_Title_BMF_Animation",
+        "actionnodelist": [
+          {
+            "classname": null,
+            "name": "gameTitle_BMF",
+            "ActionTag": 89,
+            "actionframelist": [
+              {
+                "classname": null,
+                "name": null,
+                "colorb": 255,
+                "colorg": 255,
+                "colorr": 255,
+                "frameid": 0,
+                "opacity": 255,
+                "positionx": 521,
+                "positiony": 981,
+                "rotation": 45,
+                "scalex": 0.5,
+                "scaley": 0.5,
+                "starttime": 0,
+                "visible": false
+              },
+              {
+                "classname": null,
+                "name": null,
+                "colorb": 255,
+                "colorg": 255,
+                "colorr": 255,
+                "frameid": 10,
+                "opacity": 255,
+                "positionx": 521.055542,
+                "positiony": 49.88916,
+                "rotation": 0,
+                "scalex": 0.5,
+                "scaley": 0.5,
+                "starttime": 0,
+                "visible": false
+              },
+              {
+                "classname": null,
+                "name": null,
+                "colorb": 255,
+                "colorg": 255,
+                "colorr": 255,
+                "frameid": 20,
+                "opacity": 255,
+                "positionx": 521,
+                "positiony": 981,
+                "rotation": 0,
+                "scalex": 0.5,
+                "scaley": 0.5,
+                "starttime": 0,
+                "visible": false
+              }
+            ]
+          }
+        ],
+        "loop": true,
+        "unittime": 0.100000016
+      }
+    ]
   },
   "designHeight": 960,
   "designWidth": 640,

@@ -4,7 +4,15 @@
   "animation": {
     "classname": null,
     "name": "AnimationManager",
-    "actionlist": []
+    "actionlist": [
+      {
+        "classname": null,
+        "name": "Animation0",
+        "actionnodelist": [],
+        "loop": true,
+        "unittime": 0.1
+      }
+    ]
   },
   "designHeight": 960,
   "designWidth": 640,

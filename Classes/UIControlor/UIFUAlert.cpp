@@ -45,14 +45,14 @@ bool UIFUAlert::init()
     _aUILayer = UILayer::create();
     this->addChild(_aUILayer);
     _alert_root = static_cast<Layout *>(CCUIHELPER->createWidgetFromJsonFile(_fileName.c_str()));
+    _aUILayer->addWidget(_alert_root);
     
-    _cancleButt  = static_cast<UIButton *>(_alert_root->getChildByName(""));
-    _confirmButt = static_cast<UIButton *>(_alert_root->getChildByName(""));
-    _cancleButt->addTouchEventListener(this, toucheventselector(UIFUAlert::cancelButt));
-    
-    this->setTouchEnabled(true);
-    this->setTouchMode(kCCTouchesOneByOne);
-    this->setTouchPriority(-12);   //设置触摸事件相应等级
+    _cancleButt  = static_cast<UIButton *>(_alert_root->getChildByName("cancel_butt"));
+    _cancleButt->setTouchEnable(true);
+    _confirmButt = static_cast<UIButton *>(_alert_root->getChildByName("sure_butt"));
+    _confirmButt->setTouchEnable(true);
+//    _cancleButt->addTouchEventListener(this, toucheventselector(UIFUAlert::cancelButt));
+    _textArea    = static_cast<UITextArea *>(_alert_root->getChildByName("tips_textArea"));
     
     return true;
 }
@@ -61,6 +61,13 @@ void UIFUAlert::onEnter()
 {
     this->CCLayerRGBA::onEnter();
     //....
+    ActionObject *earth_action = ActionManager::shareManager()->getActionByName("GameAlertUI.ExportJson", "Animation0");
+    
+    if (earth_action != NULL)
+    {
+        earth_action->setLoop(false);
+        earth_action->play();
+    }
 }
 
 void UIFUAlert::onExit()
@@ -105,11 +112,18 @@ void UIFUAlert::confirmButt(cocos2d::extension::UIButton *pSender, TouchEventTyp
     }
 }
 
+void UIFUAlert::boundCancelEvent(cocos2d::CCObject *target, SEL_TouchEvent selector)
+{
+    _cancleButt->addTouchEventListener(target, selector);
+}
+
 void UIFUAlert::boundConfirmEvent(cocos2d::CCObject *target, SEL_TouchEvent selector)
 {
     _confirmButt->addTouchEventListener(target, selector);
 }
 
-
-
+void UIFUAlert::setTipsTextArea(const char *tips)
+{
+    _textArea->setText(tips);
+}
 

@@ -58,6 +58,12 @@ void ChapterLayer::onEnter()
 {
     this->CCLayerRGBA::onEnter();
     //.....
+    //播放动作
+    ActionObject *earth_action = ActionManager::shareManager()->getActionByName("GameChapterLayerUI.ExportJson", "earth_roll");
+    
+    if (earth_action != NULL)
+        earth_action->play();
+
 }
 
 void ChapterLayer::onExit()

@@ -4,16 +4,16 @@
 	<dict>
 		<key>frames</key>
 		<dict>
-			<key>fenxiang.png</key>
+			<key>gold_increace/gold-increase-19.png</key>
 			<dict>
 				<key>width</key>
-				<integer>486</integer>
+				<integer>390</integer>
 				<key>height</key>
-				<integer>176</integer>
+				<integer>290</integer>
 				<key>originalWidth</key>
-				<integer>486</integer>
+				<integer>390</integer>
 				<key>originalHeight</key>
-				<integer>176</integer>
+				<integer>290</integer>
 				<key>x</key>
 				<integer>0</integer>
 				<key>y</key>
@@ -23,18 +23,18 @@
 				<key>offsetY</key>
 				<real>0</real>
 			</dict>
-			<key>fenxiang_press.png</key>
+			<key>gold_increace/gold-increase-20.png</key>
 			<dict>
 				<key>width</key>
-				<integer>486</integer>
+				<integer>390</integer>
 				<key>height</key>
-				<integer>176</integer>
+				<integer>290</integer>
 				<key>originalWidth</key>
-				<integer>486</integer>
+				<integer>390</integer>
 				<key>originalHeight</key>
-				<integer>176</integer>
+				<integer>290</integer>
 				<key>x</key>
-				<integer>488</integer>
+				<integer>392</integer>
 				<key>y</key>
 				<integer>0</integer>
 				<key>offsetX</key>
@@ -42,96 +42,77 @@
 				<key>offsetY</key>
 				<real>0</real>
 			</dict>
-			<key>xiayiguan.png</key>
+			<key>gold_increace/gold-increase-21.png</key>
 			<dict>
 				<key>width</key>
-				<integer>418</integer>
+				<integer>390</integer>
 				<key>height</key>
-				<integer>174</integer>
+				<integer>290</integer>
 				<key>originalWidth</key>
-				<integer>418</integer>
+				<integer>390</integer>
 				<key>originalHeight</key>
-				<integer>174</integer>
+				<integer>290</integer>
 				<key>x</key>
 				<integer>0</integer>
 				<key>y</key>
-				<integer>178</integer>
+				<integer>292</integer>
 				<key>offsetX</key>
 				<real>0</real>
 				<key>offsetY</key>
 				<real>0</real>
 			</dict>
-			<key>xiayiguan_press.png</key>
+			<key>gold_increace/gold-increase-22.png</key>
 			<dict>
 				<key>width</key>
-				<integer>418</integer>
+				<integer>390</integer>
 				<key>height</key>
-				<integer>174</integer>
+				<integer>290</integer>
 				<key>originalWidth</key>
-				<integer>418</integer>
+				<integer>390</integer>
 				<key>originalHeight</key>
-				<integer>174</integer>
+				<integer>290</integer>
 				<key>x</key>
-				<integer>420</integer>
+				<integer>392</integer>
 				<key>y</key>
-				<integer>178</integer>
+				<integer>292</integer>
 				<key>offsetX</key>
 				<real>0</real>
 				<key>offsetY</key>
 				<real>0</real>
 			</dict>
-			<key>accessary2/pay_item_normal.png</key>
+			<key>gold_increace/gold-increase-23.png</key>
 			<dict>
 				<key>width</key>
-				<integer>524</integer>
+				<integer>390</integer>
 				<key>height</key>
-				<integer>89</integer>
+				<integer>290</integer>
 				<key>originalWidth</key>
-				<integer>524</integer>
+				<integer>390</integer>
 				<key>originalHeight</key>
-				<integer>89</integer>
-				<key>x</key>
-				<integer>0</integer>
-				<key>y</key>
-				<integer>354</integer>
-				<key>offsetX</key>
-				<real>0</real>
-				<key>offsetY</key>
-				<real>0</real>
-			</dict>
-			<key>accessary2/pay_item_select.png</key>
-			<dict>
-				<key>width</key>
-				<integer>524</integer>
-				<key>height</key>
-				<integer>89</integer>
-				<key>originalWidth</key>
-				<integer>524</integer>
-				<key>originalHeight</key>
-				<integer>89</integer>
+				<integer>290</integer>
 				<key>x</key>
 				<integer>0</integer>
 				<key>y</key>
-				<integer>445</integer>
+				<integer>584</integer>
 				<key>offsetX</key>
 				<real>0</real>
 				<key>offsetY</key>
 				<real>0</real>
 			</dict>
-			<key>accessary2/tishikuang.png</key>
+			<key>gold_increace/gold-increase-24.png</key>
 			<dict>
 				<key>width</key>
-				<integer>464</integer>
+				<integer>390</integer>
 				<key>height</key>
-				<integer>242</integer>
+				<integer>290</integer>
 				<key>originalWidth</key>
-				<integer>464</integer>
+				<integer>390</integer>
 				<key>originalHeight</key>
-				<integer>242</integer>
+				<integer>290</integer>
 				<key>x</key>
-				<integer>526</integer>
+				<integer>392</integer>
 				<key>y</key>
-				<integer>445</integer>
+				<integer>584</integer>
 				<key>offsetX</key>
 				<real>0</real>
 				<key>offsetY</key>
@@ -143,9 +124,9 @@
 			<key>format</key>
 			<integer>0</integer>
 			<key>textureFileName</key>
-			<string>CrazyGeography4.png</string>
+			<string>CGGold_Jump3.png</string>
 			<key>realTextureFileName</key>
-			<string>CrazyGeography4.png</string>
+			<string>CGGold_Jump3.png</string>
 			<key>size</key>
 			<string>{1024,1024}</string>
 		</dict>

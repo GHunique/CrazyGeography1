@@ -30,11 +30,14 @@ enum {
     kControlerUI_volume,///-------游戏音效设置界面
     
     kGameShopUI,          //--------游戏商店
+    kGameAlertUI,         ///-------游戏提示(警告)界面
     
     kChapter_Accessary,//------------一些特定的控件
+    
+    
 };
 
-const std::string CG_GamePathes[9] =
+const std::string CG_GamePathes[10] =
 {
     "CrazyGeography/AheadChapterUI.ExportJson",
     "CrazyGeography/GameChapterLayerUI.ExportJson",
@@ -45,8 +48,10 @@ const std::string CG_GamePathes[9] =
     "CrazyGeography/ControlerUI_volume.ExportJson",     ///-----------游戏音效设置界面
     
     "CrazyGeography/GameShopUI.ExportJson",      //--------游戏商店
+    "CrazyGeography/GameAlertUI.ExportJson",     ///-------游戏提示(警告)界面
     
     "CrazyGeography/Chapter_Accesary.ExportJson",     //------------一些特定的控件
+    
 };
 
 //Game Data path GD:GameData
@@ -60,6 +65,21 @@ const std::string CG_GAME_DATA[2] =
 {
     "CGChapter.xml",    //-----------章节xml配置表路径
     "CGSetting.xml",    ///----------游戏设置文件
+};
+
+//特效
+enum  {
+    kCGANIMATION_BASE_PATH = 0,
+    kCGDocument_SUFFIX,
+    kCGGoldJUMP_ANIMATION_NAME,
+    };
+const std::string CG_ANIMATION[3] =
+{
+    
+    "CGAnimations/",    /* 所属文件夹  */
+    ".ExportJson",      /*  文件后缀  */
+    
+    "CGGold_Jump", ///----------金币特效
 };
 
 //金币对应的标示

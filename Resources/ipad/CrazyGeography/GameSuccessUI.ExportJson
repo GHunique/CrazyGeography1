@@ -622,17 +622,17 @@
           "colorR": 255,
           "flipX": false,
           "flipY": false,
-          "height": 80,
+          "height": 128,
           "ignoreSize": true,
           "opacity": 255,
           "rotation": 0,
-          "scaleX": 0.799999952,
-          "scaleY": 0.799999952,
+          "scaleX": 0.5999999,
+          "scaleY": 0.5999999,
           "tag": 48,
           "touchAble": false,
           "useMergedTexture": true,
           "visible": true,
-          "width": 80,
+          "width": 128,
           "x": 305,
           "xProportion": 0.4765625,
           "y": 269,
@@ -643,13 +643,13 @@
           "capInsetsY": 0,
           "fileName": null,
           "fileNameData": {
-            "path": "accessary/clock_05.png",
+            "path": "accessary2/childish_clock.png",
             "plistFile": null,
             "resourceType": 1
           },
           "scale9Enable": false,
-          "scale9Height": 80,
-          "scale9Width": 80
+          "scale9Height": 128,
+          "scale9Width": 128
         }
       },
       {
