@@ -39,22 +39,24 @@ bool GamePasses::init()
     _scrollView->setZOrder(10);
     _scrollView->setDirection(SCROLLVIEW_DIR_HORIZONTAL);
     
-    _passTitleLabel = static_cast<UILabelBMFont *>(_pass_root->getChildByName("gameTitle_BMF"));
+    _passTitleLabel = static_cast<UILabelBMFont *>(_pass_root->getChildByName("title_BMFLabel"));
+    //gameTitle_BMF 电梯图标
     this->passesLayout();
     
     UIButton *backButt = static_cast<UIButton *>(_pass_root->getChildByName("back_butt"));
     backButt->setTouchEnable(true);
     backButt->addTouchEventListener(this, toucheventselector(GamePasses::backChapterLayer));
     
-    ActionObject *earth_action = ActionManager::shareManager()->getActionByName("GamePassesUI.ExportJson", "game_Title_BMF_Animation");
     
-    if (earth_action != NULL)
-    {
-        earth_action->setLoop(false);
-        earth_action->play();
-    }
     
     return true;
+}
+
+void GamePasses::onEnter()
+{
+    CCLayerRGBA::onEnter();
+    
+    this->scheduleOnce(schedule_selector(GamePasses::delayAnimation), 0.5);
 }
 
 #pragma mark - private Methods
@@ -194,7 +196,18 @@ void GamePasses::backChapterLayer(cocos2d::extension::UIButton *pSender, TouchEv
 }
 
 
+#pragma mark - delayAnimation
 
+void GamePasses::delayAnimation()
+{
+    ActionObject *actionObje = ActionManager::shareManager()->getActionByName("GamePassesUI.ExportJson", "game_Title_BMF_Animation");
+    
+    if (actionObje != NULL)
+    {
+        actionObje->setLoop(false);
+        actionObje->play();
+    }
+}
 
 
 

@@ -16,7 +16,7 @@
 USING_NS_CC;
 USING_NS_CC_EXT;
 
-#define GLOBAL_DEBUG  1
+//#define GLOBAL_DEBUG  
 
 //战斗场景路径
 enum {

@@ -19,6 +19,7 @@ public:
     ~GamePasses();
     
     bool init();
+    void onEnter();
 private:
     UILayer      *_pUILayer;
     Layout       *_pass_root;
@@ -33,6 +34,8 @@ private:
     void passesLayout();                //生成,排列关卡按钮
     void gotoDirectlyGame(CCObject *pSender,TouchEventType type);           //进入指定关卡
     void backChapterLayer(UIButton *pSender,TouchEventType type);           //返回选择章节界面
+    
+    void delayAnimation();
 };
 
 #endif /* defined(__CrazyGeography__GamePasses__) */

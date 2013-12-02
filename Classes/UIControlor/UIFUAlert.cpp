@@ -123,7 +123,7 @@ void UIFUAlert::confirmButt(cocos2d::extension::UIButton *pSender, TouchEventTyp
 
 void UIFUAlert::boundCancelEvent(cocos2d::CCObject *target, SEL_TouchEvent selector)
 {
-//    _cancleButt->addTouchEventListener(target, selector);
+    _cancleButt->addTouchEventListener(target, selector);
 }
 
 void UIFUAlert::boundConfirmEvent(cocos2d::CCObject *target, SEL_TouchEvent selector)

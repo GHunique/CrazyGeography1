@@ -652,24 +652,30 @@ void GameLayer::removeAlternativeAnswer(int nGold)
     bool operationDone = false;
     
     CCArray *arr = _answerLayer->getChildren();
-    while (!operationDone)
+    
+    for (int i = 0; i < arr->count(); i++)
     {
         UIButton *butt = (UIButton *)arr->randomObject();
+        if (!butt->isEnabled()) continue;
+        
         const char * text = butt->getTitleText();
         bool allNotEque = true;
-        for (; answer_it < answer_strVector.end(); answer_it++)
+        for (int j = 0;j < answer_strVector.size();j++)
         {
-            if (strcmp(text, (*answer_it).c_str()) == 0)
+            if (strcmp(text, (answer_strVector.at(j)).c_str()) == 0)
             {
                 allNotEque = false;
+                CCLog(" 相同的 %s ",text);
                 break;
             }
         }
         
         if (allNotEque)     //全部都不等于备选答案
         {
-            butt->setEnabled(false); //设置该按钮不操作
+            CCLog("没有一个相同的 %s ",text);
+            butt->removeFromParentAndCleanup(true); //设置该按钮不操作
             operationDone = true;
+            break;
         }
     }
     
