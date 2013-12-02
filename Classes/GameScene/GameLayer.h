@@ -169,6 +169,7 @@ private:
     long _start_cd_seconds;                     //开始倒计时时间点
     long _total_award_cd;                             //剩余奖励时间
     bool _startCD;                              //是否倒计时
+    std::vector<std::string> strVector;         //保存备选答案数据
     
 protected:
     
@@ -195,8 +196,14 @@ private:
     void refreshGameData();                                         //每次刷新游戏数据函数
     void initialTipView();                                          //初始化提示信息界面(包括答案进度,答案位置提示)
     void update(float delta);
-    void nextButtCancel(UIButton *butt,TouchEventType type);
-    void nextButtConfirm(UIButton *butt,TouchEventType type);  //分享，下一关，提示处理
+    
+    void removeWrongButtCancel(UIButton *butt,TouchEventType type);
+    void removeWrongButtConfirm(UIButton *butt,TouchEventType type);       //去掉一个备选答案
+    void removeAlternativeAnswer(int nGold);                               //移除备选答案
+    
+    void oneCorrectButtCancel(UIButton *butt,TouchEventType type);         //提示一个真确答案
+    void oneCorrectButtConfirm(UIButton *butt,TouchEventType type);
+    void oneCorrectAnswer(int nGold);
 };
 
 #endif /* defined(__CrazyGeography__GameLayer__) */

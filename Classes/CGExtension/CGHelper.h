@@ -65,7 +65,14 @@ public:
     static bool isChineseChar(const char *pCh);
     
     /**
-     *  @param 从一个全是汉子的 std::string str 中取得汉子和其他符号
+     * @param 从一个字符串  std::string str 中得到子字符串,会把一段连续的英取到一个字符串
+     * @param  returnStrVector 传入一个对应类型地址
+     * @return ture标示获得成功
+     */
+    static bool stringArrFromString(std::string str,std::vector<std::string> &returnStrVector);
+    
+    /**
+     *  @param 从一个字符串 std::string str 中取得汉子和其他符号
      *  @param returnStrVector 传入一个对应类型地址
      *  @return ture标示获得成功
      */

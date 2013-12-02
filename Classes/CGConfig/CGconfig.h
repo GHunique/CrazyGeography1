@@ -100,11 +100,20 @@ enum  {//配置么个等级获得奖励
     kGameAward_LV1 = 3,
     KGameAward_LV2 = 7,
     kGameAward_LV3 = 10,
-    
-    
 };
 
-
-
 typedef std::map<std::string, std::string> Map_str_str;
+
+
+enum  {
+    kRemoveAlterAswer_need  = 30, //去掉一个错误答案需要的金币
+    kOneCorrectAswer_need   = 90, //得到一个正确答案需要的金币
+    };
+
+
 #endif /* defined(__CrazyGeography__CGconfig__) */
+
+
+
+
+

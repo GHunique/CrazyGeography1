@@ -62,9 +62,6 @@ bool GameLayer::init()
     getGold_butt->setTouchEnable(true);
     getGold_butt->setZOrder(4);
     getGold_butt->addTouchEventListener(this, toucheventselector(GameLayer::getGoldButt));
-    std::string gold_str = "     ";
-    gold_str += CGHelper::getstring(GlobalUserDefault::instance()->getGameGold());
-    getGold_butt->setText(gold_str.c_str());
     
     //帮组按钮
     UIButton *help_butt = static_cast<UIButton *>(_play_root->getChildByName("help_butt"));
@@ -119,6 +116,11 @@ void GameLayer::onEnter()
     _startCD = true;
     _total_award_cd = CG_GAME_CD_LV1;
     this->scheduleUpdate();             //启动计时器
+    
+    
+    //设置金币
+    int gold_int = GlobalUserDefault::instance()->getGameGold();
+//    _gameGold_BMF->setText(CGHelper::getChar(gold_int));
 
 }
 
@@ -162,7 +164,8 @@ void GameLayer::getGoldButt(cocos2d::extension::UIButton *pSender, TouchEventTyp
     {
        
         CCLog("(moving moving 移动)");
-    }else if (type == TOUCH_EVENT_ENDED) {
+    }else if (type == TOUCH_EVENT_ENDED)
+    {
          CCLog("(end ++ --),%d",end + 1);
         end++;
         
@@ -197,7 +200,18 @@ void GameLayer::helpButt(cocos2d::extension::UIButton *pSender, TouchEventType t
         CCLog(" begin ++ ----- %d",begin + 1);
         pSender->setOpacity(255);
         begin++;
-            }
+        
+        UIFUAlert *alert = UIFUAlert::createWithFileName();
+        addChild(alert, 1,11211);
+        alert->boundCancelEvent(this, toucheventselector(GameLayer::oneCorrectButtCancel));
+        alert->boundConfirmEvent(this, toucheventselector(GameLayer::oneCorrectButtConfirm));
+        std::string cost_gold_str = "  您确定花费";
+        cost_gold_str += CGHelper::getstring(kOneCorrectAswer_need)+"金币提示一个正确答案?";
+        alert->setTipsTextArea(cost_gold_str.c_str());
+        
+        _play_root->setTouchEnable(false,true);         //取消界面中所有触摸事件
+        
+    }
 }
 
 void GameLayer::shareButt(cocos2d::extension::UIButton *pSender, TouchEventType type)
@@ -252,11 +266,13 @@ void GameLayer::nextButt(cocos2d::extension::UIButton *pSender, TouchEventType t
        
         UIFUAlert *alert = UIFUAlert::createWithFileName();
         addChild(alert, 1,11211);
-        alert->boundCancelEvent(this, toucheventselector(GameLayer::nextButtCancel));
-        alert->boundConfirmEvent(this, toucheventselector(GameLayer::nextButtConfirm));
-        alert->setTipsTextArea("  你确定花费30金币跳过本关卡?");
+        alert->boundCancelEvent(this, toucheventselector(GameLayer::removeWrongButtCancel));
+        alert->boundConfirmEvent(this, toucheventselector(GameLayer::removeWrongButtConfirm));
+        std::string cost_gold_str = "  您确定花费";
+        cost_gold_str += CGHelper::getstring(kRemoveAlterAswer_need)+"金币去掉一个错误答案?";
+        alert->setTipsTextArea(cost_gold_str.c_str());
         
-        _play_root->setTouchEnable(false,true); //取消界面中所有触摸事件
+        _play_root->setTouchEnable(false,true);         //取消界面中所有触摸事件
         
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT) || (CC_TARGET_PLATFORM == CC_PLATFORM_WP8)
         CCMessageBox("You pressed the close button. Windows Store Apps do not implement a close button.","Alert");
@@ -327,6 +343,7 @@ void GameLayer::answerButt(cocos2d::extension::UIButton *butt, TouchEventType ty
     {
         CCLog(" 结束 ----- ");
         butt->setOpacity(255);
+        butt->setColor(ccWHITE);
         
         _answerLabel->setText(butt->getTitleText());
  
@@ -464,6 +481,7 @@ void GameLayer::compareAnswer()
          * 2.) 设置下一关章节和关卡id
          * 3.) 获得奖励后修改金币数量
          */
+        
         GlobalUserDefault::instance()->setPassInfo(star_amount);
         GlobalUserDefault::instance()->nextPass();                  //下一关
         GlobalUserDefault::instance()->increaseGameGold(award_amount);
@@ -500,7 +518,6 @@ void GameLayer::refreshGameData()
     std::string candidate_answer_str =
     ((CCString *)(_directlyCandidateDic->objectForKey("candidate")))->getCString();
     
-    std::vector<std::string> strVector;
     CGHelper::stringArrFromChineseString(candidate_answer_str,strVector);
     
     //如果有英文备选答案(一般只有一个)
@@ -536,8 +553,8 @@ void GameLayer::refreshGameData()
 
 void GameLayer::initialTipView()
 {
-    CG_MAX_ANSWER_NUMBER = CGHelper::stringLengthIncludeChinese(_standardAnswer);              //设置最大答案位置数量
-    CG_MAX_ANSWER_NUMBER -= CG_ENGLISH_ANSWER_NUMBER;
+    CG_MAX_ANSWER_NUMBER = CGHelper::stringLengthIncludeChinese(_standardAnswer);           //设置最大答案位置数量
+    CG_MAX_ANSWER_NUMBER -= CG_ENGLISH_ANSWER_NUMBER;                                       //英文答案只算一个位置
     
     cout<<"最大数量:"<<CG_MAX_ANSWER_NUMBER<<_standardAnswer<<endl;
     _hState.setMaxHoldNum(CG_MAX_ANSWER_NUMBER);                        //设置最大答案位置数量
@@ -590,7 +607,8 @@ void GameLayer::update(float delta)
     
 }
 
-void GameLayer::nextButtCancel(cocos2d::extension::UIButton *butt, TouchEventType type)
+#pragma mark - 去掉一个备选答案
+void GameLayer::removeWrongButtCancel(cocos2d::extension::UIButton *butt, TouchEventType type)
 {
     if (type == TOUCH_EVENT_BEGAN)
     {
@@ -606,7 +624,7 @@ void GameLayer::nextButtCancel(cocos2d::extension::UIButton *butt, TouchEventTyp
 
 }
 
-void GameLayer::nextButtConfirm(cocos2d::extension::UIButton *butt, TouchEventType type)
+void GameLayer::removeWrongButtConfirm(cocos2d::extension::UIButton *butt, TouchEventType type)
 
 {
     if (type == TOUCH_EVENT_BEGAN)
@@ -619,8 +637,111 @@ void GameLayer::nextButtConfirm(cocos2d::extension::UIButton *butt, TouchEventTy
     {
         this->getChildByTag(11211)->removeFromParentAndCleanup(true);
         _play_root->setTouchEnable(true,true);
+        this->removeAlternativeAnswer(kRemoveAlterAswer_need); //去掉一个错误答案
     }
 
 }
+
+void GameLayer::removeAlternativeAnswer(int nGold)
+{
+    std::vector<std::string>  answer_strVector;
+    if(!CGHelper::stringArrFromString(_standardAnswer, answer_strVector))
+        return;
+    
+    std::vector<std::string>::iterator answer_it = answer_strVector.begin();
+    bool operationDone = false;
+    
+    CCArray *arr = _answerLayer->getChildren();
+    while (!operationDone)
+    {
+        UIButton *butt = (UIButton *)arr->randomObject();
+        const char * text = butt->getTitleText();
+        bool allNotEque = true;
+        for (; answer_it < answer_strVector.end(); answer_it++)
+        {
+            if (strcmp(text, (*answer_it).c_str()) == 0)
+            {
+                allNotEque = false;
+                break;
+            }
+        }
+        
+        if (allNotEque)     //全部都不等于备选答案
+        {
+            butt->setEnabled(false); //设置该按钮不操作
+            operationDone = true;
+        }
+    }
+    
+    //设置金币数量
+    if(operationDone) GlobalUserDefault::instance()->reduceGameGold(nGold);
+}
+
+#pragma mark - 提示一个正确答案
+
+void GameLayer::oneCorrectButtCancel(cocos2d::extension::UIButton *butt, TouchEventType type)
+{
+    if (type == TOUCH_EVENT_BEGAN)
+    {
+        
+    }else if (type == TOUCH_EVENT_MOVED)
+    {
+        
+    }else if (type == TOUCH_EVENT_ENDED)
+    {
+        this->getChildByTag(11211)->removeFromParentAndCleanup(true);
+        _play_root->setTouchEnable(true,true);
+    }
+}
+
+void GameLayer::oneCorrectButtConfirm(cocos2d::extension::UIButton *butt, TouchEventType type)
+{
+    if (type == TOUCH_EVENT_BEGAN)
+    {
+        
+    }else if (type == TOUCH_EVENT_MOVED)
+    {
+        
+    }else if (type == TOUCH_EVENT_ENDED)
+    {
+        this->getChildByTag(11211)->removeFromParentAndCleanup(true);
+        _play_root->setTouchEnable(true,true);
+        this->oneCorrectAnswer(kOneCorrectAswer_need); //提示一个正确答案
+    }
+}
+
+void GameLayer::oneCorrectAnswer(int nGold)
+{
+    std::vector<std::string>  answer_strVector;
+    if(!CGHelper::stringArrFromString(_standardAnswer, answer_strVector))
+        return;
+    
+    bool operationDone = false;
+    
+    CCArray *arr = _answerLayer->getChildren();
+    for (int i = 0; i < arr->count(); i++)
+    {
+        UIButton *butt = (UIButton *)arr->objectAtIndex(i);
+        const char * text = butt->getTitleText();
+       
+        int holdIndex = _hState.getCloselyBlankIndex();     //获得当前答案空位的索引
+        std::string oneAnswer = answer_strVector.at(holdIndex);
+        
+        if (strcmp(text, oneAnswer.c_str()) == 0)
+        {
+            butt->setColor(ccYELLOW);
+            operationDone = true;
+            break;
+        }
+    }
+    
+    //设置金币数量
+    if(operationDone) GlobalUserDefault::instance()->reduceGameGold(nGold);
+}
+
+
+
+
+
 
 

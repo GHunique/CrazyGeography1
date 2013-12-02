@@ -75,6 +75,55 @@ bool CGHelper::isChineseChar(const char *pCh)
     
 }
 
+bool CGHelper::stringArrFromString(std::string str, std::vector<std::string> &returnStrVector)
+{
+    int begin_index = 0;
+    int length = str.length();
+    std::string tem_str;
+    std::string englishTemp_str;        //保存连续的英文
+    
+    while (1) {
+        
+        tem_str = str.substr(begin_index,3);
+        
+        if (isChineseChar(tem_str.c_str()))
+        {
+            
+            if (!englishTemp_str.empty())  //本次扫描已经是汉子了，所以保存上次连续的英文字母
+            {
+                std::cout<<"解析出来的 "<<englishTemp_str<<std::endl;
+                returnStrVector.push_back(englishTemp_str);
+                englishTemp_str.clear();
+            }
+            
+            begin_index += 3;
+            returnStrVector.push_back(tem_str);
+            std::cout<<"解析出来的 "<<tem_str<<std::endl;
+        }else
+        {
+            tem_str.clear();
+            tem_str = str.substr(begin_index,1);
+            begin_index += 1;
+            englishTemp_str.append(tem_str);
+        }
+        
+        
+        
+        if (begin_index == length)
+        {
+            if (!englishTemp_str.empty())
+            {
+                std::cout<<"解析出来的 "<<englishTemp_str<<std::endl;
+                returnStrVector.push_back(englishTemp_str);
+                englishTemp_str.clear();
+            }
+            break;
+        }
+    }
+    
+    return returnStrVector.size();
+}
+
 bool CGHelper::stringArrFromChineseString(std::string str, std::vector<std::string> &returnStrVector)
 {
     int begin_index = 0;
