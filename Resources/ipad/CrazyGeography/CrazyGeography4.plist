@@ -137,6 +137,25 @@
 				<key>offsetY</key>
 				<real>0</real>
 			</dict>
+			<key>accessary/cclose@2x.png</key>
+			<dict>
+				<key>width</key>
+				<integer>66</integer>
+				<key>height</key>
+				<integer>66</integer>
+				<key>originalWidth</key>
+				<integer>66</integer>
+				<key>originalHeight</key>
+				<integer>66</integer>
+				<key>x</key>
+				<integer>0</integer>
+				<key>y</key>
+				<integer>689</integer>
+				<key>offsetX</key>
+				<real>0</real>
+				<key>offsetY</key>
+				<real>0</real>
+			</dict>
 		</dict>
 		<key>metadata</key>
 		<dict>

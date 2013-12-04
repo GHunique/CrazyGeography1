@@ -27,7 +27,7 @@
         "options": {
           "__type": "ComGUILabelSurrogate:#EditorCommon.JsonModel.Component.GUI",
           "classname": "Label",
-          "name": "Label",
+          "name": "gold_Label",
           "ZOrder": 4,
           "actiontag": 178,
           "anchorPointX": 0,

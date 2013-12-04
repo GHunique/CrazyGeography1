@@ -406,7 +406,7 @@
           "colorR": 255,
           "flipX": false,
           "flipY": false,
-          "height": 40,
+          "height": 56,
           "ignoreSize": true,
           "opacity": 255,
           "rotation": 0,
@@ -416,42 +416,42 @@
           "touchAble": false,
           "useMergedTexture": true,
           "visible": true,
-          "width": 40,
-          "x": 274,
-          "xProportion": 0.428125,
-          "y": 201,
-          "yProportion": 0.209375,
+          "width": 56,
+          "x": 280,
+          "xProportion": 0.4375,
+          "y": 207,
+          "yProportion": 0.215625,
           "backGroundBox": null,
           "backGroundBoxData": {
-            "path": "accessary2/pay_checkbox.png",
+            "path": "accessary2/check_box_normal_press.png",
             "plistFile": null,
             "resourceType": 1
           },
           "backGroundBoxDisabled": null,
           "backGroundBoxDisabledData": {
-            "path": null,
+            "path": "accessary2/check_box_active_disable.png",
             "plistFile": null,
-            "resourceType": 0
+            "resourceType": 1
           },
           "backGroundBoxSelected": null,
           "backGroundBoxSelectedData": {
-            "path": "accessary2/pay_checkbox.png",
+            "path": "accessary2/check_box_active_press.png",
             "plistFile": null,
             "resourceType": 1
           },
           "frontCross": null,
           "frontCrossData": {
-            "path": "accessary2/pay_checkbox_checked.png",
+            "path": "accessary2/check_box_active.png",
             "plistFile": null,
             "resourceType": 1
           },
           "frontCrossDisabled": null,
           "frontCrossDisabledData": {
-            "path": null,
+            "path": "accessary2/check_box_normal_press.png",
             "plistFile": null,
-            "resourceType": 0
+            "resourceType": 1
           },
-          "selectedState": false
+          "selectedState": true
         }
       },
       {
