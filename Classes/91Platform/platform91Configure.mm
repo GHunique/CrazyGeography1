@@ -60,8 +60,8 @@ static platform91Configure *_platform91;
     //完成您必要的初始化工作，例如设置您的rootViewController
     //初始化平台
     NdInitConfigure *cfg = [[[NdInitConfigure alloc] init] autorelease];
-    //    cfg.appid =100010;
-    //    cfg.appKey =@"C28454605B9312157C2F76F27A9BCA2349434E546A6E9C75";
+//    cfg.appid =100010;
+//    cfg.appKey =@"C28454605B9312157C2F76F27A9BCA2349434E546A6E9C75";
     //我自己的游戏
     cfg.appid =110237;
     cfg.appKey =@"1ec5e323e5d561ea0553ba2b76df5fed304ddff14bb5c6e2";

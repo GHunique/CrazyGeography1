@@ -182,6 +182,7 @@ void ChapterLayer::gotoAheadLayer(cocos2d::extension::UIButton *pSender, TouchEv
         {
             GlobalUserDefault::instance()->enterVirtualShop();
             return;
+            
             CCScene *scene = CCScene::create();                 //添加场景
             AheadChapter *gameLayer = AheadChapter::create();
             scene->addChild(gameLayer);

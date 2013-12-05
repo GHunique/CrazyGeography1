@@ -33,11 +33,11 @@ enum {
     kGameAlertUI,         ///-------游戏提示(警告)界面
     
     kChapter_Accessary,//------------一些特定的控件
-    
+    kGameInfoUI,
     
 };
 
-const std::string CG_GamePathes[10] =
+const std::string CG_GamePathes[11] =
 {
     "CrazyGeography/AheadChapterUI.ExportJson",
     "CrazyGeography/GameChapterLayerUI.ExportJson",
@@ -51,6 +51,7 @@ const std::string CG_GamePathes[10] =
     "CrazyGeography/GameAlertUI.ExportJson",     ///-------游戏提示(警告)界面
     
     "CrazyGeography/Chapter_Accesary.ExportJson",     //------------一些特定的控件
+    "CrazyGeography/GameInfoUI.ExportJson",
     
 };
 

@@ -295,6 +295,7 @@
 		AC99D94B1842E617008EC1D6 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC99D94A1842E617008EC1D6 /* MessageUI.framework */; };
 		AC99D95F1842E7DD008EC1D6 /* NdComPlatform_SNS_Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC99D95E1842E7DD008EC1D6 /* NdComPlatform_SNS_Resources.bundle */; };
 		AC99D9691842F642008EC1D6 /* 91platformConfigure.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC99D9681842F642008EC1D6 /* 91platformConfigure.mm */; };
+		ACAA7DBB1850093B0066B799 /* GameInfoUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACAA7DB91850093B0066B799 /* GameInfoUI.cpp */; };
 		ACC9E25018337FCF006A3D65 /* UIFUAlert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACC9E24E18337FCF006A3D65 /* UIFUAlert.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
@@ -878,6 +879,8 @@
 		AC99D9671842F642008EC1D6 /* 91PlatformConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 91PlatformConfigure.h; sourceTree = "<group>"; };
 		AC99D9681842F642008EC1D6 /* 91platformConfigure.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = 91platformConfigure.mm; sourceTree = "<group>"; };
 		AC99D96A184300E4008EC1D6 /* platform91Configure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform91Configure.h; sourceTree = "<group>"; };
+		ACAA7DB91850093B0066B799 /* GameInfoUI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameInfoUI.cpp; sourceTree = "<group>"; };
+		ACAA7DBA1850093B0066B799 /* GameInfoUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameInfoUI.h; sourceTree = "<group>"; };
 		ACC9E24E18337FCF006A3D65 /* UIFUAlert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIFUAlert.cpp; sourceTree = "<group>"; };
 		ACC9E24F18337FCF006A3D65 /* UIFUAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIFUAlert.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -2115,6 +2118,8 @@
 		AC7E6C5318399FC800BF352A /* CGAccessary */ = {
 			isa = PBXGroup;
 			children = (
+				ACAA7DB91850093B0066B799 /* GameInfoUI.cpp */,
+				ACAA7DBA1850093B0066B799 /* GameInfoUI.h */,
 				AC7E6C5A1839A09200BF352A /* CGAccessaryButton.cpp */,
 				AC7E6C5B1839A09200BF352A /* CGAccessaryButton.h */,
 			);
@@ -2398,6 +2403,7 @@
 				15A3DAED1682F8A6002FB0C5 /* CocosDenshion.m in Sources */,
 				15A3DAEE1682F8A6002FB0C5 /* SimpleAudioEngine.mm in Sources */,
 				15A3DAEF1682F8A6002FB0C5 /* SimpleAudioEngine_objc.m in Sources */,
+				ACAA7DBB1850093B0066B799 /* GameInfoUI.cpp in Sources */,
 				1A27573F1697CF2B00504026 /* CCEditBoxImplAndroid.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
