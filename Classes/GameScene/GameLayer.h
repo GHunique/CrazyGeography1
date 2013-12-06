@@ -178,6 +178,8 @@ protected:
     void helpButt(UIButton *pSender, TouchEventType type);          //帮助按钮调用函数
     void shareButt(UIButton *pSender, TouchEventType type);         //分享按钮调用界面
     void nextButt(UIButton *pSender, TouchEventType type);          //下一个问题
+    void gameInfo(UIButton *pSender, TouchEventType type);          //获得信息
+    
     
     void initAnswerLayer(std::vector<std::string> &StrVector);      //初始化答案界面
     

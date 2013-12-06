@@ -138,9 +138,9 @@
           },
           "pressed": null,
           "pressedData": {
-            "path": "accessary/gur-project-101.png",
+            "path": null,
             "plistFile": null,
-            "resourceType": 1
+            "resourceType": 0
           },
           "scale9Enable": false,
           "scale9Height": 128,

@@ -67,9 +67,9 @@
           "capInsetsY": 0,
           "disabled": null,
           "disabledData": {
-            "path": null,
+            "path": "accessary2/earth.png",
             "plistFile": null,
-            "resourceType": 0
+            "resourceType": 1
           },
           "fontName": "宋体",
           "fontSize": 14,
@@ -82,7 +82,7 @@
           },
           "pressed": null,
           "pressedData": {
-            "path": "accessary/gur-project-101.png",
+            "path": "accessary2/earth.png",
             "plistFile": null,
             "resourceType": 1
           },
