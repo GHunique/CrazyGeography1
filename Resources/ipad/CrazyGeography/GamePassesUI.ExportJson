@@ -155,9 +155,7 @@
   "textures": [
     "CrazyGeography0.plist",
     "CrazyGeography1.plist",
-    "CrazyGeography2.plist",
-    "CrazyGeography3.plist",
-    "CrazyGeography4.plist"
+    "CrazyGeography2.plist"
   ],
   "version": "1.0.2.0",
   "widgetTree": {

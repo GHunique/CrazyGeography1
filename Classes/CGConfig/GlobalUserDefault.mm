@@ -42,7 +42,7 @@ GlobalUserDefault::GlobalUserDefault()
     _currChapter = 1;
     _currPass = 1;
     
-    this->chapterMapData();     //初始化章节关卡信息，加载图片资源
+    this->chapterMapData();     //初始化章节关卡信息
     
     
     _shareMultPla = new SharedMultiPlatform();  //初始化分享数据

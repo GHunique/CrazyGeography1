@@ -75,6 +75,9 @@ bool UIControlLayer::init()
     showVolum->setPosition(ccp(300,400));
     _conUILayer->addWidget(showVolum);
     
+    _silence_image = static_cast<UIImageView *>(_control_root->getChildByName("volume_image_s"));
+    _notSilence_image = static_cast<UIImageView *>(_control_root->getChildByName("volume_image"));
+    
     return true;
 }
 
@@ -88,9 +91,18 @@ void UIControlLayer::onEnter()
     //设置各个参数
     _bgMusic_slider->setPercent(_volume_bg*100);
     _efMusic_slider->setPercent(_volume_eff*100);
-    if (_silence) _silenceCBox->setSelectedState(true);
-    else _silenceCBox->setSelectedState(false);
-    
+    if (_silence){//静音了
+        
+    _silenceCBox->setSelectedState(true);
+        _silence_image->setEnabled(false);
+        _notSilence_image->setEnabled(true);
+    }
+    else{
+        
+    _silenceCBox->setSelectedState(false);
+        _silence_image->setEnabled(true);
+        _notSilence_image->setEnabled(false);
+    }
     CCString *volume_str = (CCString::createWithFormat("satrt 背景音乐:%f -- 音效音量:%f",_volume_bg,_volume_eff));
     showVolum->setText(volume_str->getCString());
 }
@@ -116,6 +128,8 @@ void UIControlLayer::quietCheckBox(cocos2d::extension::UICheckBox *pSender, Chec
             SimpleAudioEngine::sharedEngine()->setBackgroundMusicVolume(0);
             _silence = 1;
             showVolum->setText("静音了的喔。。。。");
+            _silence_image->setEnabled(false);
+            _notSilence_image->setEnabled(true);
         }
             break;
         case cocos2d::extension::CHECKBOX_STATE_EVENT_UNSELECTED:
@@ -124,6 +138,9 @@ void UIControlLayer::quietCheckBox(cocos2d::extension::UICheckBox *pSender, Chec
             SimpleAudioEngine::sharedEngine()->setBackgroundMusicVolume(_volume_bg);
             _silence = 0;
             showVolum->setText("开启声音了的！！！");
+            
+            _silence_image->setEnabled(true);
+            _notSilence_image->setEnabled(false);
         }
             break;
         default:

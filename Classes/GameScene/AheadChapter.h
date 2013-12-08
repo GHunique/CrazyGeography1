@@ -30,6 +30,7 @@ private:
     void startGame  (UIButton *pSender,TouchEventType type);
     void reSetGame  (UIButton *pSender,TouchEventType type);
     void settingGame(UIButton *pSender,TouchEventType type);
+    void onEnterTransitionDidFinish();
     
 };
 

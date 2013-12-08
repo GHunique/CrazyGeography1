@@ -75,9 +75,7 @@
   "textures": [
     "CrazyGeography0.plist",
     "CrazyGeography1.plist",
-    "CrazyGeography2.plist",
-    "CrazyGeography3.plist",
-    "CrazyGeography4.plist"
+    "CrazyGeography2.plist"
   ],
   "version": "1.0.2.0",
   "widgetTree": {
@@ -363,7 +361,7 @@
           "__type": "ComGUIImageViewSurrogate:#EditorCommon.JsonModel.Component.GUI",
           "classname": "ImageView",
           "name": "bg_image",
-          "ZOrder": 1,
+          "ZOrder": 0,
           "actiontag": 79,
           "anchorPointX": 0.5,
           "anchorPointY": 0.5,
@@ -373,7 +371,7 @@
           "colorR": 255,
           "flipX": false,
           "flipY": false,
-          "height": 940,
+          "height": 1024,
           "ignoreSize": false,
           "opacity": 255,
           "rotation": 0,
@@ -383,7 +381,7 @@
           "touchAble": false,
           "useMergedTexture": true,
           "visible": true,
-          "width": 620,
+          "width": 768,
           "x": 320,
           "xProportion": 0.5,
           "y": 480,
@@ -394,13 +392,13 @@
           "capInsetsY": 0,
           "fileName": null,
           "fileNameData": {
-            "path": "answer_bg.jpg",
+            "path": "accessary2/city_back.png",
             "plistFile": null,
             "resourceType": 1
           },
           "scale9Enable": false,
-          "scale9Height": 940,
-          "scale9Width": 620
+          "scale9Height": 1024,
+          "scale9Width": 768
         }
       },
       {
@@ -576,7 +574,7 @@
       "capInsetsWidth": 0,
       "capInsetsX": 0,
       "capInsetsY": 0,
-      "clipAble": true,
+      "clipAble": false,
       "colorType": 1,
       "vectorX": 0,
       "vectorY": -0.5

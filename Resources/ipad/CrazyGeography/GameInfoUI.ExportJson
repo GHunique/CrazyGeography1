@@ -11,9 +11,7 @@
   "textures": [
     "CrazyGeography0.plist",
     "CrazyGeography1.plist",
-    "CrazyGeography2.plist",
-    "CrazyGeography3.plist",
-    "CrazyGeography4.plist"
+    "CrazyGeography2.plist"
   ],
   "version": "1.0.2.0",
   "widgetTree": {
@@ -93,8 +91,8 @@
           "useMergedTexture": true,
           "visible": true,
           "width": 640,
-          "x": 2,
-          "xProportion": 0.003125,
+          "x": 4,
+          "xProportion": 0.00625,
           "y": 249,
           "yProportion": 0.259375,
           "backGroundImage": null,
@@ -152,10 +150,10 @@
           "useMergedTexture": true,
           "visible": true,
           "width": 64,
-          "x": 587,
-          "xProportion": 0.9171875,
-          "y": 286,
-          "yProportion": 0.297916681,
+          "x": 597,
+          "xProportion": 0.9328125,
+          "y": 280,
+          "yProportion": 0.291666657,
           "capInsetsHeight": 0,
           "capInsetsWidth": 0,
           "capInsetsX": 0,

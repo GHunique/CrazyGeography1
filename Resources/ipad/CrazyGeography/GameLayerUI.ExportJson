@@ -11,15 +11,61 @@
   "textures": [
     "CrazyGeography0.plist",
     "CrazyGeography1.plist",
-    "CrazyGeography2.plist",
-    "CrazyGeography3.plist",
-    "CrazyGeography4.plist"
+    "CrazyGeography2.plist"
   ],
   "version": "1.0.2.0",
   "widgetTree": {
     "classname": "Panel",
     "name": null,
     "children": [
+      {
+        "classname": "ImageView",
+        "name": null,
+        "children": [],
+        "options": {
+          "__type": "ComGUIImageViewSurrogate:#EditorCommon.JsonModel.Component.GUI",
+          "classname": "ImageView",
+          "name": "back_image",
+          "ZOrder": 0,
+          "actiontag": 202,
+          "anchorPointX": 0.5,
+          "anchorPointY": 0.5,
+          "classType": null,
+          "colorB": 255,
+          "colorG": 255,
+          "colorR": 255,
+          "flipX": false,
+          "flipY": false,
+          "height": 1024,
+          "ignoreSize": true,
+          "opacity": 255,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "tag": 164,
+          "touchAble": false,
+          "useMergedTexture": true,
+          "visible": true,
+          "width": 768,
+          "x": 320,
+          "xProportion": 0.5,
+          "y": 480,
+          "yProportion": 0.5,
+          "capInsetsHeight": 0,
+          "capInsetsWidth": 0,
+          "capInsetsX": 0,
+          "capInsetsY": 0,
+          "fileName": null,
+          "fileNameData": {
+            "path": "accessary2/city_back.png",
+            "plistFile": null,
+            "resourceType": 1
+          },
+          "scale9Enable": false,
+          "scale9Height": 1024,
+          "scale9Width": 768
+        }
+      },
       {
         "classname": "TextButton",
         "name": null,
@@ -347,7 +393,7 @@
           "__type": "ComGUILabelBMFontSurrogate:#EditorCommon.JsonModel.Component.GUI",
           "classname": "LabelBMFont",
           "name": "process_BMFLabel",
-          "ZOrder": 0,
+          "ZOrder": 1,
           "actiontag": 56,
           "anchorPointX": 0.5,
           "anchorPointY": 0.5,

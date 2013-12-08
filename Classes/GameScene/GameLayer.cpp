@@ -105,6 +105,9 @@ bool GameLayer::init()
     
     _gameGold_BMF = static_cast<UILabelBMFont *>(_play_root->getChildByName("gameGold_BMFLabel"));
     
+    _gold_label = static_cast<UILabel *>(_play_root->getChildByName("gold_Label"));
+    _gold_label->setText(CGHelper::getChar(GlobalUserDefault::instance()->getGameGold()));
+    
     return true;
 }
 
@@ -699,7 +702,11 @@ void GameLayer::removeAlternativeAnswer(int nGold)
     }
     
     //设置金币数量
-    if(operationDone) GlobalUserDefault::instance()->reduceGameGold(nGold);
+    if(operationDone)
+    {
+        GlobalUserDefault::instance()->reduceGameGold(nGold);
+         _gold_label->setText(CGHelper::getChar(GlobalUserDefault::instance()->getGameGold()));
+    }
 }
 
 #pragma mark - 提示一个正确答案
@@ -761,7 +768,12 @@ void GameLayer::oneCorrectAnswer(int nGold)
     }
     
     //设置金币数量
-    if(operationDone) GlobalUserDefault::instance()->reduceGameGold(nGold);
+    if(operationDone)
+    {
+        GlobalUserDefault::instance()->reduceGameGold(nGold);
+         _gold_label->setText(CGHelper::getChar(GlobalUserDefault::instance()->getGameGold()));
+    }
+    
 }
 
 

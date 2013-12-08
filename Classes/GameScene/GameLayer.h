@@ -166,6 +166,7 @@ private:
     int _currPass;                              //当前章节
     
     UILabelBMFont *_gameGold_BMF;               //显示金币标签
+    UILabel *_gold_label;                       //金币标签
     long _start_cd_seconds;                     //开始倒计时时间点
     long _total_award_cd;                             //剩余奖励时间
     bool _startCD;                              //是否倒计时
