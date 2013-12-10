@@ -19,6 +19,7 @@ public:
     bool init();
     
     void setTextArea(const char* text);
+    void setParent(UIWidget *parent);
     
 private:
     

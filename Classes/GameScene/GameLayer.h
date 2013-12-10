@@ -166,6 +166,7 @@ private:
     int _currPass;                              //当前章节
     
     UILabelBMFont *_gameGold_BMF;               //显示金币标签
+    UILabel *_gold_label;                       //金币标签
     long _start_cd_seconds;                     //开始倒计时时间点
     long _total_award_cd;                             //剩余奖励时间
     bool _startCD;                              //是否倒计时
@@ -178,6 +179,8 @@ protected:
     void helpButt(UIButton *pSender, TouchEventType type);          //帮助按钮调用函数
     void shareButt(UIButton *pSender, TouchEventType type);         //分享按钮调用界面
     void nextButt(UIButton *pSender, TouchEventType type);          //下一个问题
+    void gameInfo(UIButton *pSender, TouchEventType type);          //获得信息
+    
     
     void initAnswerLayer(std::vector<std::string> &StrVector);      //初始化答案界面
     

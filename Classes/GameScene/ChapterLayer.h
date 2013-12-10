@@ -33,6 +33,8 @@ private:
     void provincesLayout();
     void gotoDirectlyPass(CCObject *pSender,TouchEventType type);
     void gotoAheadLayer(UIButton *pSender,TouchEventType tyep);
+    
+    void onEnterTransitionDidFinish();
 };
 
 #endif /* defined(__CrazyGeography__ChapterLayer__) */

@@ -58,11 +58,7 @@ void ChapterLayer::onEnter()
 {
     this->CCLayerRGBA::onEnter();
     //.....
-    //播放动作
-    ActionObject *earth_action = ActionManager::shareManager()->getActionByName("GameChapterLayerUI.ExportJson", "earth_roll");
     
-    if (earth_action != NULL)
-        earth_action->play();
 
 }
 
@@ -180,9 +176,6 @@ void ChapterLayer::gotoAheadLayer(cocos2d::extension::UIButton *pSender, TouchEv
     switch (tyep) {
         case cocos2d::extension::TOUCH_EVENT_ENDED:
         {
-            GlobalUserDefault::instance()->enterVirtualShop();
-            return;
-            
             CCScene *scene = CCScene::create();                 //添加场景
             AheadChapter *gameLayer = AheadChapter::create();
             scene->addChild(gameLayer);
@@ -198,7 +191,19 @@ void ChapterLayer::gotoAheadLayer(cocos2d::extension::UIButton *pSender, TouchEv
 }
 
 
-
+void ChapterLayer::onEnterTransitionDidFinish()
+{
+    //播放动作
+    ActionObject *earth_action = ActionManager::shareManager()->getActionByName("GameChapterLayerUI.ExportJson", "earth_roll");
+    
+    if (earth_action != NULL)
+        earth_action->play();
+    
+    ActionObject *action = ActionManager::shareManager()->getActionByName("GameChapterLayerUI.ExportJson", "map_scale");
+    
+    if (action != NULL)
+        action->play();
+}
 
 
 

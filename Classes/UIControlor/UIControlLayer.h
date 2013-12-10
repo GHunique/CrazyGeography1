@@ -35,6 +35,8 @@ private:
     int  _silence;             //是否静音 1 静音;0 有声
     
     UILabel *showVolum;
+    UIImageView *_silence_image;    //静音 按钮图标
+    UIImageView *_notSilence_image; //有声音按钮图标
     
 private:
     void  quietCheckBox(UICheckBox *pSender,CheckBoxEventType type);

@@ -73,22 +73,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../Classes/CGExtension/CGHelper.cpp"
-            timestampString = "406270599.754038"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "CGHelper::getfloat(const std::string str)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "../Classes/UIControlor/UIFUAlert.h"
             timestampString = "407601005.972496"
             startingColumnNumber = "9223372036854775807"
@@ -138,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameScene/GameLayer.cpp"
-            timestampString = "407683617.602238"
+            timestampString = "408203929.441889"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "622"
-            endingLineNumber = "622"
+            startingLineNumber = "644"
+            endingLineNumber = "644"
             landmarkName = "GameLayer::removeWrongButtCancel(cocos2d::extension::UIButton *butt, TouchEventType type)"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,44 +138,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameScene/GameLayer.cpp"
-            timestampString = "407683741.578805"
+            timestampString = "408203929.441889"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "621"
-            endingLineNumber = "621"
+            startingLineNumber = "643"
+            endingLineNumber = "643"
             landmarkName = "GameLayer::removeWrongButtCancel(cocos2d::extension::UIButton *butt, TouchEventType type)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../Classes/GameScene/GameLayer.cpp"
-            timestampString = "407683868.147388"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "238"
-            endingLineNumber = "238"
-            landmarkName = "GameLayer::shareButt(cocos2d::extension::UIButton *pSender, TouchEventType type)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../Classes/GameScene/GameLayer.cpp"
-            timestampString = "407683869.61339"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "237"
-            endingLineNumber = "237"
-            landmarkName = "GameLayer::shareButt(cocos2d::extension::UIButton *pSender, TouchEventType type)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -202,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameScene/GameLayer.cpp"
-            timestampString = "407685055.302121"
+            timestampString = "408203929.441889"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "661"
-            endingLineNumber = "661"
+            startingLineNumber = "683"
+            endingLineNumber = "683"
             landmarkName = "GameLayer::removeAlternativeAnswer(int nGold)"
             landmarkType = "5">
          </BreakpointContent>
