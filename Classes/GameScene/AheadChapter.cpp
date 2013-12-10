@@ -12,13 +12,14 @@
 #include "UIControlLayer.h"
 //------
 #include "CGShop.h"
+#include "CGHelper.h"
 
 #include "MacroDefine.h"
 
 
 AheadChapter::AheadChapter()
 {
-    
+   
 }
 
 AheadChapter::~AheadChapter()
@@ -174,7 +175,10 @@ void AheadChapter::settingGame(cocos2d::extension::UIButton *pSender, TouchEvent
         default:
             break;
     }
+    
 }
+<<<<<<< HEAD
+=======
 
 void AheadChapter::onEnterTransitionDidFinish()
 {
@@ -200,3 +204,4 @@ void AheadChapter::delayAnimation()
 
 
 
+>>>>>>> e082ceceede6c9a1acc5d7099b596fd6a60ccbfa
