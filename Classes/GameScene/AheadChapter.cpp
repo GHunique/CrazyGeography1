@@ -177,8 +177,6 @@ void AheadChapter::settingGame(cocos2d::extension::UIButton *pSender, TouchEvent
     }
     
 }
-<<<<<<< HEAD
-=======
 
 void AheadChapter::onEnterTransitionDidFinish()
 {
@@ -201,7 +199,3 @@ void AheadChapter::delayAnimation()
         action->play();
     }
 }
-
-
-
->>>>>>> e082ceceede6c9a1acc5d7099b596fd6a60ccbfa
