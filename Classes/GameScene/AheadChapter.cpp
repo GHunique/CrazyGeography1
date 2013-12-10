@@ -183,6 +183,19 @@ void AheadChapter::onEnterTransitionDidFinish()
     
     if (action != NULL)
         action->play();
+    
+    
+    this->scheduleOnce(schedule_selector(AheadChapter::delayAnimation), 3.2);
+}
+
+void AheadChapter::delayAnimation()
+{
+    ActionObject  *action = ActionManager::shareManager()->getActionByName("AheadChapterUI.ExportJson", "map_animation");
+    
+    if (action != NULL)
+    {
+        action->play();
+    }
 }
 
 

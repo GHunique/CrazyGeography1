@@ -32,6 +32,8 @@ private:
     void settingGame(UIButton *pSender,TouchEventType type);
     void onEnterTransitionDidFinish();
     
+    void delayAnimation();
+    
 };
 
 #endif /* defined(__CrazyGeography__AheadChapter__) */

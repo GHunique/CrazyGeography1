@@ -11,7 +11,8 @@
   "textures": [
     "CrazyGeography0.plist",
     "CrazyGeography1.plist",
-    "CrazyGeography2.plist"
+    "CrazyGeography2.plist",
+    "CrazyGeography3.plist"
   ],
   "version": "1.0.2.0",
   "widgetTree": {
@@ -141,7 +142,7 @@
           "__type": "ComGUILabelSurrogate:#EditorCommon.JsonModel.Component.GUI",
           "classname": "Label",
           "name": "gold_Label",
-          "ZOrder": 4,
+          "ZOrder": 5,
           "actiontag": 178,
           "anchorPointX": 0,
           "anchorPointY": 0.5,
@@ -289,7 +290,7 @@
           "__type": "ComGUIImageViewSurrogate:#EditorCommon.JsonModel.Component.GUI",
           "classname": "ImageView",
           "name": "answerBG_image",
-          "ZOrder": 3,
+          "ZOrder": 5,
           "actiontag": 59,
           "anchorPointX": 0.5,
           "anchorPointY": 0.5,
@@ -2630,7 +2631,7 @@
       "capInsetsWidth": 0,
       "capInsetsX": 0,
       "capInsetsY": 0,
-      "clipAble": false,
+      "clipAble": true,
       "colorType": 2,
       "vectorX": 0,
       "vectorY": -0.5

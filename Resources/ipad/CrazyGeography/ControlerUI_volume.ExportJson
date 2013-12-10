@@ -11,13 +11,62 @@
   "textures": [
     "CrazyGeography0.plist",
     "CrazyGeography1.plist",
-    "CrazyGeography2.plist"
+    "CrazyGeography2.plist",
+    "CrazyGeography3.plist"
   ],
   "version": "1.0.2.0",
   "widgetTree": {
     "classname": "Panel",
     "name": null,
     "children": [
+      {
+        "classname": "ImageView",
+        "name": null,
+        "children": [],
+        "options": {
+          "__type": "ComGUIImageViewSurrogate:#EditorCommon.JsonModel.Component.GUI",
+          "classname": "ImageView",
+          "name": "volume_iamge_s",
+          "ZOrder": 8,
+          "actiontag": 203,
+          "anchorPointX": 0.5,
+          "anchorPointY": 0.5,
+          "classType": null,
+          "colorB": 255,
+          "colorG": 255,
+          "colorR": 255,
+          "flipX": false,
+          "flipY": false,
+          "height": 128,
+          "ignoreSize": true,
+          "opacity": 255,
+          "rotation": 0,
+          "scaleX": 0.4999999,
+          "scaleY": 0.4999999,
+          "tag": 142,
+          "touchAble": false,
+          "useMergedTexture": true,
+          "visible": true,
+          "width": 128,
+          "x": 119,
+          "xProportion": 0.1859375,
+          "y": 212,
+          "yProportion": 0.220833331,
+          "capInsetsHeight": 0,
+          "capInsetsWidth": 0,
+          "capInsetsX": 0,
+          "capInsetsY": 0,
+          "fileName": null,
+          "fileNameData": {
+            "path": "accessary2/super-mono-3d-042.png",
+            "plistFile": null,
+            "resourceType": 1
+          },
+          "scale9Enable": false,
+          "scale9Height": 128,
+          "scale9Width": 128
+        }
+      },
       {
         "classname": "ImageView",
         "name": null,
@@ -418,7 +467,7 @@
           "scaleX": 1,
           "scaleY": 1,
           "tag": 97,
-          "touchAble": false,
+          "touchAble": true,
           "useMergedTexture": true,
           "visible": true,
           "width": 56,
