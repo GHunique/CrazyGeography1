@@ -556,6 +556,11 @@ void GlobalUserDefault::cancelAllAuth()
 
 #pragma mark - buyCommodity
 
+void GlobalUserDefault::init91Platform()
+{
+    [[platform91Configure instance] init];
+}
+
 void GlobalUserDefault::buyCommodities(const char *commId, const char *commName, float price, int count)
 {
     NSString *commIdStr = [NSString stringWithUTF8String:commId];

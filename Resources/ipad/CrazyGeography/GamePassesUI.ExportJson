@@ -181,7 +181,7 @@
           "colorR": 255,
           "flipX": false,
           "flipY": false,
-          "height": 960,
+          "height": 1024,
           "ignoreSize": false,
           "opacity": 255,
           "rotation": 0,
@@ -191,9 +191,9 @@
           "touchAble": false,
           "useMergedTexture": true,
           "visible": true,
-          "width": 640,
-          "x": 319,
-          "xProportion": 0.4984375,
+          "width": 768,
+          "x": 300,
+          "xProportion": 0.46875,
           "y": 479,
           "yProportion": 0.498958319,
           "capInsetsHeight": 0,
@@ -202,13 +202,13 @@
           "capInsetsY": 0,
           "fileName": null,
           "fileNameData": {
-            "path": "answer_bg.jpg",
+            "path": "accessary2/city_back.png",
             "plistFile": null,
             "resourceType": 1
           },
           "scale9Enable": false,
-          "scale9Height": 960,
-          "scale9Width": 640
+          "scale9Height": 1024,
+          "scale9Width": 768
         }
       },
       {
@@ -315,7 +315,7 @@
           "__type": "ComGUILabelBMFontSurrogate:#EditorCommon.JsonModel.Component.GUI",
           "classname": "LabelBMFont",
           "name": "gameTitle_BMF",
-          "ZOrder": 3,
+          "ZOrder": 7,
           "actiontag": 89,
           "anchorPointX": 0.5,
           "anchorPointY": 0.5,
@@ -328,7 +328,7 @@
           "height": 87,
           "ignoreSize": true,
           "opacity": 255,
-          "rotation": 60,
+          "rotation": 42,
           "scaleX": 0.5,
           "scaleY": 0.5,
           "tag": 110,
@@ -338,8 +338,8 @@
           "width": 362,
           "x": 518,
           "xProportion": 0.809375,
-          "y": 800,
-          "yProportion": 0.8333333,
+          "y": 861,
+          "yProportion": 0.896875,
           "fileNameData": {
             "path": "BMF/TitleFont.fnt",
             "plistFile": null,
@@ -513,6 +513,73 @@
             "resourceType": 0
           },
           "text": "北京"
+        }
+      },
+      {
+        "classname": "TextButton",
+        "name": null,
+        "children": [],
+        "options": {
+          "__type": "ComGUITextButtonSurrogate:#EditorCommon.JsonModel.Component.GUI",
+          "classname": "TextButton",
+          "name": "trager_butt",
+          "ZOrder": 9,
+          "actiontag": 210,
+          "anchorPointX": 0.5,
+          "anchorPointY": 0.5,
+          "classType": null,
+          "colorB": 255,
+          "colorG": 255,
+          "colorR": 255,
+          "flipX": false,
+          "flipY": false,
+          "height": 40,
+          "ignoreSize": false,
+          "opacity": 255,
+          "rotation": 39,
+          "scaleX": 1,
+          "scaleY": 1,
+          "tag": 172,
+          "touchAble": true,
+          "useMergedTexture": true,
+          "visible": true,
+          "width": 103,
+          "x": 526,
+          "xProportion": 0.821875,
+          "y": 856,
+          "yProportion": 0.891666651,
+          "capInsetsHeight": 0,
+          "capInsetsWidth": 0,
+          "capInsetsX": 0,
+          "capInsetsY": 0,
+          "disabled": null,
+          "disabledData": {
+            "path": null,
+            "plistFile": null,
+            "resourceType": 0
+          },
+          "fontName": "宋体",
+          "fontSize": 14,
+          "fontType": 0,
+          "normal": null,
+          "normalData": {
+            "path": null,
+            "plistFile": null,
+            "resourceType": 0
+          },
+          "pressed": null,
+          "pressedData": {
+            "path": null,
+            "plistFile": null,
+            "resourceType": 0
+          },
+          "scale9Enable": false,
+          "scale9Height": 40,
+          "scale9Width": 103,
+          "text": "Text Button",
+          "textColorB": 255,
+          "textColorG": 255,
+          "textColorR": 255
         }
       }
     ],

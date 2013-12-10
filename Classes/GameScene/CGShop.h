@@ -24,6 +24,7 @@ private:
     Layout  *_shop_root;
 private:
     void backButton(UIButton *pSender,TouchEventType type);
+    void loginButt(UIButton *pSender,TouchEventType type);
 };
 
 #endif /* defined(__CrazyGeography__CGShop__) */

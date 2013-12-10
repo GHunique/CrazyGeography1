@@ -45,7 +45,7 @@ static platform91Configure *_platform91;
 + (platform91Configure *)instance
 {
     if (!_platform91) {
-        _platform91 = [[platform91Configure alloc] init];
+        _platform91 = [[platform91Configure alloc]init];
         
     }
     

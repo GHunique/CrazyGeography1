@@ -56,6 +56,10 @@ bool CGShop::init()
     back_butt->setTouchEnable(true);
     back_butt->addTouchEventListener(this, toucheventselector(CGShop::backButton));
     
+    UIButton *login_butt = static_cast<UIButton *>(_shop_root->getChildByName("login_butt"));
+    login_butt->setTouchEnable(true);
+    login_butt->addTouchEventListener(this, toucheventselector(CGShop::loginButt));
+    
     GlobalUserDefault::instance()->show91ToolBar(false);
     
     return true;
@@ -67,6 +71,7 @@ void CGShop::buyGold(cocos2d::extension::UIButton *pSender, TouchEventType type)
     if (type != TOUCH_EVENT_ENDED)
         return;
     
+    PLAY_EFFECT(TAP_EFFECT);
     float price = 0.0;
     int count = 1;
     const char * commId = "";
@@ -126,6 +131,12 @@ void CGShop::buyGold(cocos2d::extension::UIButton *pSender, TouchEventType type)
 void CGShop::backButton(cocos2d::extension::UIButton *pSender, TouchEventType type)
 {
     switch (type) {
+            
+        case TOUCH_EVENT_BEGAN:
+        {
+             PLAY_EFFECT(TAP_EFFECT);
+        }
+            break;
         case TOUCH_EVENT_ENDED:
         {
             CCScene *scene = CCScene::create();
@@ -142,4 +153,23 @@ void CGShop::backButton(cocos2d::extension::UIButton *pSender, TouchEventType ty
     }
 }
 
+void CGShop::loginButt(cocos2d::extension::UIButton *pSender, TouchEventType type)
+{
+    switch (type) {
+            
+        case TOUCH_EVENT_BEGAN:
+        {
+            PLAY_EFFECT(TAP_EFFECT);
+        }
+            break;
+        case TOUCH_EVENT_ENDED:
+        {
+            GlobalUserDefault::instance()->enterAccountManage();
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
 

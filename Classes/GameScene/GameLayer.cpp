@@ -144,7 +144,7 @@ void GameLayer::fanHuiButt(cocos2d::extension::UIButton *pSender, TouchEventType
 {
     if (type == TOUCH_EVENT_BEGAN)
     {
-       
+      PLAY_EFFECT(TAP_EFFECT);
     }else if (type == TOUCH_EVENT_MOVED)
     {
         
@@ -167,7 +167,7 @@ void GameLayer::getGoldButt(cocos2d::extension::UIButton *pSender, TouchEventTyp
 {
     if (type == TOUCH_EVENT_BEGAN)
     {
-        
+         PLAY_EFFECT(TAP_EFFECT);
     }else if (type == TOUCH_EVENT_MOVED)
     {
        
@@ -190,6 +190,7 @@ void GameLayer::helpButt(cocos2d::extension::UIButton *pSender, TouchEventType t
 {
     if (type == TOUCH_EVENT_BEGAN)
     {
+        PLAY_EFFECT(TAP_EFFECT);
         pSender->setOpacity(150);
     }else if (type == TOUCH_EVENT_MOVED)
     {
@@ -226,6 +227,7 @@ void GameLayer::shareButt(cocos2d::extension::UIButton *pSender, TouchEventType 
 {
     if (type == TOUCH_EVENT_BEGAN)
     {
+        PLAY_EFFECT(TAP_EFFECT);
         pSender->setOpacity(150);
     }else if (type == TOUCH_EVENT_MOVED)
     {
@@ -256,7 +258,9 @@ void GameLayer::shareButt(cocos2d::extension::UIButton *pSender, TouchEventType 
 
 void GameLayer::nextButt(cocos2d::extension::UIButton *pSender, TouchEventType type)
 {
-    if (type == TOUCH_EVENT_BEGAN) {
+    if (type == TOUCH_EVENT_BEGAN)
+    {
+        PLAY_EFFECT(TAP_EFFECT);
         pSender->setOpacity(150);
     }else if (type == TOUCH_EVENT_MOVED)
     {
@@ -295,7 +299,11 @@ void GameLayer::nextButt(cocos2d::extension::UIButton *pSender, TouchEventType t
 
 void GameLayer::gameInfo(cocos2d::extension::UIButton *pSender, TouchEventType type)
 {
-    if (type == TOUCH_EVENT_ENDED)
+    if (type == TOUCH_EVENT_BEGAN)
+    {
+      PLAY_EFFECT(TAP_EFFECT);
+    }
+    else if (type == TOUCH_EVENT_ENDED)
     {
         
         GameInfoUI *game_info = GameInfoUI::create();
@@ -347,6 +355,7 @@ void GameLayer::answerButt(cocos2d::extension::UIButton *butt, TouchEventType ty
 {
     if (type == TOUCH_EVENT_BEGAN)
     {
+         PLAY_EFFECT(TAP_EFFECT);
         butt->setOpacity(150);
     }else if (type == TOUCH_EVENT_MOVED)
     {
@@ -378,6 +387,7 @@ void GameLayer::answerSelectedButt(cocos2d::extension::UIButton *butt, TouchEven
 {
     if (type == TOUCH_EVENT_BEGAN)
     {
+         PLAY_EFFECT(TAP_EFFECT);
         butt->setOpacity(150);
     }else if (type == TOUCH_EVENT_MOVED)
     {
@@ -634,7 +644,7 @@ void GameLayer::removeWrongButtCancel(cocos2d::extension::UIButton *butt, TouchE
 {
     if (type == TOUCH_EVENT_BEGAN)
     {
-        
+         PLAY_EFFECT(TAP_EFFECT);
     }else if (type == TOUCH_EVENT_MOVED)
     {
         
@@ -651,7 +661,7 @@ void GameLayer::removeWrongButtConfirm(cocos2d::extension::UIButton *butt, Touch
 {
     if (type == TOUCH_EVENT_BEGAN)
     {
-        
+      PLAY_EFFECT(TAP_EFFECT);
     }else if (type == TOUCH_EVENT_MOVED)
     {
         
@@ -715,7 +725,7 @@ void GameLayer::oneCorrectButtCancel(cocos2d::extension::UIButton *butt, TouchEv
 {
     if (type == TOUCH_EVENT_BEGAN)
     {
-        
+         PLAY_EFFECT(TAP_EFFECT);
     }else if (type == TOUCH_EVENT_MOVED)
     {
         
@@ -730,7 +740,7 @@ void GameLayer::oneCorrectButtConfirm(cocos2d::extension::UIButton *butt, TouchE
 {
     if (type == TOUCH_EVENT_BEGAN)
     {
-        
+         PLAY_EFFECT(TAP_EFFECT);
     }else if (type == TOUCH_EVENT_MOVED)
     {
         

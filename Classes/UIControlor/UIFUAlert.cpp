@@ -83,6 +83,9 @@ void UIFUAlert::cancelButt(cocos2d::extension::UIButton *pSender, TouchEventType
 {
     switch (type) {
         case TOUCH_EVENT_BEGAN:
+        {
+            PLAY_EFFECT(TAP_EFFECT);
+        }
             break;
         case TOUCH_EVENT_MOVED:
             break;
@@ -107,8 +110,12 @@ void UIFUAlert::cancelButt(cocos2d::extension::UIButton *pSender, TouchEventType
 
 void UIFUAlert::confirmButt(cocos2d::extension::UIButton *pSender, TouchEventType type)
 {
-    switch (type) {
+    switch (type)
+    {
         case TOUCH_EVENT_BEGAN:
+        {
+            PLAY_EFFECT(TAP_EFFECT);
+        }
             break;
         case TOUCH_EVENT_MOVED:
             break;

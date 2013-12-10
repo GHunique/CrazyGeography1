@@ -47,7 +47,9 @@ bool GamePasses::init()
     backButt->setTouchEnable(true);
     backButt->addTouchEventListener(this, toucheventselector(GamePasses::backChapterLayer));
     
-    
+    UILabelBMFont *game_title_BMF = static_cast<UILabelBMFont *>(_pass_root->getChildByName("gameTitle_BMF"));
+    game_title_BMF->setTouchEnable(true);
+    game_title_BMF->addTouchEventListener(this, toucheventselector(GamePasses::delayAnimation));
     
     return true;
 }
@@ -55,8 +57,6 @@ bool GamePasses::init()
 void GamePasses::onEnter()
 {
     CCLayerRGBA::onEnter();
-    
-    this->scheduleOnce(schedule_selector(GamePasses::delayAnimation), 0.5);
 }
 
 #pragma mark - private Methods
@@ -139,9 +139,14 @@ void GamePasses::gotoDirectlyGame(cocos2d::CCObject *pSender, TouchEventType typ
     switch (type)
     {
         case TOUCH_EVENT_BEGAN:
-            
+        {
+             PLAY_EFFECT(TAP_EFFECT);
+        }
             break;
         case TOUCH_EVENT_MOVED:
+        {
+          
+        }
             
             break;
         case TOUCH_EVENT_ENDED:
@@ -172,7 +177,9 @@ void GamePasses::backChapterLayer(cocos2d::extension::UIButton *pSender, TouchEv
     switch (type)
     {
         case TOUCH_EVENT_BEGAN:
-            
+        {
+             PLAY_EFFECT(TAP_EFFECT);
+        }
             break;
         case TOUCH_EVENT_MOVED:
             
@@ -198,15 +205,19 @@ void GamePasses::backChapterLayer(cocos2d::extension::UIButton *pSender, TouchEv
 
 #pragma mark - delayAnimation
 
-void GamePasses::delayAnimation()
+void GamePasses::delayAnimation(cocos2d::extension::UIWidget *pSender, TouchEventType type)
 {
-    ActionObject *actionObje = ActionManager::shareManager()->getActionByName("GamePassesUI.ExportJson", "game_Title_BMF_Animation");
-    
-    if (actionObje != NULL)
-    {
-        actionObje->setLoop(false);
-        actionObje->play();
+    if (type == TOUCH_EVENT_BEGAN) {
+        ActionObject *actionObje = ActionManager::shareManager()->getActionByName("GamePassesUI.ExportJson", "game_Title_BMF_Animation");
+        
+        if (actionObje != NULL)
+        {
+            actionObje->setLoop(false);
+            actionObje->play();
+        }
+
     }
+    
 }
 
 

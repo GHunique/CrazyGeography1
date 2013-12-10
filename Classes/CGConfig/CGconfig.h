@@ -12,6 +12,7 @@
 #include "cocos-ext.h"
 #include "cocos2d.h"
 #include <iostream>
+#include "SimpleAudioEngine.h"
 
 USING_NS_CC;
 USING_NS_CC_EXT;
@@ -110,6 +111,13 @@ enum  {
     kRemoveAlterAswer_need  = 30, //去掉一个错误答案需要的金币
     kOneCorrectAswer_need   = 90, //得到一个正确答案需要的金币
     };
+
+//播放声音
+
+#define SWIPE_EFFECT        "Swipe.wav"
+#define TAP_EFFECT          "Tap.wav"
+
+#define PLAY_EFFECT(PATH) CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(PATH)
 
 
 #endif /* defined(__CrazyGeography__CGconfig__) */

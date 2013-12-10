@@ -290,7 +290,7 @@
           "__type": "ComGUIImageViewSurrogate:#EditorCommon.JsonModel.Component.GUI",
           "classname": "ImageView",
           "name": "answerBG_image",
-          "ZOrder": 5,
+          "ZOrder": 8,
           "actiontag": 59,
           "anchorPointX": 0.5,
           "anchorPointY": 0.5,

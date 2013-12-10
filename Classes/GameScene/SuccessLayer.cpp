@@ -66,8 +66,9 @@ void SuccessLayer::onExit()
 void SuccessLayer::shareButt(cocos2d::extension::UIButton *butt, TouchEventType type)
 {
     
-    if (type == TOUCH_EVENT_BEGAN) {
-        
+    if (type == TOUCH_EVENT_BEGAN)
+    {
+        PLAY_EFFECT(TAP_EFFECT);
     }else if(type == TOUCH_EVENT_MOVED)
     {
         
@@ -80,8 +81,9 @@ void SuccessLayer::shareButt(cocos2d::extension::UIButton *butt, TouchEventType 
 void SuccessLayer::nextButt(cocos2d::extension::UIButton *butt, TouchEventType type)
 {
     
-    if (type == TOUCH_EVENT_BEGAN) {
-        
+    if (type == TOUCH_EVENT_BEGAN)
+    {
+      PLAY_EFFECT(TAP_EFFECT);
     }else if(type == TOUCH_EVENT_MOVED)
     {
         

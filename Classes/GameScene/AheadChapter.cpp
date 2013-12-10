@@ -49,6 +49,10 @@ bool AheadChapter::init()
     settingButt->setTouchEnable(true);
     settingButt->addTouchEventListener(this, toucheventselector(AheadChapter::settingGame));
     
+    UIImageView *map_image = static_cast<UIImageView *>(_ahead_root->getChildByName("gMap_image"));
+    map_image->setTouchEnable(true);
+    map_image->addTouchEventListener(this, toucheventselector(AheadChapter::enterAcountManager));
+    
     return true;
 }
 
@@ -73,6 +77,9 @@ void AheadChapter::startGame(cocos2d::extension::UIButton *pSender, TouchEventTy
 {
     switch (type) {
         case TOUCH_EVENT_BEGAN:
+        {
+            PLAY_EFFECT(TAP_EFFECT);
+        }
             break;
         case TOUCH_EVENT_MOVED:
             break;
@@ -100,6 +107,9 @@ void AheadChapter::reSetGame(cocos2d::extension::UIButton *pSender, TouchEventTy
 {
     switch (type) {
         case TOUCH_EVENT_BEGAN:
+        {
+            PLAY_EFFECT(TAP_EFFECT);
+        }
             break;
         case TOUCH_EVENT_MOVED:
             break;
@@ -120,6 +130,8 @@ void AheadChapter::reSetGame(cocos2d::extension::UIButton *pSender, TouchEventTy
             
 //            GlobalUserDefault::instance()->unLockAchievement(1, 50, "我去这么好的游戏");
 //            GlobalUserDefault::instance()->enterVirtualShop();
+            
+            return;
             CCScene *scene = CCScene::create();                 //添加场景
             CGShop *gameLayer = CGShop::create();               //章节
             scene->addChild(gameLayer);
@@ -141,7 +153,8 @@ void AheadChapter::settingGame(cocos2d::extension::UIButton *pSender, TouchEvent
     switch (type) {
         case TOUCH_EVENT_BEGAN:
         {
-                    }
+            PLAY_EFFECT(TAP_EFFECT);
+        }
             break;
         case TOUCH_EVENT_MOVED:
             break;
@@ -160,7 +173,7 @@ void AheadChapter::settingGame(cocos2d::extension::UIButton *pSender, TouchEvent
 //            GlobalUserDefault::instance()->submitScoreTo91(1, 1, "用户获得了哈");
 //            GlobalUserDefault::instance()->openScoreBoard(0);
 //            GlobalUserDefault::instance()->openAchievement();
-//            return;
+            return;
             GlobalUserDefault::instance()->show91ToolBar(false);
 
             CCScene *scene = CCScene::create();                         //添加场景
@@ -176,6 +189,18 @@ void AheadChapter::settingGame(cocos2d::extension::UIButton *pSender, TouchEvent
             break;
     }
     
+}
+
+void AheadChapter::enterAcountManager(cocos2d::extension::UIWidget *pSender, TouchEventType type)
+{
+    if (type == TOUCH_EVENT_BEGAN)
+    {
+        PLAY_EFFECT(TAP_EFFECT);
+        
+    }else if (type == TOUCH_EVENT_ENDED)
+    {
+        GlobalUserDefault::instance()->enterAccountManage();
+    }
 }
 
 void AheadChapter::onEnterTransitionDidFinish()

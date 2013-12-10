@@ -142,15 +142,33 @@ void ChapterLayer::provincesLayout()
 
 void ChapterLayer::gotoDirectlyPass(CCObject *pSender, TouchEventType type)
 {
+    UIButton *butt = static_cast<UIButton *>(pSender);
+    
     switch (type) {
         case TOUCH_EVENT_BEGAN:
-            
+        {
+             PLAY_EFFECT(TAP_EFFECT);
+            butt->setOpacity(150);
+        }
             break;
         case TOUCH_EVENT_MOVED:
+        {
+            CCPoint movingPoint = butt->getTouchMovePos();
+            
+            if (!butt->hitTest(movingPoint))
+            {
+                CCLog(" 移除到外面了-----  ");
+                butt->setOpacity(255);
+            }else {
+                butt->setOpacity(150);
+            }
+        }
             
             break;
         case TOUCH_EVENT_ENDED:
         {
+            butt->setOpacity(255);
+            
             UIButton *butt = static_cast<UIButton *>(pSender);
             ProvinceButton *proButt = static_cast<ProvinceButton *>(butt->getParent());
             GlobalUserDefault::instance()->setCurrentChapter(proButt->getChapterId()); //设置进入章节
@@ -173,7 +191,14 @@ void ChapterLayer::gotoDirectlyPass(CCObject *pSender, TouchEventType type)
 
 void ChapterLayer::gotoAheadLayer(cocos2d::extension::UIButton *pSender, TouchEventType tyep)
 {
-    switch (tyep) {
+    switch (tyep)
+    {
+        case cocos2d::extension::TOUCH_EVENT_BEGAN:
+        {
+             PLAY_EFFECT(TAP_EFFECT);
+        }
+            break;
+            
         case cocos2d::extension::TOUCH_EVENT_ENDED:
         {
             CCScene *scene = CCScene::create();                 //添加场景

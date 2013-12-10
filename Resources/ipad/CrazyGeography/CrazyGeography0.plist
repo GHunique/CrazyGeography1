@@ -251,7 +251,7 @@
 				<key>offsetY</key>
 				<real>0</real>
 			</dict>
-			<key>pass_info_search.png</key>
+			<key>pass_info_passed.png</key>
 			<dict>
 				<key>width</key>
 				<integer>250</integer>
@@ -270,7 +270,7 @@
 				<key>offsetY</key>
 				<real>0</real>
 			</dict>
-			<key>pass_info_passed.png</key>
+			<key>pass_info_passed_gray.png</key>
 			<dict>
 				<key>width</key>
 				<integer>250</integer>

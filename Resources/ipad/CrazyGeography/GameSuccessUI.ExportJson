@@ -128,12 +128,12 @@
           "anchorPointX": 0.5,
           "anchorPointY": 0.5,
           "classType": null,
-          "colorB": 255,
-          "colorG": 255,
-          "colorR": 255,
+          "colorB": 180,
+          "colorG": 130,
+          "colorR": 70,
           "flipX": false,
           "flipY": false,
-          "height": 940,
+          "height": 1024,
           "ignoreSize": false,
           "opacity": 255,
           "rotation": 0,
@@ -143,9 +143,9 @@
           "touchAble": false,
           "useMergedTexture": true,
           "visible": true,
-          "width": 620,
-          "x": 320,
-          "xProportion": 0.5,
+          "width": 768,
+          "x": 380,
+          "xProportion": 0.59375,
           "y": 480,
           "yProportion": 0.5,
           "capInsetsHeight": 0,
@@ -154,13 +154,13 @@
           "capInsetsY": 0,
           "fileName": null,
           "fileNameData": {
-            "path": "answer_success_bg.jpg",
+            "path": "accessary2/city_back.png",
             "plistFile": null,
             "resourceType": 1
           },
           "scale9Enable": false,
-          "scale9Height": 940,
-          "scale9Width": 620
+          "scale9Height": 1024,
+          "scale9Width": 768
         }
       },
       {
@@ -872,7 +872,7 @@
       "capInsetsWidth": 0,
       "capInsetsX": 0,
       "capInsetsY": 0,
-      "clipAble": false,
+      "clipAble": true,
       "colorType": 1,
       "vectorX": 0,
       "vectorY": -0.5

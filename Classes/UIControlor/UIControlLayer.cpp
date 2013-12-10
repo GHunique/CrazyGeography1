@@ -146,6 +146,8 @@ void UIControlLayer::quietCheckBox(cocos2d::extension::UICheckBox *pSender, Chec
         default:
             break;
     }
+    
+    PLAY_EFFECT(TAP_EFFECT);
 }
 
 float UIControlLayer::setBackGroundMusicVolum(cocos2d::extension::UISlider *pSender,SliderEventType type)
@@ -201,7 +203,7 @@ void UIControlLayer::backButt(cocos2d::extension::UIButton *pSender, TouchEventT
 {
     if (type == TOUCH_EVENT_BEGAN)
     {
-        
+        PLAY_EFFECT(TAP_EFFECT);
     }else if(type == TOUCH_EVENT_MOVED)
     {
         

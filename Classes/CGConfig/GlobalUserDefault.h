@@ -105,6 +105,7 @@ public:
     void cancelAllAuth();                       //取消所有平台授权
     
     //---- 91平台操作
+    void init91Platform();
     void buyCommodities(const char* commId,const char* commName,float price,int count);
     void show91ToolBar(bool show);              //显示或隐藏91工具栏
     void switchAccount();

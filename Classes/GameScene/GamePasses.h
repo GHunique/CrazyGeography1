@@ -35,7 +35,7 @@ private:
     void gotoDirectlyGame(CCObject *pSender,TouchEventType type);           //进入指定关卡
     void backChapterLayer(UIButton *pSender,TouchEventType type);           //返回选择章节界面
     
-    void delayAnimation();
+    void delayAnimation(UIWidget *pSender,TouchEventType type);
 };
 
 #endif /* defined(__CrazyGeography__GamePasses__) */
