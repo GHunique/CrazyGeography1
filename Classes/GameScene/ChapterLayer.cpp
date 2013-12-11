@@ -62,7 +62,7 @@ void ChapterLayer::onEnter()
     MovingLabel *ml = MovingLabel::create();
 //    GlobalUserDefault::instance()->getcur
     ml->setTexture("您已击败了全国的%0.02的玩家！继续加油吧");
-    ml->setPosition(ccp(0,720));
+    ml->setPosition(ccp(20,740));
     _chapter_root->addChild(ml);
     ml->setMovingInfo(6);
 

@@ -15,7 +15,7 @@ bool MovingLabel::init()
         return false;
     }
     
-    this->setSize(CCSizeMake(640, 60));
+    this->setSize(CCSizeMake(600, 60));
     this->setClippingEnable(true);
     this->setColor(ccWHITE);
     
@@ -53,6 +53,7 @@ void MovingLabel::setTexture(const char *contents)
 void MovingLabel::removeThisFromParent()
 {
 //    this->removeFromParentAndCleanup(bool cleanup)
+    _movingLabel->setPosition(ccp(25,0));
 }
 
 
