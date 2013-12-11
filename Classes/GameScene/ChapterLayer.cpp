@@ -11,6 +11,7 @@
 #include "GlobalUserDefault.h"
 #include "CGAccessaryButton.h"
 #include "AheadChapter.h"
+#include "MovingLabel.h"
 
 ChapterLayer::ChapterLayer()
 {
@@ -58,7 +59,12 @@ void ChapterLayer::onEnter()
 {
     this->CCLayerRGBA::onEnter();
     //.....
-    
+    MovingLabel *ml = MovingLabel::create();
+//    GlobalUserDefault::instance()->getcur
+    ml->setTexture("您已击败了全国的%0.02的玩家！继续加油吧");
+    ml->setPosition(ccp(0,720));
+    _chapter_root->addChild(ml);
+    ml->setMovingInfo(6);
 
 }
 

@@ -215,9 +215,7 @@ void GamePasses::delayAnimation(cocos2d::extension::UIWidget *pSender, TouchEven
             actionObje->setLoop(false);
             actionObje->play();
         }
-
     }
-    
 }
 
 

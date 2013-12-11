@@ -38,6 +38,7 @@
 		046F3D2D1844172E00B0ECBB /* NetEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 046F3D251844172E00B0ECBB /* NetEngine.framework */; };
 		046F3D2E1844172E00B0ECBB /* NdComPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 046F3D261844172E00B0ECBB /* NdComPlatform.framework */; };
 		046F3D2F1844172E00B0ECBB /* NdComPlatformInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 046F3D271844172E00B0ECBB /* NdComPlatformInt.framework */; };
+		04760B651858B66300F412CB /* MovingLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04760B631858B66300F412CB /* MovingLabel.cpp */; };
 		04D24AD91824D7AE00E4EBBD /* SuccessLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04D24AD71824D7AE00E4EBBD /* SuccessLayer.cpp */; };
 		15A3D8FF1682F7D5002FB0C5 /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15A3D88B1682F7D5002FB0C5 /* b2BroadPhase.cpp */; };
 		15A3D9001682F7D5002FB0C5 /* b2CollideCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15A3D88D1682F7D5002FB0C5 /* b2CollideCircle.cpp */; };
@@ -368,6 +369,8 @@
 		046F3D251844172E00B0ECBB /* NetEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NetEngine.framework; sourceTree = "<group>"; };
 		046F3D261844172E00B0ECBB /* NdComPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NdComPlatform.framework; sourceTree = "<group>"; };
 		046F3D271844172E00B0ECBB /* NdComPlatformInt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NdComPlatformInt.framework; sourceTree = "<group>"; };
+		04760B631858B66300F412CB /* MovingLabel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MovingLabel.cpp; sourceTree = "<group>"; };
+		04760B641858B66300F412CB /* MovingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingLabel.h; sourceTree = "<group>"; };
 		04D24AD71824D7AE00E4EBBD /* SuccessLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SuccessLayer.cpp; sourceTree = "<group>"; };
 		04D24AD81824D7AE00E4EBBD /* SuccessLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuccessLayer.h; sourceTree = "<group>"; };
 		15A3D87E1682F7B3002FB0C5 /* cocos2dx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2dx.xcodeproj; path = ../../../cocos2dx/proj.ios/cocos2dx.xcodeproj; sourceTree = "<group>"; };
@@ -2142,6 +2145,8 @@
 		ACC9E24818337E07006A3D65 /* UIControlor */ = {
 			isa = PBXGroup;
 			children = (
+				04760B631858B66300F412CB /* MovingLabel.cpp */,
+				04760B641858B66300F412CB /* MovingLabel.h */,
 				AC82DA191834D2B600969C15 /* UIControlLayer.cpp */,
 				AC82DA1A1834D2B600969C15 /* UIControlLayer.h */,
 				ACC9E24E18337FCF006A3D65 /* UIFUAlert.cpp */,
@@ -2383,6 +2388,7 @@
 				15A3DA4D1682F826002FB0C5 /* CCControlPotentiometer.cpp in Sources */,
 				15A3DA4E1682F826002FB0C5 /* CCControlSaturationBrightnessPicker.cpp in Sources */,
 				15A3DA4F1682F826002FB0C5 /* CCControlSlider.cpp in Sources */,
+				04760B651858B66300F412CB /* MovingLabel.cpp in Sources */,
 				15A3DA501682F826002FB0C5 /* CCControlStepper.cpp in Sources */,
 				15A3DA511682F826002FB0C5 /* CCControlSwitch.cpp in Sources */,
 				15A3DA521682F826002FB0C5 /* CCControlUtils.cpp in Sources */,

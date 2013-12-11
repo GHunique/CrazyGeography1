@@ -387,7 +387,7 @@ void GameLayer::answerSelectedButt(cocos2d::extension::UIButton *butt, TouchEven
 {
     if (type == TOUCH_EVENT_BEGAN)
     {
-         PLAY_EFFECT(TAP_EFFECT);
+         PLAY_EFFECT(SWIPE_EFFECT);
         butt->setOpacity(150);
     }else if (type == TOUCH_EVENT_MOVED)
     {

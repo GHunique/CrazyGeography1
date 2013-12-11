@@ -115,29 +115,6 @@ void AheadChapter::reSetGame(cocos2d::extension::UIButton *pSender, TouchEventTy
             break;
         case TOUCH_EVENT_ENDED:
         {
-//            const char* animation_path = (CG_ANIMATION[kCGANIMATION_BASE_PATH] + CG_ANIMATION[kCGGoldJUMP_ANIMATION_NAME]+CG_ANIMATION[kCGDocument_SUFFIX]).c_str();
-//            CCArmatureDataManager::sharedArmatureDataManager()->addArmatureFileInfo(animation_path);
-//            
-//            CCArmature *armature = CCArmature::create(CG_ANIMATION[kCGGoldJUMP_ANIMATION_NAME].c_str());
-//                            armature->getAnimation()->playByIndex(0,-1,-1,0);
-//            
-//            armature->setPosition(ccp(0.5 * CG_ScreenSize.width,CG_ScreenSize.height * 0.45));
-//            addChild(armature,19);
-//            return;
-//            GlobalUserDefault::instance()->buyCommodities("", "", 68, 1);
-
-//            GlobalUserDefault::instance()->enterAccountManage();
-            
-//            GlobalUserDefault::instance()->unLockAchievement(1, 50, "我去这么好的游戏");
-//            GlobalUserDefault::instance()->enterVirtualShop();
-            
-            return;
-            CCScene *scene = CCScene::create();                 //添加场景
-            CGShop *gameLayer = CGShop::create();               //章节
-            scene->addChild(gameLayer);
-            CCTransitionScene *transition = CCTransitionProgressInOut::create(0.2, scene);
-            //        CCTransitionScene *transition = GlobalUserDefault::instance()->randomTransitionScene(scene);
-            CCDirector::sharedDirector()->replaceScene(transition);
             
         }
             break;
@@ -160,20 +137,7 @@ void AheadChapter::settingGame(cocos2d::extension::UIButton *pSender, TouchEvent
             break;
         case TOUCH_EVENT_ENDED:
         {
-//            const char* animation_path = (CG_ANIMATION[kCGANIMATION_BASE_PATH] + CG_ANIMATION[kCGGoldJUMP_ANIMATION_NAME]+CG_ANIMATION[kCGDocument_SUFFIX]).c_str();
-//            CCArmatureDataManager::sharedArmatureDataManager()->addArmatureFileInfo(animation_path);
-//            
-//            CCArmature *armature = CCArmature::create(CG_ANIMATION[kCGGoldJUMP_ANIMATION_NAME].c_str());
-//            armature->getAnimation()->playByIndex(1,-1,-1,0);
-//            
-//            armature->setPosition(ccp(0.5 * CG_ScreenSize.width,CG_ScreenSize.height * 0.45));
-//            addChild(armature,19);
-//            return;
-            
-//            GlobalUserDefault::instance()->submitScoreTo91(1, 1, "用户获得了哈");
-//            GlobalUserDefault::instance()->openScoreBoard(0);
-//            GlobalUserDefault::instance()->openAchievement();
-            return;
+
             GlobalUserDefault::instance()->show91ToolBar(false);
 
             CCScene *scene = CCScene::create();                         //添加场景
