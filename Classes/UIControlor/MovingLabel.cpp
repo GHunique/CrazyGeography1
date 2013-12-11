@@ -53,7 +53,7 @@ void MovingLabel::setTexture(const char *contents)
 void MovingLabel::removeThisFromParent()
 {
 //    this->removeFromParentAndCleanup(bool cleanup)
-    _movingLabel->setPosition(ccp(25,0));
+    _movingLabel->setPosition(ccp(0,0));
 }
 
 
