@@ -298,6 +298,7 @@
 		AC99D9691842F642008EC1D6 /* 91platformConfigure.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC99D9681842F642008EC1D6 /* 91platformConfigure.mm */; };
 		ACAA7DBB1850093B0066B799 /* GameInfoUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACAA7DB91850093B0066B799 /* GameInfoUI.cpp */; };
 		ACC9E25018337FCF006A3D65 /* UIFUAlert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACC9E24E18337FCF006A3D65 /* UIFUAlert.cpp */; };
+		ACD98CE618594605008318AF /* EffectSoundPlayController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACD98CE418594605008318AF /* EffectSoundPlayController.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -886,6 +887,8 @@
 		ACAA7DBA1850093B0066B799 /* GameInfoUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameInfoUI.h; sourceTree = "<group>"; };
 		ACC9E24E18337FCF006A3D65 /* UIFUAlert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIFUAlert.cpp; sourceTree = "<group>"; };
 		ACC9E24F18337FCF006A3D65 /* UIFUAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIFUAlert.h; sourceTree = "<group>"; };
+		ACD98CE418594605008318AF /* EffectSoundPlayController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectSoundPlayController.cpp; sourceTree = "<group>"; };
+		ACD98CE518594605008318AF /* EffectSoundPlayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectSoundPlayController.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -2145,6 +2148,8 @@
 		ACC9E24818337E07006A3D65 /* UIControlor */ = {
 			isa = PBXGroup;
 			children = (
+				ACD98CE418594605008318AF /* EffectSoundPlayController.cpp */,
+				ACD98CE518594605008318AF /* EffectSoundPlayController.h */,
 				04760B631858B66300F412CB /* MovingLabel.cpp */,
 				04760B641858B66300F412CB /* MovingLabel.h */,
 				AC82DA191834D2B600969C15 /* UIControlLayer.cpp */,
@@ -2320,6 +2325,7 @@
 				15A3D92A1682F7D5002FB0C5 /* b2WheelJoint.cpp in Sources */,
 				15A3D9391682F7D5002FB0C5 /* b2Rope.cpp in Sources */,
 				15A3D9951682F7F9002FB0C5 /* chipmunk.c in Sources */,
+				ACD98CE618594605008318AF /* EffectSoundPlayController.cpp in Sources */,
 				15A3D9971682F7F9002FB0C5 /* cpConstraint.c in Sources */,
 				15A3D9981682F7F9002FB0C5 /* cpDampedRotarySpring.c in Sources */,
 				15A3D9991682F7F9002FB0C5 /* cpDampedSpring.c in Sources */,

@@ -11,7 +11,6 @@
 
 #include "cocos-ext.h"
 #include "cocos2d.h"
-#include <iostream>
 #include "SimpleAudioEngine.h"
 
 USING_NS_CC;
@@ -114,8 +113,14 @@ enum  {
 
 //播放声音
 
-#define SWIPE_EFFECT        "Swipe.wav"
-#define TAP_EFFECT          "Tap.wav"
+#define SWIPE_EFFECT        "sound/Swipe.wav"
+#define TAP_EFFECT          "sound/Tap.wav"
+#define DU_EFFECT           "sound/Du.mp3"
+#define GETGOLD_EFFECT      "sound/getGold.mp3"
+#define JUMPDU_EFFECT       "sound/jumpDu.mp3"
+#define LEVELUP_EFFECT      "sound/levelup.mp3"
+#define GETGOLD2_EFFECT     "sound/getGold2.mp3"
+
 
 #define PLAY_EFFECT(PATH) CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(PATH)
 
