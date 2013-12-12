@@ -17,9 +17,11 @@
 #include "MacroDefine.h"
 
 
+#include <streambuf>
+
 AheadChapter::AheadChapter()
 {
-   
+    
 }
 
 AheadChapter::~AheadChapter()
