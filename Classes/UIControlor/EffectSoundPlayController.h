@@ -49,6 +49,8 @@ private:
     void playEffect();
     void update(float dt);
     
+    void setStart(bool start);
+    
 };
 
 #endif /* defined(__CrazyGeography__EffectSoundPlayController__) */

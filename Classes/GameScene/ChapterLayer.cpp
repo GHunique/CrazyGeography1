@@ -59,9 +59,9 @@ void ChapterLayer::onEnter()
 {
     this->CCLayerRGBA::onEnter();
     //.....
+    
     MovingLabel *ml = MovingLabel::create();
-//    GlobalUserDefault::instance()->getcur
-    ml->setTexture("您已击败了全国的%0.02的玩家！继续加油吧");
+    ml->setTexture(GlobalUserDefault::instance()->wellcomStatement());
     ml->setPosition(ccp(25,740));
     _chapter_root->addChild(ml);
     ml->setMovingInfo(20);

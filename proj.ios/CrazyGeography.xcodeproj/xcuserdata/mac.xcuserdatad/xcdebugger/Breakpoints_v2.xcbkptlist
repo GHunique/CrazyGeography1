@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameScene/GameLayer.cpp"
-            timestampString = "408377055.670393"
+            timestampString = "408555228.18729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "693"
-            endingLineNumber = "693"
+            startingLineNumber = "682"
+            endingLineNumber = "682"
             landmarkName = "GameLayer::removeAlternativeAnswer(int nGold)"
             landmarkType = "5">
          </BreakpointContent>

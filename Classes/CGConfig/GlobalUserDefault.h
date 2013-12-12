@@ -68,6 +68,11 @@ public:
     int getPassedChapter();
     int getPassedPass();
     
+    /**
+     * 返回总的关卡数量
+     */
+    int getTotalPasses();
+    
     std::string getCurrentChapterName();
     
     void showDictionaryKeyAndValue(CCDictionary *dic);
@@ -91,6 +96,11 @@ public:
      * @brief 随机返回一种场景转换形式
      */
     CCTransitionScene *randomTransitionScene(CCScene *s);
+    
+    /**
+     *  返回一个随机的字符串
+     */
+    const char* wellcomStatement();
     
     /**
      * 设置当前的章节和关卡

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--我是勇哥我怕谁-->
 <CGDic>
-    <dicInfo passedChaId="1" passedPassId="1" id="0" name="中国" shortName="中"/>
+    <dicInfo passedChaId="1" passedPassId="1" id="0" name="中国" shortName="中" totalPasses = "127" />
     <dic id="1" name="北京" shortName="京" star="0"/>
     <dic id="2" name="天津" shortName="津" star="0"/>
     <dic id="3" name="上海" shortName="沪" star="0"/>

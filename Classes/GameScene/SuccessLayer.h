@@ -33,9 +33,14 @@ protected:
 private:
     void shareButt(UIButton *butt,TouchEventType type);
     void nextButt(UIButton *butt,TouchEventType type);
+    void actionOfSuccessEffect();
+    void removeCCArmature();
 public:
     
     void setSuccessData(Map_str_str &dic);
+    
+private:
+    Map_str_str _dic;
 };
 
 #endif /* defined(__CrazyGeography__SuccessLayer__) */

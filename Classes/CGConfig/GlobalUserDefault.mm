@@ -89,6 +89,13 @@ int GlobalUserDefault::getPassedPass()
     return _passedPass;
 }
 
+int GlobalUserDefault::getTotalPasses()
+{
+    int totalPassed = ((CCString *)(((CCDictionary *)g_chapterMapDic->objectForKey("0"))->objectForKey("totalPasses")))->intValue();
+    
+    return totalPassed;
+}
+
 void GlobalUserDefault::showDictionaryKeyAndValue(cocos2d::CCDictionary *dic)
 {
     CCDictElement *dicEle;
@@ -128,7 +135,15 @@ CCTransitionScene *GlobalUserDefault::randomTransitionScene(cocos2d::CCScene *s)
         cout<<"设置了 srand。只能设置一次"<<endl;
     }
     
-    int random_transition = CGHelper::randomNumber(1, 33);
+    int random_transition;
+    bool random_ok = false;
+    
+    do {
+        random_transition = CGHelper::randomNumber(1, 33);
+        if (random_transition != 7 && random_transition != 15) {
+            random_ok = true;
+        }
+    } while (!random_ok);
     
     CCTransitionScene *reScene = NULL;
     float jump_time = 1.8;
@@ -368,6 +383,34 @@ CCTransitionScene *GlobalUserDefault::randomTransitionScene(cocos2d::CCScene *s)
     
     CCLog("[randomTransitionScene 第%d个场景]",random_transition);
     return reScene;
+}
+
+const char* GlobalUserDefault::wellcomStatement()
+{
+    int random_int = CGHelper::randomNumber(1, 5);
+    const char* statement = "";
+    
+    int passed = CCUserDefault::sharedUserDefault()->getIntegerForKey(CG_FINISHED_PASS);
+    int total_passed = getTotalPasses();
+    float percent = passed/(float)total_passed;
+    
+    CCString *str = CCString::createWithFormat("您已击败了全国的%.3f%%的玩家！继续加油吧",percent);
+    
+    return str->getCString();
+    
+    //奇数说提示
+    if (random_int%2 != 0)
+    {
+        if (random_int == 1) {
+            
+        }
+        
+    }else
+        //偶数说数据
+    {
+        
+    }
+    
 }
 
 void GlobalUserDefault::setCurrentPass(int pass)

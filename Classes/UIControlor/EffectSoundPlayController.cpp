@@ -50,8 +50,13 @@ void EffectSoundPlayController::setEffect(const char *pFile, float effectTime, c
     
     
     CCTime::gettimeofdayCocos2d(&_startTimeval, NULL);
-    _start = true;
     
+    if (delay) {
+        _start = true;
+    }else
+    {
+        this->scheduleOnce(schedule_selector(EffectSoundPlayController::setStart), delay);
+    }
 }
 
 void EffectSoundPlayController::update(float dt)
@@ -68,7 +73,11 @@ void EffectSoundPlayController::update(float dt)
         PLAY_EFFECT(_pFile);
         _canPlayTime = ((CCString *)(_interValTimeArr->objectAtIndex(_currTimes)))->floatValue();
     }
+    
 }
 
-
+void EffectSoundPlayController::setStart(bool start)
+{
+    _start = true;
+}
 

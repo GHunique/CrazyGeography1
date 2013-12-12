@@ -95,6 +95,8 @@ const std::string CG_ANIMATION[3] =
 //游戏初始化金币
 #define CG_GAME_INIT_GOLD    120
 
+//完成关卡数量
+#define CG_FINISHED_PASS     "CG_FINISHED_PASS_XSY"
 
 enum  {//配置么个等级获得奖励
     

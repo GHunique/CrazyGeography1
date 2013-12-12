@@ -171,6 +171,7 @@ private:
     long _total_award_cd;                             //剩余奖励时间
     bool _startCD;                              //是否倒计时
     std::vector<std::string> strVector;         //保存备选答案数据
+    CCArray _selectedAnswerArr;                 //已经选择了的答案数组
     
 protected:
     
@@ -207,6 +208,8 @@ private:
     void oneCorrectButtCancel(UIButton *butt,TouchEventType type);         //提示一个真确答案
     void oneCorrectButtConfirm(UIButton *butt,TouchEventType type);
     void oneCorrectAnswer(int nGold);
+    
+    void successfully();
 };
 
 #endif /* defined(__CrazyGeography__GameLayer__) */

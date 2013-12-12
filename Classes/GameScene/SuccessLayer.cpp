@@ -12,6 +12,8 @@
 #include "GlobalUserDefault.h"
 #include "MacroDefine.h"
 
+#include "EffectSoundPlayController.h"
+
 
 SuccessLayer::SuccessLayer()
 {
@@ -100,20 +102,27 @@ void SuccessLayer::nextButt(cocos2d::extension::UIButton *butt, TouchEventType t
 
 void SuccessLayer::setSuccessData(Map_str_str &dic)
 {
+    _dic = dic;
+    this->scheduleOnce(schedule_selector(SuccessLayer::actionOfSuccessEffect),1);
+    
+}
+
+void SuccessLayer::actionOfSuccessEffect()
+{
     //设置奖励
     UILabel *jiangli_label = static_cast<UILabel *>(_rootLayout->getChildByName("jiangli_label"));
     
     char charData[2];
-    sprintf(charData, "x  %s",dic.at("jiangli").c_str());
+    sprintf(charData, "x  %s",_dic.at("jiangli").c_str());
     jiangli_label->setText(charData);
     
     //设置答案
     UILabel *answer_label = static_cast<UILabel *>(_rootLayout->getChildByName("answer_label"));
-//    sprintf(charData, "",)
-    answer_label->setText(dic.at("answer").c_str());
+    //    sprintf(charData, "",)
+    answer_label->setText(_dic.at("answer").c_str());
     
     //初始化星级
-   
+    
     for (int i = 2; i <= 3; i++)
     {
         std::string xingName = "xingxing_image_";
@@ -125,7 +134,7 @@ void SuccessLayer::setSuccessData(Map_str_str &dic)
     }
     
     //设置星级
-    int xingshu =  CGHelper::getint(dic.at("xingshu"));
+    int xingshu =  CGHelper::getint(_dic.at("xingshu"));
     
     cout<<xingshu<<"  星数量"<<std::endl;
     for (int i = 2; i <= xingshu; i++)
@@ -140,14 +149,11 @@ void SuccessLayer::setSuccessData(Map_str_str &dic)
     
     //通关所用时间
     UILabel *used_time_label = static_cast<UILabel *>(_rootLayout->getChildByName("time_label"));
-    std::string time_str = " " + dic.at("shijian") + " 秒";
+    std::string time_str = " " + _dic.at("shijian") + " 秒";
     used_time_label->setText(time_str.c_str());
     
     //显示特效
-    
-    if (xingshu <= 1)
-        return;
-    
+        
     const char* animation_path = (CG_ANIMATION[kCGANIMATION_BASE_PATH] + CG_ANIMATION[kCGGoldJUMP_ANIMATION_NAME]+CG_ANIMATION[kCGDocument_SUFFIX]).c_str();
     CCArmatureDataManager::sharedArmatureDataManager()->addArmatureFileInfo(animation_path);
     
@@ -155,15 +161,31 @@ void SuccessLayer::setSuccessData(Map_str_str &dic)
     if (xingshu >2)
     {
         armature->getAnimation()->playByIndex(0,-1,-1,0);
-       
+        
     }else if(xingshu > 1)
     {
         armature->getAnimation()->playByIndex(1,-1,-1,0);
+    }else
+    {
+       armature->getAnimation()->playByIndex(1,-1,-1,0);
     }
     
+    //播放音效
+    EffectSoundPlayController *ESPC = EffectSoundPlayController::create();
+    this->addChild(ESPC);
+    ESPC->setEffect(DU_EFFECT, 1, 0.5, 0);
+    //音效播放
+    
+    
     armature->setPosition(ccp(0.5 * CG_ScreenSize.width,CG_ScreenSize.height * 0.45));
-    addChild(armature,19);
+//    addChild(armature,19,11221);
+    
+    this->scheduleOnce(schedule_selector(SuccessLayer::removeCCArmature), 2.5);
+
 }
 
-
+void SuccessLayer::removeCCArmature()
+{
+    this->removeChildByTag(11221, true);
+}
 

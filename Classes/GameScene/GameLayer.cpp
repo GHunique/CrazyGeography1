@@ -376,8 +376,8 @@ void GameLayer::answerButt(cocos2d::extension::UIButton *butt, TouchEventType ty
         butt->setOpacity(255);
         butt->setColor(ccWHITE);
         
-        _answerLabel->setText(butt->getTitleText());
- 
+//        _answerLabel->setText(butt->getTitleText());
+        
         this->layoutSelectedAnswer(butt);
         
     }
@@ -406,8 +406,9 @@ void GameLayer::answerSelectedButt(cocos2d::extension::UIButton *butt, TouchEven
     {
         CCLog(" 结束 ----- ");
         butt->setOpacity(255);
+        butt->setColor(ccWHITE);
         
-        _answerLabel->setText(butt->getTitleText());
+//        _answerLabel->setText(butt->getTitleText());
         
         this->returnToOraginPlace(butt);                //重新打开答案按钮触摸事件
         
@@ -422,6 +423,11 @@ void GameLayer::layoutSelectedAnswer(cocos2d::CCObject *pObj)       //选中到�
     {
         
         UIButton *butt = static_cast<UIButton *>(pObj);
+        
+        if (!_selectedAnswerArr.containsObject(butt))
+        {
+            _selectedAnswerArr.addObject(butt);         //添加到已经选择答案数组中
+        }
         
 //        butt->oldPoint = butt->getPosition();           //将此时坐标保存
         
@@ -465,6 +471,13 @@ void GameLayer::returnToOraginPlace(cocos2d::CCObject *pObj)
     butt->setPosition(_hState.getOldPoint(holdIndex));              //将此时坐标保存
     
     this->setProcessShow(_hState.getCount());
+    
+    for (int i = 0; i < _selectedAnswerArr.count(); i++) {
+        UIButton * buttTmep = (UIButton *)_selectedAnswerArr.objectAtIndex(i);
+        buttTmep->setColor(ccWHITE);
+    }
+    
+    _selectedAnswerArr.removeObject(butt);
 }
 
 void GameLayer::setProcessShow(int pre)
@@ -486,51 +499,28 @@ void GameLayer::compareAnswer()
         std::cout<<"匹配成功  ："<<anSwer<<"  "<<_standardAnswer<<std::endl;
         _startCD = false;
         
+        int passed = CCUserDefault::sharedUserDefault()->getIntegerForKey(CG_FINISHED_PASS);
+        passed++;
+        CCUserDefault::sharedUserDefault()->setIntegerForKey(CG_FINISHED_PASS,passed);
+        
         struct cc_timeval now;
         CCTime::gettimeofdayCocos2d(&now, NULL);
         long curr_seconds = now.tv_sec;
         _total_award_cd = curr_seconds - _start_cd_seconds;
         
-        int award_amount;
-        int star_amount;
-        
-        if (_total_award_cd <= CG_GAME_CD_LV3)
-        {
-            award_amount = kGameAward_LV3;
-            star_amount = 3;
-        }else if(_total_award_cd <= CG_GAME_CD_LV2)
-        {
-            award_amount = KGameAward_LV2;
-            star_amount = 2;
-        }else
-        {
-            award_amount = kGameAward_LV1;
-            star_amount = 1;
+        for (int i = 0; i < _selectedAnswerArr.count(); i++) {
+            UIButton *butt = (UIButton *)_selectedAnswerArr.objectAtIndex(i);
+            butt->setColor(ccGREEN);
         }
         
-        /**
-         * 1.）修改通关结果
-         * 2.) 设置下一关章节和关卡id
-         * 3.) 获得奖励后修改金币数量
-         */
+        this->scheduleOnce(schedule_selector(GameLayer::successfully), 1);
         
-        GlobalUserDefault::instance()->setPassInfo(star_amount);
-        GlobalUserDefault::instance()->nextPass();                  //下一关
-        GlobalUserDefault::instance()->increaseGameGold(award_amount);
-        
-        SuccessLayer *_succLayer  = SuccessLayer::create();         //通关界面
-        CCScene *success_scene = CCScene::create();
-        success_scene->addChild(_succLayer,10);
-        
-        Map_str_str dic;
-        dic.insert(make_pair("xingshu",CGHelper::getChar(star_amount)));
-        dic.insert(make_pair("answer", _standardAnswer));
-        dic.insert(make_pair("jiangli", CGHelper::getChar(award_amount)));
-        dic.insert(make_pair("shijian", CGHelper::getChar(_total_award_cd)));
-        _succLayer->setSuccessData(dic);
-        
-        CCTransitionScene *transition = GlobalUserDefault::instance()->randomTransitionScene(success_scene);
-        CCDirector::sharedDirector()->replaceScene(transition);
+    }
+    else{
+        for (int i = 0; i < _selectedAnswerArr.count(); i++) {
+            UIButton *butt = (UIButton *)_selectedAnswerArr.objectAtIndex(i);
+            butt->setColor(ccRED);
+        }
     }
 }
 
@@ -786,7 +776,49 @@ void GameLayer::oneCorrectAnswer(int nGold)
     
 }
 
-
+void GameLayer::successfully()
+{
+    int award_amount;
+    int star_amount;
+    
+    if (_total_award_cd <= CG_GAME_CD_LV3)
+    {
+        award_amount = kGameAward_LV3;
+        star_amount = 3;
+    }else if(_total_award_cd <= CG_GAME_CD_LV2)
+    {
+        award_amount = KGameAward_LV2;
+        star_amount = 2;
+    }else
+    {
+        award_amount = kGameAward_LV1;
+        star_amount = 1;
+    }
+    
+    /**
+     * 1.）修改通关结果
+     * 2.) 设置下一关章节和关卡id
+     * 3.) 获得奖励后修改金币数量
+     */
+    
+    GlobalUserDefault::instance()->setPassInfo(star_amount);
+    GlobalUserDefault::instance()->nextPass();                  //下一关
+    GlobalUserDefault::instance()->increaseGameGold(award_amount);
+    
+    SuccessLayer *_succLayer  = SuccessLayer::create();         //通关界面
+    CCScene *success_scene = CCScene::create();
+    success_scene->addChild(_succLayer,10);
+    
+    Map_str_str dic;
+    dic.insert(make_pair("xingshu",CGHelper::getChar(star_amount)));
+    dic.insert(make_pair("answer", _standardAnswer));
+    dic.insert(make_pair("jiangli", CGHelper::getChar(award_amount)));
+    dic.insert(make_pair("shijian", CGHelper::getChar(_total_award_cd)));
+    _succLayer->setSuccessData(dic);
+    
+    CCTransitionScene *transition = GlobalUserDefault::instance()->randomTransitionScene(success_scene);
+    CCDirector::sharedDirector()->replaceScene(transition);
+}
 
 
 
