@@ -394,7 +394,7 @@ const char* GlobalUserDefault::wellcomStatement()
     int total_passed = getTotalPasses();
     float percent = passed/(float)total_passed;
     
-    CCString *str = CCString::createWithFormat("您已击败了全国的%.3f%%的玩家！继续加油吧",percent);
+    CCString *str = CCString::createWithFormat("您已击败全国的%.3f%%的玩家！继续加油吧",percent);
     
     return str->getCString();
     
