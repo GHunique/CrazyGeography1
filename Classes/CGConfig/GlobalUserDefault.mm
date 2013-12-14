@@ -399,11 +399,28 @@ const char* GlobalUserDefault::wellcomStatement(bool statistics)
     
     int random_int = CGHelper::randomNumber(1, 5);
     const char* statement = "";
+<<<<<<< HEAD
 
     switch (random_int) {
         case 1:
         {
             statement = "美好的一天从[知乎地标]开始.";
+=======
+    
+    int passed = CCUserDefault::sharedUserDefault()->getIntegerForKey(CG_FINISHED_PASS);
+    int total_passed = getTotalPasses();
+    float percent = passed/(float)total_passed;
+    
+    CCString *str = CCString::createWithFormat("您已击败全国的%.3f%%的玩家！继续加油吧",percent);
+    
+    return str->getCString();
+    
+    //奇数说提示
+    if (random_int%2 != 0)
+    {
+        if (random_int == 1) {
+            
+>>>>>>> b3c39b03280010b14001d835d3bb207b2210f6d1
         }
             break;
         case 2:
