@@ -819,8 +819,3 @@ void GameLayer::successfully()
     CCTransitionScene *transition = GlobalUserDefault::instance()->randomTransitionScene(success_scene);
     CCDirector::sharedDirector()->replaceScene(transition);
 }
-
-
-
-
-

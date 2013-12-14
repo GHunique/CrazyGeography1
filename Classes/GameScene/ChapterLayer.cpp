@@ -61,7 +61,7 @@ void ChapterLayer::onEnter()
     //.....
     
     MovingLabel *ml = MovingLabel::create();
-    ml->setTexture(GlobalUserDefault::instance()->wellcomStatement());
+    ml->setTexture(GlobalUserDefault::instance()->wellcomStatement(false));
     ml->setPosition(ccp(25,740));
     _chapter_root->addChild(ml);
     ml->setMovingInfo(20);

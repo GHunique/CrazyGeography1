@@ -76,7 +76,7 @@ void SuccessLayer::shareButt(cocos2d::extension::UIButton *butt, TouchEventType 
         
     }else if (type == TOUCH_EVENT_ENDED)
     {
-        
+        GlobalUserDefault::instance()->sharedGame(0);
     }
 }
 

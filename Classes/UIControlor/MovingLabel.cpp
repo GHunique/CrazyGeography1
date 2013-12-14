@@ -36,6 +36,7 @@ bool MovingLabel::init()
 
 void MovingLabel::setMovingInfo(float detal)
 {
+    _movingLabel->setPosition(ccp(500,0));
     CCSize labelSize = _movingLabel->getSize();
     CCActionInterval *movingTo = CCMoveTo::create(detal, ccp(-(labelSize.width/* + _movingLabel->getPosition().x*/),_movingLabel->getPosition().y));
     CCCallFunc *callFunc = CCCallFunc::create(this, callfunc_selector(MovingLabel::removeThisFromParent));
@@ -48,12 +49,11 @@ void MovingLabel::setTexture(const char *contents)
     _movingLabel->setText(contents);
 }
 
-
-
 void MovingLabel::removeThisFromParent()
 {
 //    this->removeFromParentAndCleanup(bool cleanup)
     _movingLabel->setPosition(ccp(0,0));
+    _movingLabel->setTextHorizontalAlignment(kCCTextAlignmentCenter);//居中
 }
 
 

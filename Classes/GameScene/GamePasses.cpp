@@ -13,6 +13,8 @@
 #include "GameLayer.h"
 #include "ChapterLayer.h"
 
+#include "MovingLabel.h"
+
 GamePasses::GamePasses()
 {
     _firstPoint = ccp(30,600);
@@ -57,6 +59,12 @@ bool GamePasses::init()
 void GamePasses::onEnter()
 {
     CCLayerRGBA::onEnter();
+    //。。。。。。
+    MovingLabel *ml = MovingLabel::create();
+    ml->setTexture(GlobalUserDefault::instance()->wellcomStatement(true));
+    ml->setPosition(ccp(25,740));
+    _pass_root->addChild(ml);
+    ml->setMovingInfo(20);
 }
 
 #pragma mark - private Methods

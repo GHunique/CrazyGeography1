@@ -385,32 +385,53 @@ CCTransitionScene *GlobalUserDefault::randomTransitionScene(cocos2d::CCScene *s)
     return reScene;
 }
 
-const char* GlobalUserDefault::wellcomStatement()
+const char* GlobalUserDefault::wellcomStatement(bool statistics)
 {
-    int random_int = CGHelper::randomNumber(1, 5);
-    const char* statement = "";
-    
-    int passed = CCUserDefault::sharedUserDefault()->getIntegerForKey(CG_FINISHED_PASS);
-    int total_passed = getTotalPasses();
-    float percent = passed/(float)total_passed;
-    
-    CCString *str = CCString::createWithFormat("您已击败了全国的%.3f%%的玩家！继续加油吧",percent);
-    
-    return str->getCString();
-    
-    //奇数说提示
-    if (random_int%2 != 0)
-    {
-        if (random_int == 1) {
-            
-        }
+    if (statistics) {
+        int passed = CCUserDefault::sharedUserDefault()->getIntegerForKey(CG_FINISHED_PASS);
+        int total_passed = getTotalPasses();
+        float percent = passed/(float)total_passed;
         
-    }else
-        //偶数说数据
-    {
+        CCString *str = CCString::createWithFormat("您击败了全国约%.3f%%的玩家!继续加油吧",percent);
         
+        return str->getCString();
     }
     
+    int random_int = CGHelper::randomNumber(1, 5);
+    const char* statement = "";
+
+    switch (random_int) {
+        case 1:
+        {
+            statement = "美好的一天从[知乎地标]开始.";
+        }
+            break;
+        case 2:
+        {
+            statement = "让我们一睹为快,神游各大城市的标志性建筑吧.";
+        }
+            break;
+        
+        case 3:
+        {
+            statement = "[知乎地标]虽未置身地标,确能知其位乎其名.";
+        }
+            break;
+            
+        case 4:
+        {
+            statement = "";
+        }
+            break;
+            
+        default:
+        {
+            statement = "您击败了全国约%.3f%%的玩家!继续加油吧.";
+        }
+            break;
+    }
+    
+    return statement;
 }
 
 void GlobalUserDefault::setCurrentPass(int pass)
@@ -536,7 +557,7 @@ void GlobalUserDefault::nextPass()
             XMLOperation::fixAttribute1(makeCacheFileData(CG_GAME_DATA[KGD_CHAPTER_XML]).c_str(), "0", "passedChaId", CGHelper::getChar(_passedChapter),"id",true);
             XMLOperation::fixAttribute1(makeCacheFileData(CG_GAME_DATA[KGD_CHAPTER_XML]).c_str(), "0", "passedPassId", CGHelper::getChar(_passedPass),"id",true);
             
-            this->currPassInfomation();        //加载新关卡的所有章节信息
+            this->currPassInfomation();        //加载新关卡的所有信息
         }
     }else
     {

@@ -99,8 +99,9 @@ public:
     
     /**
      *  返回一个随机的字符串
+     *  @param statistics 标示为统计数据
      */
-    const char* wellcomStatement();
+    const char* wellcomStatement(bool statistics);
     
     /**
      * 设置当前的章节和关卡
