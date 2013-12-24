@@ -16,7 +16,7 @@
 
 #include "MacroDefine.h"
 
-
+#include "EffectSoundPlayController.h"
 #include <streambuf>
 
 AheadChapter::AheadChapter()
@@ -175,10 +175,15 @@ void AheadChapter::onEnterTransitionDidFinish()
     ActionObject *action = ActionManager::shareManager()->getActionByName("AheadChapterUI.ExportJson", "title_panel_animation");
     
     if (action != NULL)
+    {
+        EffectSoundPlayController *effectSound = EffectSoundPlayController::create();
+        effectSound->setEffect(DU_EFFECT, 1, 0.9, 0.1);
+        this->addChild(effectSound);
         action->play();
+        
+    }
     
-    
-    this->scheduleOnce(schedule_selector(AheadChapter::delayAnimation), 3.2);
+    this->scheduleOnce(schedule_selector(AheadChapter::delayAnimation), 1.2);
 }
 
 void AheadChapter::delayAnimation()
@@ -187,6 +192,9 @@ void AheadChapter::delayAnimation()
     
     if (action != NULL)
     {
+        EffectSoundPlayController *effectSound = EffectSoundPlayController::create();
+        effectSound->setEffect(PULL_EFFECT, 0, 0, 0.5);
+        this->addChild(effectSound);
         action->play();
     }
 }

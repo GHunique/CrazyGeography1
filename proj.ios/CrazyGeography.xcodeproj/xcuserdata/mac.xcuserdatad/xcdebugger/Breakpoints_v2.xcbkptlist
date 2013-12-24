@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameScene/GameLayer.cpp"
-            timestampString = "408555228.18729"
+            timestampString = "409070131.600995"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "682"
-            endingLineNumber = "682"
+            startingLineNumber = "685"
+            endingLineNumber = "685"
             landmarkName = "GameLayer::removeAlternativeAnswer(int nGold)"
             landmarkType = "5">
          </BreakpointContent>
@@ -153,13 +153,91 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../Classes/UIControlor/UIControlLayer.cpp"
-            timestampString = "408370043.337719"
+            filePath = "../Classes/CGConfig/GlobalUserDefault.mm"
+            timestampString = "409068746.711063"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "UIControlLayer::onEnter()"
+            startingLineNumber = "545"
+            endingLineNumber = "545"
+            landmarkName = "GlobalUserDefault::nextPass()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GlobalUserDefault::nextPass()"
+                  moduleName = "CrazyGeography"
+                  urlString = "file:///Users/mac/Documents/myProjects/cocos2d-x-2.2.0/projects/CrazyGeography1/Classes/CGConfig/GlobalUserDefault.mm"
+                  timestampString = "409070248.931235"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "546"
+                  endingLineNumber = "546"
+                  offsetFromSymbolStart = "58">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GlobalUserDefault::nextPass()"
+                  moduleName = "CrazyGeography"
+                  urlString = "file:///Users/mac/Documents/myProjects/cocos2d-x-2.2.0/projects/CrazyGeography1/Classes/CGConfig/GlobalUserDefault.mm"
+                  timestampString = "409070248.931545"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "546"
+                  endingLineNumber = "546"
+                  offsetFromSymbolStart = "874">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/CGConfig/GlobalUserDefault.mm"
+            timestampString = "409068746.711063"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "549"
+            endingLineNumber = "549"
+            landmarkName = "GlobalUserDefault::nextPass()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/CGConfig/GlobalUserDefault.mm"
+            timestampString = "409068746.711063"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "551"
+            endingLineNumber = "551"
+            landmarkName = "GlobalUserDefault::nextPass()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/CGConfig/GlobalUserDefault.mm"
+            timestampString = "409068746.711063"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "550"
+            endingLineNumber = "550"
+            landmarkName = "GlobalUserDefault::nextPass()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

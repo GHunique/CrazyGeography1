@@ -7,9 +7,9 @@
 			<key>accessary2/tishikuang.png</key>
 			<dict>
 				<key>width</key>
-				<integer>464</integer>
+				<integer>461</integer>
 				<key>height</key>
-				<integer>242</integer>
+				<integer>240</integer>
 				<key>originalWidth</key>
 				<integer>464</integer>
 				<key>originalHeight</key>
@@ -19,60 +19,60 @@
 				<key>y</key>
 				<integer>0</integer>
 				<key>offsetX</key>
-				<real>0</real>
+				<real>-0.5</real>
 				<key>offsetY</key>
 				<real>0</real>
 			</dict>
 			<key>accessary2/map.png</key>
 			<dict>
 				<key>width</key>
-				<integer>128</integer>
+				<integer>86</integer>
 				<key>height</key>
-				<integer>128</integer>
+				<integer>83</integer>
 				<key>originalWidth</key>
 				<integer>128</integer>
 				<key>originalHeight</key>
 				<integer>128</integer>
 				<key>x</key>
-				<integer>466</integer>
+				<integer>463</integer>
 				<key>y</key>
 				<integer>0</integer>
 				<key>offsetX</key>
-				<real>0</real>
+				<real>1</real>
 				<key>offsetY</key>
-				<real>0</real>
+				<real>-0.5</real>
 			</dict>
 			<key>accessary2/map_gray.png</key>
 			<dict>
 				<key>width</key>
-				<integer>128</integer>
+				<integer>86</integer>
 				<key>height</key>
-				<integer>128</integer>
+				<integer>83</integer>
 				<key>originalWidth</key>
 				<integer>128</integer>
 				<key>originalHeight</key>
 				<integer>128</integer>
 				<key>x</key>
-				<integer>596</integer>
+				<integer>551</integer>
 				<key>y</key>
 				<integer>0</integer>
 				<key>offsetX</key>
-				<real>0</real>
+				<real>1</real>
 				<key>offsetY</key>
-				<real>0</real>
+				<real>-0.5</real>
 			</dict>
 			<key>accessary2/backword.png</key>
 			<dict>
 				<key>width</key>
-				<integer>64</integer>
+				<integer>60</integer>
 				<key>height</key>
-				<integer>64</integer>
+				<integer>60</integer>
 				<key>originalWidth</key>
 				<integer>64</integer>
 				<key>originalHeight</key>
 				<integer>64</integer>
 				<key>x</key>
-				<integer>726</integer>
+				<integer>639</integer>
 				<key>y</key>
 				<integer>0</integer>
 				<key>offsetX</key>
@@ -83,15 +83,15 @@
 			<key>accessary2/backword_sel.png</key>
 			<dict>
 				<key>width</key>
-				<integer>64</integer>
+				<integer>60</integer>
 				<key>height</key>
-				<integer>64</integer>
+				<integer>60</integer>
 				<key>originalWidth</key>
 				<integer>64</integer>
 				<key>originalHeight</key>
 				<integer>64</integer>
 				<key>x</key>
-				<integer>792</integer>
+				<integer>701</integer>
 				<key>y</key>
 				<integer>0</integer>
 				<key>offsetX</key>
@@ -102,15 +102,15 @@
 			<key>accessary2/linkedin.png</key>
 			<dict>
 				<key>width</key>
-				<integer>64</integer>
+				<integer>60</integer>
 				<key>height</key>
-				<integer>64</integer>
+				<integer>60</integer>
 				<key>originalWidth</key>
 				<integer>64</integer>
 				<key>originalHeight</key>
 				<integer>64</integer>
 				<key>x</key>
-				<integer>858</integer>
+				<integer>763</integer>
 				<key>y</key>
 				<integer>0</integer>
 				<key>offsetX</key>
@@ -121,15 +121,15 @@
 			<key>accessary2/linkedin_sel.png</key>
 			<dict>
 				<key>width</key>
-				<integer>64</integer>
+				<integer>60</integer>
 				<key>height</key>
-				<integer>64</integer>
+				<integer>60</integer>
 				<key>originalWidth</key>
 				<integer>64</integer>
 				<key>originalHeight</key>
 				<integer>64</integer>
 				<key>x</key>
-				<integer>924</integer>
+				<integer>825</integer>
 				<key>y</key>
 				<integer>0</integer>
 				<key>offsetX</key>
@@ -150,7 +150,7 @@
 				<key>x</key>
 				<integer>0</integer>
 				<key>y</key>
-				<integer>244</integer>
+				<integer>242</integer>
 				<key>offsetX</key>
 				<real>0</real>
 				<key>offsetY</key>
@@ -169,7 +169,7 @@
 				<key>x</key>
 				<integer>199</integer>
 				<key>y</key>
-				<integer>244</integer>
+				<integer>242</integer>
 				<key>offsetX</key>
 				<real>0</real>
 				<key>offsetY</key>
@@ -188,7 +188,7 @@
 				<key>x</key>
 				<integer>398</integer>
 				<key>y</key>
-				<integer>244</integer>
+				<integer>242</integer>
 				<key>offsetX</key>
 				<real>0</real>
 				<key>offsetY</key>
@@ -207,7 +207,7 @@
 				<key>x</key>
 				<integer>0</integer>
 				<key>y</key>
-				<integer>372</integer>
+				<integer>370</integer>
 				<key>offsetX</key>
 				<real>0</real>
 				<key>offsetY</key>
@@ -226,7 +226,7 @@
 				<key>x</key>
 				<integer>0</integer>
 				<key>y</key>
-				<integer>462</integer>
+				<integer>460</integer>
 				<key>offsetX</key>
 				<real>0</real>
 				<key>offsetY</key>
@@ -245,7 +245,7 @@
 				<key>x</key>
 				<integer>642</integer>
 				<key>y</key>
-				<integer>462</integer>
+				<integer>460</integer>
 				<key>offsetX</key>
 				<real>0</real>
 				<key>offsetY</key>
@@ -264,7 +264,7 @@
 				<key>x</key>
 				<integer>732</integer>
 				<key>y</key>
-				<integer>462</integer>
+				<integer>460</integer>
 				<key>offsetX</key>
 				<real>0</real>
 				<key>offsetY</key>
@@ -283,7 +283,7 @@
 				<key>x</key>
 				<integer>801</integer>
 				<key>y</key>
-				<integer>462</integer>
+				<integer>460</integer>
 				<key>offsetX</key>
 				<real>0</real>
 				<key>offsetY</key>
@@ -292,21 +292,21 @@
 			<key>accessary2/recycle_ori.png</key>
 			<dict>
 				<key>width</key>
-				<integer>128</integer>
+				<integer>96</integer>
 				<key>height</key>
-				<integer>128</integer>
+				<integer>105</integer>
 				<key>originalWidth</key>
 				<integer>128</integer>
 				<key>originalHeight</key>
 				<integer>128</integer>
 				<key>x</key>
-				<integer>0</integer>
+				<integer>922</integer>
 				<key>y</key>
-				<integer>590</integer>
+				<integer>460</integer>
 				<key>offsetX</key>
 				<real>0</real>
 				<key>offsetY</key>
-				<real>0</real>
+				<real>-1.5</real>
 			</dict>
 			<key>accessary2/pay_item_normal.png</key>
 			<dict>
@@ -319,9 +319,9 @@
 				<key>originalHeight</key>
 				<integer>89</integer>
 				<key>x</key>
-				<integer>130</integer>
+				<integer>0</integer>
 				<key>y</key>
-				<integer>590</integer>
+				<integer>588</integer>
 				<key>offsetX</key>
 				<real>0</real>
 				<key>offsetY</key>
@@ -340,7 +340,7 @@
 				<key>x</key>
 				<integer>0</integer>
 				<key>y</key>
-				<integer>720</integer>
+				<integer>679</integer>
 				<key>offsetX</key>
 				<real>0</real>
 				<key>offsetY</key>
@@ -351,7 +351,7 @@
 				<key>width</key>
 				<integer>60</integer>
 				<key>height</key>
-				<integer>60</integer>
+				<integer>59</integer>
 				<key>originalWidth</key>
 				<integer>60</integer>
 				<key>originalHeight</key>
@@ -359,11 +359,11 @@
 				<key>x</key>
 				<integer>526</integer>
 				<key>y</key>
-				<integer>720</integer>
+				<integer>679</integer>
 				<key>offsetX</key>
 				<real>0</real>
 				<key>offsetY</key>
-				<real>0</real>
+				<real>-0.5</real>
 			</dict>
 			<key>answer_success_bg.jpg</key>
 			<dict>
@@ -378,7 +378,7 @@
 				<key>x</key>
 				<integer>0</integer>
 				<key>y</key>
-				<integer>811</integer>
+				<integer>770</integer>
 				<key>offsetX</key>
 				<real>0</real>
 				<key>offsetY</key>
@@ -387,9 +387,9 @@
 			<key>accessary2/childish_clock.png</key>
 			<dict>
 				<key>width</key>
-				<integer>128</integer>
+				<integer>115</integer>
 				<key>height</key>
-				<integer>128</integer>
+				<integer>114</integer>
 				<key>originalWidth</key>
 				<integer>128</integer>
 				<key>originalHeight</key>
@@ -397,18 +397,18 @@
 				<key>x</key>
 				<integer>642</integer>
 				<key>y</key>
-				<integer>811</integer>
+				<integer>770</integer>
 				<key>offsetX</key>
-				<real>0</real>
+				<real>-0.5</real>
 				<key>offsetY</key>
-				<real>0</real>
+				<real>-1</real>
 			</dict>
 			<key>fenxiang.png</key>
 			<dict>
 				<key>width</key>
-				<integer>486</integer>
+				<integer>484</integer>
 				<key>height</key>
-				<integer>176</integer>
+				<integer>175</integer>
 				<key>originalWidth</key>
 				<integer>486</integer>
 				<key>originalHeight</key>
@@ -416,30 +416,30 @@
 				<key>x</key>
 				<integer>0</integer>
 				<key>y</key>
-				<integer>1773</integer>
+				<integer>1732</integer>
 				<key>offsetX</key>
 				<real>0</real>
 				<key>offsetY</key>
-				<real>0</real>
+				<real>0.5</real>
 			</dict>
 			<key>fenxiang_press.png</key>
 			<dict>
 				<key>width</key>
-				<integer>486</integer>
+				<integer>484</integer>
 				<key>height</key>
-				<integer>176</integer>
+				<integer>175</integer>
 				<key>originalWidth</key>
 				<integer>486</integer>
 				<key>originalHeight</key>
 				<integer>176</integer>
 				<key>x</key>
-				<integer>488</integer>
+				<integer>486</integer>
 				<key>y</key>
-				<integer>1773</integer>
+				<integer>1732</integer>
 				<key>offsetX</key>
 				<real>0</real>
 				<key>offsetY</key>
-				<real>0</real>
+				<real>0.5</real>
 			</dict>
 		</dict>
 		<key>metadata</key>

@@ -172,6 +172,7 @@ private:
     bool _startCD;                              //是否倒计时
     std::vector<std::string> strVector;         //保存备选答案数据
     CCArray _selectedAnswerArr;                 //已经选择了的答案数组
+    bool _isPassed;                             //判断是否已经通关了
     
 protected:
     

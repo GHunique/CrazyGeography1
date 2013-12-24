@@ -140,13 +140,14 @@ CCTransitionScene *GlobalUserDefault::randomTransitionScene(cocos2d::CCScene *s)
     
     do {
         random_transition = CGHelper::randomNumber(1, 33);
-        if (random_transition != 7 && random_transition != 15) {
+        if (random_transition != 7 && random_transition != 15
+            &&random_transition != 6 && random_transition != 18) {
             random_ok = true;
         }
     } while (!random_ok);
     
     CCTransitionScene *reScene = NULL;
-    float jump_time = 1.8;
+    float jump_time = 1.1;
     float radial_time = 0.5;
     float horizontal_time = 0.8f;
     float vertical_time = 0.8;
@@ -539,7 +540,9 @@ void GlobalUserDefault::nextPass()
 {
     int passNum = _currPass + 1;
     int chapNum = _currChapter + 1;
-
+    
+    CCLog(" passNum %d . _totalPasses %d  ._passedPass %d",passNum,_totalPasses,_passedPass);
+    
     if (passNum > _totalPasses)                //如果是最后一关,则进入下一章节
     {
         if (chapNum > _totalChapters)          //所有章节完成
@@ -564,6 +567,9 @@ void GlobalUserDefault::nextPass()
         {
             _currPass = _passedPass = passNum;
             XMLOperation::fixAttribute1(makeCacheFileData(CG_GAME_DATA[KGD_CHAPTER_XML]).c_str(), "0", "passedPassId", CGHelper::getChar(_passedPass),"id",true);
+        }else
+        {
+            _currPass = passNum;
         }
     }
 }

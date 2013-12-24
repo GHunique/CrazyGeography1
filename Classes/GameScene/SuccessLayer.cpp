@@ -103,8 +103,6 @@ void SuccessLayer::nextButt(cocos2d::extension::UIButton *butt, TouchEventType t
 void SuccessLayer::setSuccessData(Map_str_str &dic)
 {
     _dic = dic;
-    this->scheduleOnce(schedule_selector(SuccessLayer::actionOfSuccessEffect),1);
-    
 }
 
 void SuccessLayer::actionOfSuccessEffect()
@@ -170,12 +168,16 @@ void SuccessLayer::actionOfSuccessEffect()
        armature->getAnimation()->playByIndex(1,-1,-1,0);
     }
     
-    //播放音效
-    EffectSoundPlayController *ESPC = EffectSoundPlayController::create();
-    this->addChild(ESPC);
-    ESPC->setEffect(DU_EFFECT, 1, 0.5, 0);
-    //音效播放
     
+    
+    //播放动画
+    ActionObject  *action = ActionManager::shareManager()->getActionByName("GameSuccessUI.ExportJson", "scaleAnimation");
+    
+    if (action != NULL)
+    {
+        action->play();
+    }
+    //播放动画
     
     armature->setPosition(ccp(0.5 * CG_ScreenSize.width,CG_ScreenSize.height * 0.45));
 //    addChild(armature,19,11221);
@@ -187,5 +189,17 @@ void SuccessLayer::actionOfSuccessEffect()
 void SuccessLayer::removeCCArmature()
 {
     this->removeChildByTag(11221, true);
+}
+
+void SuccessLayer::onEnterTransitionDidFinish()
+{
+    //播放音效
+    EffectSoundPlayController *ESPC = EffectSoundPlayController::create();
+    this->addChild(ESPC);
+    ESPC->setEffect(DU_EFFECT, 1, 0.1, 0.1);
+    //音效播放
+    
+    this->scheduleOnce(schedule_selector(SuccessLayer::actionOfSuccessEffect),0.1);
+    
 }
 

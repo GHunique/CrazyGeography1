@@ -122,6 +122,8 @@ enum  {
 #define JUMPDU_EFFECT       "sound/jumpDu.mp3"
 #define LEVELUP_EFFECT      "sound/levelup.mp3"
 #define GETGOLD2_EFFECT     "sound/getGold2.mp3"
+#define PULL_EFFECT         "sound/pull.wav"
+#define DING_EFFECT         "sound/ding.wav"
 
 
 #define PLAY_EFFECT(PATH) CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(PATH)

@@ -4,7 +4,94 @@
   "animation": {
     "classname": null,
     "name": "AnimationManager",
-    "actionlist": []
+    "actionlist": [
+      {
+        "classname": null,
+        "name": "scaleAnimation",
+        "actionnodelist": [
+          {
+            "classname": null,
+            "name": "ImageView_Clone",
+            "ActionTag": 176,
+            "actionframelist": [
+              {
+                "classname": null,
+                "name": null,
+                "colorb": 255,
+                "colorg": 255,
+                "colorr": 255,
+                "frameid": 8,
+                "opacity": 255,
+                "positionx": 305,
+                "positiony": 269,
+                "rotation": 0,
+                "scalex": 0,
+                "scaley": 0,
+                "starttime": 0,
+                "visible": false
+              },
+              {
+                "classname": null,
+                "name": null,
+                "colorb": 255,
+                "colorg": 255,
+                "colorr": 255,
+                "frameid": 9,
+                "opacity": 255,
+                "positionx": 305,
+                "positiony": 269,
+                "rotation": 0,
+                "scalex": 0.5,
+                "scaley": 0.5,
+                "starttime": 0,
+                "visible": false
+              }
+            ]
+          },
+          {
+            "classname": null,
+            "name": "ImageView",
+            "ActionTag": 70,
+            "actionframelist": [
+              {
+                "classname": null,
+                "name": null,
+                "colorb": 255,
+                "colorg": 255,
+                "colorr": 255,
+                "frameid": 0,
+                "opacity": 255,
+                "positionx": 305,
+                "positiony": 343,
+                "rotation": 0,
+                "scalex": 0,
+                "scaley": 0,
+                "starttime": 0,
+                "visible": false
+              },
+              {
+                "classname": null,
+                "name": null,
+                "colorb": 255,
+                "colorg": 255,
+                "colorr": 255,
+                "frameid": 1,
+                "opacity": 255,
+                "positionx": 305,
+                "positiony": 343,
+                "rotation": 0,
+                "scalex": 1,
+                "scaley": 1,
+                "starttime": 0,
+                "visible": false
+              }
+            ]
+          }
+        ],
+        "loop": false,
+        "unittime": 0.1
+      }
+    ]
   },
   "designHeight": 960,
   "designWidth": 640,
@@ -577,8 +664,8 @@
           "ignoreSize": true,
           "opacity": 255,
           "rotation": 0,
-          "scaleX": 1,
-          "scaleY": 1,
+          "scaleX": 0,
+          "scaleY": 0,
           "tag": 48,
           "touchAble": false,
           "useMergedTexture": true,
@@ -625,8 +712,8 @@
           "ignoreSize": true,
           "opacity": 255,
           "rotation": 0,
-          "scaleX": 0.5999999,
-          "scaleY": 0.5999999,
+          "scaleX": 0,
+          "scaleY": 0,
           "tag": 48,
           "touchAble": false,
           "useMergedTexture": true,

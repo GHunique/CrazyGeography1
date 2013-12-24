@@ -31,6 +31,7 @@ GameLayer::GameLayer()
     CG_MAX_ANSWER_NUMBER = 0;
     CG_ENGLISH_ANSWER_NUMBER = 0;
     GlobalUserDefault::instance()->show91ToolBar(false);
+    _isPassed = false;
 }
 
 GameLayer::~GameLayer()
@@ -499,9 +500,6 @@ void GameLayer::compareAnswer()
         std::cout<<"匹配成功  ："<<anSwer<<"  "<<_standardAnswer<<std::endl;
         _startCD = false;
         
-        int passed = CCUserDefault::sharedUserDefault()->getIntegerForKey(CG_FINISHED_PASS);
-        passed++;
-        CCUserDefault::sharedUserDefault()->setIntegerForKey(CG_FINISHED_PASS,passed);
         
         struct cc_timeval now;
         CCTime::gettimeofdayCocos2d(&now, NULL);
@@ -532,6 +530,11 @@ void GameLayer::refreshGameData()
     title_label->setText(GlobalUserDefault::instance()->getCurrentChapterName().c_str());
     
     _directlyCandidateDic = GlobalUserDefault::instance()->currPassInfo();
+    
+//    int star_num = ((CCString *)_directlyCandidateDic->objectForKey("star"))->intValue();
+//    if (star_num > 100) {
+//        _isPassed = true;
+//    }
 //    GlobalUserDefault::instance()->showDictionaryKeyAndValue(_directlyCandidateDic);
     
     CC_ASSERT(_directlyCandidateDic != NULL);
@@ -793,6 +796,16 @@ void GameLayer::successfully()
     {
         award_amount = kGameAward_LV1;
         star_amount = 1;
+    }
+    
+    if (!_isPassed) {
+        int passed = CCUserDefault::sharedUserDefault()->getIntegerForKey(CG_FINISHED_PASS);
+        passed++;
+        CCUserDefault::sharedUserDefault()->setIntegerForKey(CG_FINISHED_PASS,passed);
+        
+    }else
+    {
+        
     }
     
     /**

@@ -35,6 +35,7 @@ private:
     void nextButt(UIButton *butt,TouchEventType type);
     void actionOfSuccessEffect();
     void removeCCArmature();
+    void onEnterTransitionDidFinish();
 public:
     
     void setSuccessData(Map_str_str &dic);
